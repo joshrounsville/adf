@@ -1,0 +1,41 @@
+/* ==========================================================================
+  Footer
+========================================================================== */
+
+
+footer {
+  padding: $padding 0;
+  background: $colorGrayXDark;
+  font-size: $fontSmall;
+  border-top: 5px solid $colorBlueLight;
+  @include fontRegular();
+  a {
+    color: $colorGray;
+    &:hover,
+    &:focus {
+      color: $colorBlue;
+    }
+  }
+  .list-inline {
+    li {
+      padding: 0 8px 0 0;
+    }
+  }
+}
+
+.nav-footer {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 50px 0 0;
+  h5 {
+    padding: 0 0 7px;
+    color: #fff;
+    font-size: $fontSmall;
+  }
+  li {
+    padding: 0 0 3px;
+  }
+  .icon {
+    fill: $colorGray;
+  }
+}

@@ -1,0 +1,17 @@
+/* ==========================================================================
+  Links
+========================================================================== */
+
+
+a {
+  color: $colorLink;
+  text-decoration: none;
+  transition: all 0.13s ease-in-out;
+  svg {
+    transition: all 0.13s ease-in-out;
+  }
+  &:hover,
+  &:focus {
+    color: $colorLinkHover;
+  }
+}

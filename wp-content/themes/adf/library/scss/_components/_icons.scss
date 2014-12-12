@@ -1,0 +1,117 @@
+/* ==========================================================================
+  Icons
+========================================================================== */
+
+
+.icon {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  border: 3px solid #c3f1f3;
+  border-radius: 100%;
+  .icon-svg {
+    margin: 0 auto;
+  }
+}
+
+.icon-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/////////////// circles
+
+.icon-globe {
+  padding: 14px 1px 0 0;
+  .icon-svg {
+    height: 36px;
+  }
+}
+
+.icon-map-marker {
+  padding: 13px 0 0 0;
+  .icon-svg {
+    height: 37px;
+  }
+}
+
+.icon-pennant {
+  padding: 14px 0 0 6px;
+  .icon-svg {
+    height: 34px;
+  }
+}
+
+.icon-soccer-ball {
+  padding: 14px 1px 0 0;
+  .icon-svg {
+    height: 36px;
+  }
+}
+
+.icon-soccer-pitch {
+  padding: 13px 0 0 2px;
+  .icon-svg {
+    height: 38px;
+  }
+}
+
+.icon-trophy {
+  padding: 15px 0 0 0;
+  .icon-svg {
+    height: 38px;
+  }
+}
+
+
+
+/////////////// non-circles
+
+.icon-arrow-down {
+  width: 10px;
+  height: 7px;
+  fill: $colorGrayLight;
+}
+
+.icon-arrow-right {
+  width: 25px;
+  height: 21px;
+  fill: $colorBlueLight;
+}
+
+.icon-arrow-left-line {
+  width: 9px;
+  height: 14px;
+  fill: $colorBlueLight;
+}
+
+.icon-arrow-right-line {
+  width: 9px;
+  height: 14px;
+  fill: $colorBlueLight;
+}
+
+.icon-facebook {
+  width: 8px;
+  height: 15px;
+  fill: #fff;
+}
+
+.icon-instagram {
+  width: 15px;
+  height: 14px;
+  fill: #fff;
+}
+
+.icon-twitter {
+  width: 14px;
+  height: 11px;
+  fill: #fff;
+}

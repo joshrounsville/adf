@@ -1,0 +1,111 @@
+/* ==========================================================================
+  Header
+========================================================================== */
+
+
+header {
+  background: $colorGrayXDark;
+  padding: 15px 0 20px;
+  position: relative;
+  z-index: 10;
+  .home & {
+    background: transparent;
+  }
+}
+
+
+.dropdown {
+  font-size: $fontH6;
+  text-transform: lowercase;
+  position: relative;
+  z-index: 2;
+  @include fontBold();
+  a {
+    color: #fff;
+    &:hover,
+    &:focus {
+      color: $colorBlue;
+    }
+  }
+}
+
+.show-dropdown {
+  .list-dropdown {
+    height: 57px;
+    opacity: 1;
+  }
+}
+
+.hide-show-dropdown {
+  &:hover,
+  &:focus {
+    span {
+      transform: translateY(2px);
+    }
+  }
+  span {
+    margin-left: 7px;
+    transition: transform 0.13s ease-in-out;
+  }
+}
+
+.list-dropdown {
+  position: absolute;
+  padding: 5px 15px 0 0;
+  top: 100%;
+  right: 0;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.13s ease-in-out, height 0.1s ease-in-out;
+}
+
+
+.logo {
+  display: inline-block;
+  margin: 0 40px 0 0;
+}
+
+
+.nav-main {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 15px;
+  text-transform: uppercase;
+  @include fontBold();
+  li {
+    margin: 0 15px 0 0;
+  }
+  a {
+    color: #fff;
+    &:hover,
+    &:focus {
+      color: $colorBlue;
+    }
+  }
+}
+
+
+.nav-utility {
+  position: relative;
+  bottom: -15px;
+  li {
+    margin: 0 0 0 5px;
+  }
+  .social {
+    margin: 0 8px 0 0;
+    position: relative;
+    bottom: -2px;
+  }
+}
+
+.social {
+  a {
+    &:hover,
+    &:focus {
+      span {
+        fill: $colorBlue;
+      }
+    }
+  }
+}
