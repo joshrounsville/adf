@@ -5,8 +5,8 @@
     <h3 class="pad-b">Lost Password</h3>
     <div class="form-row">
       <div class="form-item form-full-width">
-        <label for="user_login"><?php _e( 'Username or E-mail:' ); ?></label>
-        <input type="text" name="user_login" id="user_login" class="input" value="<?php $template->the_posted_value( 'user_login' ); ?>" size="20" />
+        <label for="user_login<?php $template->the_instance(); ?>"><?php _e( 'Username or E-mail:' ); ?></label>
+        <input type="text" name="user_login" id="user_login<?php $template->the_instance(); ?>" class="input" value="<?php $template->the_posted_value( 'user_login' ); ?>" size="20" />
       </div>
     </div>
 

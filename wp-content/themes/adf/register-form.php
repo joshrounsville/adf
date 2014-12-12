@@ -1,13 +1,13 @@
 <?php $template->the_errors(); ?>
 
-  <form name="registerform" id="registerform" action="<?php $template->the_action_url( 'register' ); ?>" method="post">
+  <form name="registerform" id="registerform<?php $template->the_instance(); ?>" action="<?php $template->the_action_url( 'register' ); ?>" method="post">
 
     <h3 class="pad-b">Login Info</h3>
 
     <div class="form-row">
       <div class="form-item form-full-width">
-        <label for="user_login">Username</label>
-        <input type="text" name="user_login" id="user_login">
+        <label for="user_login<?php $template->the_instance(); ?>">Username</label>
+        <input type="text" name="user_login" id="user_login<?php $template->the_instance(); ?>" value="<?php $template->the_posted_value( 'user_login' ); ?>">
       </div>
     </div>
 
@@ -20,48 +20,48 @@
 
     <div class="form-row">
       <div class="form-item form-left">
-        <label for="first_name">First Name</label>
-        <input type="text" name="first_name" id="first_name">
+        <label for="first_name<?php $template->the_instance(); ?>">First Name</label>
+        <input type="text" name="first_name" id="first_name<?php $template->the_instance(); ?>" value="<?php $template->the_posted_value( 'first_name' ); ?>">
       </div>
       <div class="form-item form-right">
-        <label for="last_name">Last Name</label>
-        <input type="text" name="last_name" id="last_name">
+        <label for="last_name<?php $template->the_instance(); ?>">Last Name</label>
+        <input type="text" name="last_name" id="last_name<?php $template->the_instance(); ?>" value="<?php $template->the_posted_value( 'last_name' ); ?>">
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-item form-left">
-        <label for="current_age">Current Age</label>
-        <input type="text" name="current_age" id="current_age">
+        <label for="current_age<?php $template->the_instance(); ?>">Current Age</label>
+        <input type="text" name="current_age" id="current_age<?php $template->the_instance(); ?>" value="<?php $template->the_posted_value( 'current_age' ); ?>">
       </div>
       <div class="form-item form-right">
-        <label for="current_club">Current Club</label>
-        <input type="text" name="current_club" id="current_club">
+        <label for="current_club<?php $template->the_instance(); ?>">Current Club</label>
+        <input type="text" name="current_club" id="current_club<?php $template->the_instance(); ?>" value="<?php $template->the_posted_value( 'current_club' ); ?>">
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-item form-left">
-        <label for="user_email">Email Address</label>
-        <input type="email" name="user_email" id="user_email">
+        <label for="user_email<?php $template->the_instance(); ?>">Email Address</label>
+        <input type="email" name="user_email" id="user_email<?php $template->the_instance(); ?>" value="<?php $template->the_posted_value( 'user_email' ); ?>">
       </div>
       <div class="form-item form-right">
-        <label for="phone_number">Phone Number</label>
-        <input type="tel" name="phone_number" id="phone_number">
+        <label for="phone_number<?php $template->the_instance(); ?>">Phone Number</label>
+        <input type="tel" name="phone_number" id="phone_number<?php $template->the_instance(); ?>" value="<?php $template->the_posted_value( 'phone_number' ); ?>">
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-item form-full-width">
-        <label for="goals_short_term">Soccer Goals (Short Term)</label>
-        <textarea name="goals_short_term" id="goals_short_term"></textarea>
+        <label for="goals_short_term<?php $template->the_instance(); ?>">Soccer Goals (Short Term)</label>
+        <textarea name="goals_short_term" id="goals_short_term<?php $template->the_instance(); ?>"><?php $template->the_posted_value( 'goals_short_term' ); ?></textarea>
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-item form-full-width">
-        <label for="goals_long_term">Soccer Goals (Long Term)</label>
-        <textarea name="goals_long_term" id="goals_long_term"></textarea>
+        <label for="goals_long_term<?php $template->the_instance(); ?>">Soccer Goals (Long Term)</label>
+        <textarea name="goals_long_term" id="goals_long_term<?php $template->the_instance(); ?>"><?php $template->the_posted_value( 'goals_long_term' ); ?></textarea>
       </div>
     </div>
 
@@ -70,30 +70,30 @@
 
     <div class="form-row">
       <div class="form-item form-left">
-        <label for="guardian_first_name">First Name</label>
-        <input type="text" name="guardian_first_name" id="guardian_first_name">
+        <label for="guardian_first_name<?php $template->the_instance(); ?>">First Name</label>
+        <input type="text" name="guardian_first_name" id="guardian_first_name<?php $template->the_instance(); ?>" value="<?php $template->the_posted_value( 'guardian_first_name' ); ?>">
       </div>
       <div class="form-item form-right">
-        <label for="guardian_last_name">Last Name</label>
-        <input type="text" name="guardian_last_name" id="guardian_last_name">
+        <label for="guardian_last_name<?php $template->the_instance(); ?>">Last Name</label>
+        <input type="text" name="guardian_last_name" id="guardian_last_name<?php $template->the_instance(); ?>" value="<?php $template->the_posted_value( 'guardian_last_name' ); ?>">
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-item form-left">
-        <label for="guardian_email">Email Address</label>
-        <input type="email" name="guardian_email" id="guardian_email">
+        <label for="guardian_email<?php $template->the_instance(); ?>">Email Address</label>
+        <input type="email" name="guardian_email" id="guardian_email<?php $template->the_instance(); ?>" value="<?php $template->the_posted_value( 'guardian_email' ); ?>">
       </div>
       <div class="form-item form-right">
-        <label for="guardian_phone_number">Phone Number</label>
-        <input type="tel" name="guardian_phone_number" id="guardian_phone_number">
+        <label for="guardian_phone_number<?php $template->the_instance(); ?>">Phone Number</label>
+        <input type="tel" name="guardian_phone_number" id="guardian_phone_number<?php $template->the_instance(); ?>" value="<?php $template->the_posted_value( 'guardian_phone_number' ); ?>">
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-item form-full-width">
-        <label for="hear_about_us">How did you hear about us?</label>
-        <textarea name="hear_about_us" id="hear_about_us" class="input"></textarea>
+        <label for="hear_about_us<?php $template->the_instance(); ?>">How did you hear about us?</label>
+        <textarea name="hear_about_us" id="hear_about_us<?php $template->the_instance(); ?>" class="input"><?php $template->the_posted_value( 'hear_about_us' ); ?></textarea>
       </div>
     </div>
 
