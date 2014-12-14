@@ -11,7 +11,7 @@
 <section class="callout">
   <div class="container relative">
 
-    <div class="carousel">
+   <!--  <div class="carousel">
       <span class="icon icon-arrow-left-line">
         <svg class="icon-svg">
           <use xlink:href="#icon-arrow-left-line" />
@@ -22,10 +22,10 @@
           <use xlink:href="#icon-arrow-right-line" />
         </svg>
       </span>
-    </div>
+    </div> -->
 
     <div class="row">
-      <div class="span6">
+      <div class="span6 span-m-8">
         <h1 class="pad-b text-white text-uppercase">Learn the Technique. <br>Learn the Art.</h1>
         <p class="text-highlight pad-b">We are Portland’s Premier Technical Soccer Training Development Program. Academia de Futeboltraining is designed for players 8-21 years of age, who are inspired to take their game to the next level.</p>
         <a href="#" class="btn btn--primary">Learn More</a>
@@ -46,7 +46,7 @@
     </div>
 
     <div class="row pad-t">
-      <div class="span3">
+      <div class="span3 span-m-6 pad-b-m--20">
         <span class="icon icon-circle icon-soccer-ball">
           <svg class="icon-svg">
             <use xlink:href="#icon-soccer-ball" />
@@ -55,7 +55,7 @@
         <h4 class="pad-t--10 pad-b--10">The Academia</h4>
         <p>Players that are selected, join the Academia team, which participates in two of the highest leagues in Oregon: Oregon Premier League and Oregon Youth Soccer Association.</p>
       </div>
-      <div class="span3">
+      <div class="span3 span-m-6 pad-b-m--20">
         <span class="icon icon-circle icon-soccer-pitch">
           <svg class="icon-svg">
             <use xlink:href="#icon-soccer-pitch" />
@@ -64,7 +64,7 @@
         <h4 class="pad-t--10 pad-b--10">Training Academia</h4>
         <p>The Training Academia is open to all players 6 years and older. The Academia’s curriculum is designed to focus on developing the individual player's technical abilities and touch. It is also designed to develop confidence on the ball by teaching players how to maneuver in and around tight spaces under pressure.</p>
       </div>
-      <div class="span3">
+      <div class="span3 span-m-6">
         <span class="icon icon-circle icon-globe">
           <svg class="icon-svg">
             <use xlink:href="#icon-globe" />
@@ -73,7 +73,7 @@
         <h4 class="pad-t--10 pad-b--10">International Training</h4>
         <p>Players have the opportunity to travel to Brazil and train with professional club teams such as Fluminense. Training with these teams exposes players to a faster paced game which accelerates their development. While in Brazil, players gain valuable life experiences on and off the pitch.</p>
       </div>
-      <div class="span3">
+      <div class="span3 span-m-6">
         <span class="icon icon-circle icon-trophy">
           <svg class="icon-svg">
             <use xlink:href="#icon-trophy" />
@@ -102,7 +102,7 @@
 
     <div class="row pad-t">
       <div class="span3">
-        <a class="box-event">
+        <a href="#" class="box-event">
           <time datetime="2014-11-02">November 2, 2014</time>
           <h3>Event 1: A Short Title</h3>
           <span class="view-event">
@@ -116,7 +116,7 @@
         </a>
       </div>
       <div class="span3">
-        <a class="box-event">
+        <a href="#" class="box-event">
           <time datetime="2014-11-02">November 2, 2014</time>
           <h3>Event 2: This One Has a Longer Title</h3>
           <span class="view-event">
@@ -130,7 +130,7 @@
         </a>
       </div>
       <div class="span3">
-        <a class="box-event">
+        <a href="#" class="box-event">
           <time datetime="2014-11-02">November 2, 2014</time>
           <h3>Event 3: A Short Title</h3>
           <span class="view-event">
@@ -144,7 +144,7 @@
         </a>
       </div>
       <div class="span3">
-        <a class="box-event">
+        <a href="#" class="box-event">
           <time datetime="2014-11-02">November 2, 2014</time>
           <h3>Event 4: A Short Title</h3>
           <span class="view-event">
@@ -163,6 +163,8 @@
 </section>
 
 
+<?php $query = new WP_Query( array('posts_per_page' => 3, 'post_type' => 'video') ); ?>
+<?php if ( $query->have_posts() ) : ?>
 <section class="pad-v--2x">
   <div class="container">
 
@@ -176,52 +178,24 @@
     </div>
 
     <div class="row pad-t">
+      <?php while ($query->have_posts()) : $query->the_post(); ?>
       <div class="span4">
-        <a href="#" class="box-video">
+        <a href="#" class="box-video video-wrap" data-id="<?php the_field('youtube_id'); ?>">
           <span class="icon icon-arrow-right">
             <svg class="icon-svg">
               <use xlink:href="#icon-arrow-right" />
             </svg>
           </span>
-          <span class="video-title">
-            <h3>Cadete Training Academy</h3>
-            <h6>1:46</h6>
-          </span>
-          <img src="http://placehold.it/360x230/85E1E5/ffffff" alt="placeholder">
+          <span class="video-title"></span>
         </a>
       </div>
-      <div class="span4">
-        <a href="#" class="box-video">
-          <span class="icon icon-arrow-right">
-            <svg class="icon-svg">
-              <use xlink:href="#icon-arrow-right" />
-            </svg>
-          </span>
-          <span class="video-title">
-            <h3>Cadete Training Academy Lorem Ipsum set Dolor Lorem</h3>
-            <h6>1:46</h6>
-          </span>
-          <img src="http://placehold.it/360x230/D2BE14/ffffff" alt="placeholder">
-        </a>
-      </div>
-      <div class="span4">
-        <a href="#" class="box-video">
-          <span class="icon icon-arrow-right">
-            <svg class="icon-svg">
-              <use xlink:href="#icon-arrow-right" />
-            </svg>
-          </span>
-          <span class="video-title">
-            <h3>Cadete Training Academy</h3>
-            <h6>1:46</h6>
-          </span>
-          <img src="http://placehold.it/360x230/C95050/ffffff" alt="placeholder">
-        </a>
-      </div>
+      <?php endwhile; ?>
     </div>
 
   </div>
 </section>
+<?php endif; ?>
+<?php wp_reset_postdata(); ?>
 
 
 <section class="bg-gray pad-v">
@@ -255,7 +229,7 @@
 <section class="pad-v--2x">
   <div class="container">
 
-    <div class="row pad-t">
+    <div class="row">
       <div class="span4">
         <span class="icon icon-circle icon-pennant">
           <svg class="icon-svg">
@@ -292,5 +266,6 @@
 </section>
 
 
-
 <?php get_footer(); ?>
+
+<?php get_template_part( 'library/partials/modal', 'video' ); ?>

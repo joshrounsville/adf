@@ -18,9 +18,14 @@
   &:focus {
     .icon {
       opacity: 0;
+      transition: opacity 0.13s ease-in-out;
     }
     .video-title {
       opacity: 1;
+      transform: translateY(-50%);
+      h6 {
+        transform: translateY(0px);
+      }
     }
     img {
       opacity: 0.4;
@@ -37,7 +42,8 @@
     border-radius: 100%;
     padding: 0 0 0 4px;
     z-index: 5;
-    transition: opacity 0.13s ease-in-out;
+    transition: opacity 0.13s 0.02s ease-in-out;
+    backface-visibility: hidden;
   }
   .icon-svg {
     height: 27px;
@@ -46,11 +52,43 @@
   }
   img {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    top: -40px;
+    left: -20px;
     transition: opacity 0.13s ease-in-out;
+    min-width: 420px;
+    backface-visibility: hidden;
+  }
+  @include breakpoint(medium) {
+    height: 200px;
+    padding: 20px 10px;
+    &:hover,
+    &:focus {
+      .icon {
+        opacity: 1;
+
+      }
+      .video-title {
+        opacity: 1;
+        h6 {
+          transform: none;
+        }
+      }
+    }
+    .icon {
+      margin: 0;
+      top: auto;
+      right: 10px;
+      bottom: 10px;
+      left: auto;
+      width: 40px;
+      height: 40px;
+      .icon-svg {
+        height: 17px;
+      }
+    }
+    img {
+      opacity: 0.4;
+    }
   }
 }
 
@@ -59,12 +97,23 @@
   position: relative;
   z-index: 5;
   display: block;
-  transition: opacity 0.13s ease-in-out;
+  transition: opacity 0.13s ease-in-out, transform 0.13s ease-in-out;
   @include vAlign();
+  transform: translateY(-35%);
+  backface-visibility: hidden;
   h3 {
     color: #fff;
   }
   h6 {
     color: $colorBlueLight;
+    transform: translateY(5px);
+    transition: transform 0.13s 0.05s ease-in-out;
+  }
+  @include breakpoint(medium) {
+    opacity: 1;
+    transform: translateY(-50%);
+    h6 {
+      transform: none;
+    }
   }
 }

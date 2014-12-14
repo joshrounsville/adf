@@ -12,6 +12,10 @@ body {
   color: $colorText;
   line-height: $lineHeight;
   background: $colorGrayXDark;
+
+  @include breakpoint(medium) {
+    font-size: $fontBase - 2;
+  }
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -36,9 +40,6 @@ h1, h2, h3, h4, h5, h6,
     font-size: $fontH1 - 2;
   }
   @include breakpoint(medium) {
-    font-size: $fontH1 - 4;
-  }
-  @include breakpoint(small) {
     font-size: $fontH1 - 6;
   }
 }
@@ -49,9 +50,6 @@ h1, h2, h3, h4, h5, h6,
     font-size: $fontH2 - 2;
   }
   @include breakpoint(medium) {
-    font-size: $fontH2 - 4;
-  }
-  @include breakpoint(small) {
     font-size: $fontH2 - 5;
   }
 }
@@ -62,10 +60,7 @@ h1, h2, h3, h4, h5, h6,
     font-size: $fontH3 - 2;
   }
   @include breakpoint(medium) {
-    font-size: $fontH3 - 3;
-  }
-  @include breakpoint(small) {
-    font-size: $fontH3 - 4;
+    font-size: $fontH3 - 6;
   }
 }
 
@@ -77,9 +72,6 @@ h1, h2, h3, h4, h5, h6,
   }
   @include breakpoint(medium) {
     font-size: $fontH4 - 3;
-  }
-  @include breakpoint(small) {
-    font-size: $fontH4 - 4;
   }
 }
 

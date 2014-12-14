@@ -5,4 +5,12 @@
 
 section {
   background: #fff;
+  animation: fadeIn 0.4s 0.35s both;
+  backface-visibility: hidden;
+  @include breakpoint(medium) {
+    transition: opacity 0.13s ease-in-out;
+    .show-nav & {
+      opacity: 0.6;
+    }
+  }
 }

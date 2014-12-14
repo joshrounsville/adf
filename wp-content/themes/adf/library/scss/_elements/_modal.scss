@@ -1,0 +1,92 @@
+/* ==========================================================================
+  Modal
+========================================================================== */
+
+
+
+.modal-open {
+  overflow: hidden;
+  .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+
+.modal-dialog {
+  position: relative;
+  background-clip: padding-box;
+  outline: 0;
+  width: 890px;
+  max-width: 86%;
+  margin: 90px auto 0;
+}
+
+
+.modal-body {
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  .in & {
+    opacity: 1;
+  }
+  .close {
+    font-size: 26px;
+    position: absolute;
+    top: -36px;
+    right: -20px;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      .icon-svg {
+        stroke: $colorBlueLight;
+      }
+    }
+  }
+}
+
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000000;
+  transition: opacity 0.3s ease-in-out;
+  &.fade {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  &.in {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+  }
+}
+
+.video-target {
+  iframe {
+    width: 890px;
+    height: 501px;
+  }
+}

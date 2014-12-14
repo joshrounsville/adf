@@ -38,7 +38,26 @@
 
   <?php get_template_part( 'library/partials/icons', 'svg' ); ?>
 
-  <header>
+  <header class="header-mobile">
+    <div class="container">
+
+      <div class="row">
+        <div class="span12">
+          <a href="/" class="logo logo-mobile">
+            <img src="<?php echo get_template_directory_uri(); ?>/library/img/logos/academia-de-futeboltraining.png" alt="Academia de futeboltraining" width="60" height="60">
+          </a>
+          <a href="#" class="nav-show nav-trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <header class="header-main">
     <div class="container">
 
       <div class="row">
@@ -59,13 +78,18 @@
               'theme_location' => 'translation-links'
             )); ?>
           </div>
+          <a href="#" class="icon icon-x nav-hide nav-trigger">
+            <svg class="icon-svg">
+              <use xlink:href="#icon-x" />
+            </svg>
+          </a>
         </div>
       </div>
 
       <div class="row pad-t--20">
-        <div class="span7">
+        <div class="span7 span-m-12">
 
-          <a href="/" class="logo">
+          <a href="/" class="logo logo-main">
             <img src="<?php echo get_template_directory_uri(); ?>/library/img/logos/academia-de-futeboltraining.png" alt="Academia de futeboltraining" width="60" height="60">
           </a>
 
@@ -80,7 +104,7 @@
 
         </div>
 
-        <div class="span5 text-right">
+        <div class="span5 text-right span-m-12">
           <nav class="nav-utility">
             <ul class="list-inline">
               <li class="social facebook">

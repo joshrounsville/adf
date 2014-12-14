@@ -10,4 +10,26 @@
   padding: 230px 0 170px;
   margin-top: -135px;
   position: relative;
+  animation: fadeIn 0.4s 0.35s both;
+  h1 {
+    animation: fadeIn 0.4s 0.4s both;
+  }
+  p {
+    animation: fadeIn 0.4s 0.45s both;
+  }
+  .btn {
+    animation: fadeIn 0.4s 0.5s both;
+  }
+
+  @include breakpoint(large) {
+    padding: 200px 0 140px;
+  }
+  @include breakpoint(medium) {
+    margin-top: -95px;
+    padding: 115px 0 60px;
+    transition: opacity 0.13s ease-in-out;
+    .show-nav & {
+      opacity: 0.6;
+    }
+  }
 }

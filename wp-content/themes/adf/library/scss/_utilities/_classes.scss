@@ -48,6 +48,10 @@
 .text-highlight {
   @include fontRegular();
   font-size: $fontLarge;
+
+  @include breakpoint(medium) {
+    font-size: $fontLarge - 2;
+  }
 }
 
 

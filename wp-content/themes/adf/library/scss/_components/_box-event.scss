@@ -9,7 +9,7 @@
   border-top: 4px solid $colorBlueLight;
   border-radius: 4px;
   height: 230px;
-  padding: 20px;
+  padding: 20px 17px;
   position: relative;
   display: block;
   backface-visibility: hidden;
@@ -19,6 +19,14 @@
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
     .icon-svg {
       transform: translateX(2px);
+    }
+  }
+
+  @include breakpoint(medium) {
+    padding: 15px 7px;
+    height: 200px;
+    time {
+      font-size: $fontSmall;
     }
   }
 }
@@ -42,5 +50,10 @@
       height: 14px;
       margin: 0 auto;
     }
+  }
+
+  @include breakpoint(medium) {
+    bottom: 15px;
+    right: 10px;
   }
 }

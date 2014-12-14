@@ -21,12 +21,29 @@ footer {
       padding: 0 8px 0 0;
     }
   }
+
+  @include breakpoint(medium) {
+    font-size: $fontSmall - 2;
+  }
+}
+
+.logo-footer {
+  margin-right: 30px;
+  @include breakpoint(medium) {
+    margin-right: 20px;
+  }
+  @include breakpoint(small) {
+    display: none;
+  }
 }
 
 .nav-footer {
   display: inline-block;
   vertical-align: top;
   padding: 0 50px 0 0;
+  &:last-of-type {
+    padding: 0;
+  }
   h5 {
     padding: 0 0 7px;
     color: #fff;
@@ -37,5 +54,21 @@ footer {
   }
   .icon {
     fill: $colorGray;
+  }
+
+  @include breakpoint(medium) {
+    padding: 0 30px 0 0;
+  }
+  @include breakpoint(small) {
+    padding: 0 0 15px;
+    width: 45%;
+    &:nth-last-child(2) {
+      padding: 0;
+    }
+    .list-inline {
+      li {
+        display: inline-block;
+      }
+    }
   }
 }

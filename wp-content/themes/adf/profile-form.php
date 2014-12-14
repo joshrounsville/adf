@@ -1,6 +1,6 @@
 <?php $template->the_errors(); ?>
 
-  <form id="your-profile<?php $template->the_instance(); ?>" action="<?php $template->the_action_url( 'profile' ); ?>" method="post">
+  <form id="your-profile<?php $template->the_instance(); ?>" class="form-validate-profile" action="<?php $template->the_action_url( 'profile' ); ?>" method="post">
     <?php wp_nonce_field( 'update-user_' . $current_user->ID ); ?>
     <p class="hide">
       <input type="hidden" name="from" value="profile" />
@@ -57,47 +57,47 @@
     <div class="form-row">
       <div class="form-item form-left">
         <label for="first_name<?php $template->the_instance(); ?>">First Name</label>
-        <input type="text" name="first_name" id="first_name<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->first_name ); ?>">
+        <input type="text" name="first_name" id="first_name<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->first_name ); ?>" required>
       </div>
       <div class="form-item form-right">
         <label for="last_name<?php $template->the_instance(); ?>">Last Name</label>
-        <input type="text" name="last_name" id="last_name<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->last_name ); ?>">
+        <input type="text" name="last_name" id="last_name<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->last_name ); ?>" required>
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-item form-left">
         <label for="current_age<?php $template->the_instance(); ?>">Current Age</label>
-        <input type="text" name="current_age" id="current_age<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->current_age ); ?>">
+        <input type="text" name="current_age" id="current_age<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->current_age ); ?>" required>
       </div>
       <div class="form-item form-right">
         <label for="current_club<?php $template->the_instance(); ?>">Current Club</label>
-        <input type="text" name="current_club" id="current_club<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->current_club ); ?>">
+        <input type="text" name="current_club" id="current_club<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->current_club ); ?>" required>
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-item form-left">
         <label for="email<?php $template->the_instance(); ?>">E-mail</label>
-        <input type="text" name="email" id="email<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->user_email ); ?>">
+        <input type="text" name="email" id="email<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->user_email ); ?>" required>
       </div>
       <div class="form-item form-right">
         <label for="phone_number<?php $template->the_instance(); ?>">Phone Number</label>
-        <input type="tel" name="phone_number" id="phone_number<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->phone_number ); ?>">
+        <input type="tel" name="phone_number" id="phone_number<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->phone_number ); ?>" required>
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-item form-full-width">
         <label for="goals_short_term<?php $template->the_instance(); ?>">Soccer Goals (Short Term)</label>
-        <textarea name="goals_short_term" id="goals_short_term<?php $template->the_instance(); ?>"><?php echo esc_attr( $profileuser->goals_short_term ); ?></textarea>
+        <textarea name="goals_short_term" id="goals_short_term<?php $template->the_instance(); ?>" required><?php echo esc_attr( $profileuser->goals_short_term ); ?></textarea>
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-item form-full-width">
         <label for="goals_long_term<?php $template->the_instance(); ?>">Soccer Goals (Long Term)</label>
-        <textarea name="goals_long_term" id="goals_long_term<?php $template->the_instance(); ?>"><?php echo esc_attr( $profileuser->goals_long_term ); ?></textarea>
+        <textarea name="goals_long_term" id="goals_long_term<?php $template->the_instance(); ?>" required><?php echo esc_attr( $profileuser->goals_long_term ); ?></textarea>
       </div>
     </div>
 
@@ -106,29 +106,29 @@
     <div class="form-row">
       <div class="form-item form-left">
         <label for="guardian_first_name<?php $template->the_instance(); ?>">First Name</label>
-        <input type="text" name="guardian_first_name" id="guardian_first_name<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->guardian_first_name ); ?>">
+        <input type="text" name="guardian_first_name" id="guardian_first_name<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->guardian_first_name ); ?>" required>
       </div>
       <div class="form-item form-right">
         <label for="guardian_last_name<?php $template->the_instance(); ?>">Last Name</label>
-        <input type="text" name="guardian_last_name" id="guardian_last_name<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->guardian_last_name ); ?>">
+        <input type="text" name="guardian_last_name" id="guardian_last_name<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->guardian_last_name ); ?>" required>
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-item form-left">
         <label for="guardian_email<?php $template->the_instance(); ?>">Email Address</label>
-        <input type="email" name="guardian_email" id="guardian_email<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->guardian_email ); ?>">
+        <input type="email" name="guardian_email" id="guardian_email<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->guardian_email ); ?>" required>
       </div>
       <div class="form-item form-right">
         <label for="guardian_phone_number<?php $template->the_instance(); ?>">Phone Number</label>
-        <input type="tel" name="guardian_phone_number" id="guardian_phone_number<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->guardian_phone_number ); ?>">
+        <input type="tel" name="guardian_phone_number" id="guardian_phone_number<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->guardian_phone_number ); ?>" required>
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-item form-full-width">
         <label for="hear_about_us<?php $template->the_instance(); ?>">How did you hear about us?</label>
-        <textarea name="hear_about_us" id="hear_about_us<?php $template->the_instance(); ?>"><?php echo esc_attr( $profileuser->hear_about_us ); ?></textarea>
+        <textarea name="hear_about_us" id="hear_about_us<?php $template->the_instance(); ?>" required><?php echo esc_attr( $profileuser->hear_about_us ); ?></textarea>
       </div>
     </div>
 

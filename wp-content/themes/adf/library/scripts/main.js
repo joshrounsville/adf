@@ -29,7 +29,7 @@ $(function() {
 
 
   //////// setup request animation frame shim
-  (function() {
+  var animationFrame = function() {
     var lastTime = 0;
     var vendors = ['ms', 'moz', 'webkit', 'o'];
     for( var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x ) {
@@ -52,7 +52,77 @@ $(function() {
         clearTimeout(id);
       };
     }
-  }());
+  };
+
+  animationFrame();
+
+
+
+  //////// call fitvids
+  var fluidVid = function() {
+    var vid = $('.responsive-vid');
+
+    $(vid).fitVids();
+  };
+
+  fluidVid();
+
+
+
+  //////// call jQuery validate
+  var formValidation = function() {
+    var formValidate = $('.form-validate');
+    var formValidateProfile = $('.form-validate-profile');
+
+    $(formValidate).validate({
+      rules: {
+        pass1: {
+          required: true,
+          minlength: 5
+        },
+        pass2: {
+          required: true,
+          minlength: 5,
+          equalTo: '#pass1'
+        },
+        current_age: {
+          required: true,
+          number: true
+        },
+        phone_number: {
+          required: true,
+          phoneUS: true
+        },
+        guardian_phone_number: {
+          required: true,
+          phoneUS: true
+        },
+        program: {
+          required: true
+        }
+      }
+    });
+
+    $(formValidateProfile).validate({
+      rules: {
+        current_age: {
+          required: true,
+          number: true
+        },
+        phone_number: {
+          required: true,
+          phoneUS: true
+        },
+        guardian_phone_number: {
+          required: true,
+          phoneUS: true
+        },
+        program: 'required'
+      }
+    });
+  };
+
+  formValidation();
 
 
 
@@ -87,6 +157,23 @@ $(function() {
 
 
 
+  //////// hide/show nav
+
+  var mobileNav = function() {
+    var trigger = $('.nav-trigger');
+
+    trigger.on('touchstart click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      body.toggleClass('show-nav');
+    });
+
+  };
+
+  mobileNav();
+
+
 
   //////// hide/show dropdown
   var dropdown = function() {
@@ -117,6 +204,120 @@ $(function() {
 
 
 
+
+  //////// lot's O' video stuff
+
+  var video = function() {
+    var videoBox = $('.video-wrap');
+    var key = 'AIzaSyBXgjE8zZuyJW0X6KS22dR34OdVORL91U4';
+
+    videoBox.each(function() {
+
+      var el = $(this);
+      var contentTarget = $(el).find('.video-title');
+      var vidId = $(this).attr('data-id');
+
+      $.getJSON('https://www.googleapis.com/youtube/v3/videos?id=' + vidId + '&part=snippet,contentDetails&key=' + key, function(data) {
+
+
+        // get the title
+        var title = data.items[0].snippet.title;
+
+
+        // get the screenshot
+        var imgSrc = data.items[0].snippet.thumbnails.standard.url;
+
+
+        // format the time
+        var time = data.items[0].contentDetails.duration;
+            time = time.split('PT')[1];
+        var formattedTime;
+        var seconds;
+        var minutes;
+
+        if (time.indexOf('M') >= 0) {
+
+          minutes = time.split('M')[0];
+          seconds = time.split('M')[1];
+          seconds = seconds.split('S')[0];
+
+          if ( seconds.length < 2 ) {
+            seconds = '0' + seconds;
+          }
+
+          formattedTime = minutes + ':' + seconds;
+
+        } else {
+
+          seconds = time.split('S')[0];
+
+          if ( seconds.length < 2 ) {
+            seconds = '0' + seconds;
+          }
+
+          formattedTime = '0:' + seconds;
+
+        }
+
+
+        // build the layout
+        $('<h3>', {
+          'html': title
+        }).appendTo(contentTarget);
+
+        $('<h6>', {
+          'html': formattedTime
+        }).appendTo(contentTarget);
+
+        $('<img>', {
+          'src': imgSrc,
+          'title': title
+        }).appendTo(el);
+
+      });
+
+    });
+
+
+  };
+
+  video();
+
+
+
+
+  var playVideo = function() {
+    var playBtn = $('.video-wrap');
+    var videoTarget = $('.video-target');
+
+    playBtn.on('click', function(e) {
+      e.preventDefault();
+
+      var videoID = $(this).attr('data-id');
+
+      $('<iframe>', {
+        'src': '//www.youtube.com/embed/' + videoID + '?rel=0&autoplay=1&vq=hd720',
+        'frameborder': 0,
+        'id': 'youtube-video',
+        'allowfullscreen' : true
+      }).appendTo(videoTarget);
+
+      $('#video-modal').modal();
+
+      fluidVid();
+
+    });
+
+  };
+
+  $('#video-modal').on('hide.bs.modal', function() {
+    setTimeout(function() {
+      $('.fluid-width-video-wrapper').remove();
+      $('#youtube-video').remove();
+    }, 200);
+  });
+
+  playVideo();
 
 
 

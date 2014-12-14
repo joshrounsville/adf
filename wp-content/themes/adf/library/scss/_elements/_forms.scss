@@ -99,6 +99,10 @@ input::-moz-focus-inner {
     display: block;
     padding: 5px 0 0 0;
   }
+
+  @include breakpoint(small) {
+    padding: 0;
+  }
 }
 
 .form-override {
@@ -113,24 +117,52 @@ input::-moz-focus-inner {
       padding: 0 0 0 15px;
     }
   }
+  @include breakpoint(small) {
+    p {
+      width: 100%;
+      &:nth-of-type(1) {
+        float: none;
+        padding: 0 0 20px;
+      }
+      &:nth-of-type(2) {
+        float: none;
+        padding: 0 0 20px;
+      }
+    }
+  }
 }
 
 .form-item {
   width: 50%;
+  @include breakpoint(small) {
+    width: 100%;
+  }
 }
 
 .form-full-width {
   width: 100%;
+  @include breakpoint(small) {
+    padding: 0 0 20px;
+  }
 }
 
 .form-left {
   float: left;
   padding: 0 15px 0 0;
+
+  @include breakpoint(small) {
+    float: none;
+    padding: 0 0 20px;
+  }
 }
 
 .form-right {
   float: right;
   padding: 0 0 0 15px;
+  @include breakpoint(small) {
+    float: none;
+    padding: 0 0 20px;
+  }
 }
 
 label,
@@ -140,6 +172,10 @@ label,
   color: $colorGray;
   padding: 0 0 3px;
   @include fontBold();
+  &.error {
+    color: $colorRed;
+    padding: 2px 0 0 0;
+  }
 }
 
 input[type="text"],
@@ -167,6 +203,10 @@ textarea {
       background: $colorGrayXLight;
       border: 1px solid $colorGrayXLight;
     }
+  }
+  &.error {
+    border-color: $colorRedLight;
+    background: #fff;
   }
 }
 
@@ -240,7 +280,6 @@ textarea {
 .error {
   @include fontRegular();
 }
-
 
 
 

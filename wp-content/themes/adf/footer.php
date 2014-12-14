@@ -4,7 +4,7 @@
         <div class="row">
           <div class="span12">
 
-            <a href="/" class="logo">
+            <a href="/" class="logo logo-footer">
               <img src="<?php echo get_template_directory_uri(); ?>/library/img/logos/academia-de-futeboltraining.png" alt="Academia de futeboltraining" width="60" height="60">
             </a>
 

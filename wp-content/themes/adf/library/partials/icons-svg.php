@@ -93,4 +93,9 @@
       c0.3-0.1,0.5-0.2,0.8-0.3C-283.9,389.2-283.7,389.2-283.6,389.2"/>
   </symbol>
 
+  <symbol id="icon-x" viewBox="-294.3 383 23.6 23.6">
+    <path fill="none" stroke-width="3" stroke-linecap="square" d="M-292.1,404.6l19.4-19.4"/>
+    <path fill="none" stroke-width="3" stroke-linecap="square" d="M-272.8,404.6l-19.4-19.4"/>
+  </symbol>
+
 </svg>

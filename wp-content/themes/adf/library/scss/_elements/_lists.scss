@@ -30,6 +30,17 @@ ol {
   li {
     display: inline-block;
   }
+  @include breakpoint(small) {
+    display: block;
+    li {
+      display: block;
+      margin: 0;
+      padding: 0 0 10px;
+      &:last-of-type {
+        padding: 0;
+      }
+    }
+  }
 }
 
 .list-inline-spacer {
@@ -40,11 +51,39 @@ ol {
       margin: 0;
     }
   }
+
+  @include breakpoint(large) {
+    li {
+      margin: 0 20px 0 0;
+    }
+  }
+  @include breakpoint(small) {
+    display: block;
+    li {
+      display: block;
+      margin: 0;
+      padding: 0 0 10px;
+      &:last-of-type {
+        padding: 0;
+      }
+    }
+  }
 }
 
 .list-inline-middle {
   li {
     display: inline-block;
     vertical-align: middle;
+  }
+  @include breakpoint(small) {
+    display: block;
+    li {
+      display: block;
+      margin: 0;
+      padding: 0 0 10px;
+      &:last-of-type {
+        padding: 0;
+      }
+    }
   }
 }

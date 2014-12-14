@@ -13,11 +13,21 @@
 .pad-v {
   padding-top: $padding;
   padding-bottom: $padding;
+
+  @include breakpoint(medium) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 .pad-v--2x {
   padding-top: $padding*2;
   padding-bottom: $padding*2;
+
+  @include breakpoint(medium) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 .pad-h {
@@ -35,6 +45,10 @@
 
 .pad-t--2x {
   padding-top: $padding*2;
+
+  @include breakpoint(medium) {
+    padding-top: 40px;
+  }
 }
 
 .pad-t--20 {
@@ -59,6 +73,10 @@
 
 .pad-b--2x {
   padding-bottom: $padding*2;
+
+  @include breakpoint(medium) {
+    padding-bottom: 40px;
+  }
 }
 
 .pad-b--20 {
@@ -71,6 +89,12 @@
 
 .pad-b--0 {
   padding-bottom: 0;
+}
+
+.pad-b-m--20 {
+  @include breakpoint(medium) {
+    padding-bottom: 20px;
+  }
 }
 
 
