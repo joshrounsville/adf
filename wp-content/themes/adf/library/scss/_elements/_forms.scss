@@ -191,6 +191,7 @@ textarea {
   border-radius: 4px;
   display: block;
   width: 100%;
+  -webkit-appearance: none;
   transition: border 0.13s ease-in-out, background 0.13s ease-in-out;
   &:hover,
   &:focus {

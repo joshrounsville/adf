@@ -28,8 +28,9 @@
     margin-top: -95px;
     padding: 115px 0 60px;
     transition: opacity 0.13s ease-in-out;
+    animation: none;
     .show-nav & {
-      opacity: 0.6;
+      opacity: 0.5;
     }
   }
 }
