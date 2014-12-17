@@ -41,6 +41,10 @@
 
 .pad-t {
   padding-top: $padding;
+
+  @include breakpoint(medium) {
+    padding-top: 20px;
+  }
 }
 
 .pad-t--2x {
@@ -69,6 +73,10 @@
 
 .pad-b {
   padding-bottom: $padding;
+
+  @include breakpoint(medium) {
+    padding-bottom: 20px;
+  }
 }
 
 .pad-b--2x {

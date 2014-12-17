@@ -48,6 +48,9 @@ h1, h2, h3, h4, h5, h6,
   @include breakpoint(medium) {
     font-size: $fontH1 - 6;
   }
+  @include breakpoint(small) {
+    font-size: $fontH1 - 10;
+  }
 }
 
 .h2, h2 {

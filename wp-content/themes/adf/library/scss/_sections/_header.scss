@@ -21,6 +21,7 @@ header {
   display: none;
   @include breakpoint(medium) {
     display: block;
+    padding: 15px 0;
     transition: opacity 0.13s ease-in-out;
     .show-nav & {
       opacity: 0.5;

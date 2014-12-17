@@ -32,5 +32,8 @@
     .show-nav & {
       opacity: 0.5;
     }
+    h1, p, .btn {
+      animation: none;
+    }
   }
 }
