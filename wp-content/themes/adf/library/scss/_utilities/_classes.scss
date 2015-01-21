@@ -55,7 +55,7 @@
 }
 
 
-/*==========  BACKGROUND  ==========*/
+/*==========  BACKGROUND - COLORS ==========*/
 
 .bg-white {
   background-color: #fff;
@@ -63,6 +63,60 @@
 
 .bg-gray {
   background-color: $colorGrayXLight;
+  .page-id-154 & {
+    background-color: $colorBlue;
+    h3, h4 {
+      color: #fff;
+    }
+  }
+  .page-id-156 & {
+    background-color: $colorGray;
+    h3, h4 {
+      color: #fff;
+    }
+  }
+  .page-id-158 & {
+    background-color: $colorGrayDark;
+    h3, h4 {
+      color: #fff;
+    }
+  }
+  .page-id-160 & {
+    background-color: $colorBlueDark;
+    h3, h4 {
+      color: #fff;
+    }
+  }
+}
+
+.bg-gray-dark {
+  background-color: $colorGrayLight;
+}
+
+.bg-red {
+  background-color: $colorRedLight;
+}
+
+.bg-blue {
+  background-color: $colorBlueLight;
+}
+
+
+
+/*==========  BACKGROUND - IMAGES ==========*/
+
+.bg-blue-img {
+  background-image: url(../img/headers/header-blue.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.bg-red-img {
+  background-image: url(../img/headers/header-red.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 

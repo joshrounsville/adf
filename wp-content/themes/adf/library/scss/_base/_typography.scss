@@ -8,13 +8,14 @@ html, body, button {
 
 body {
   @include fontLight();
+  font-family: $fontRegular;
+  font-style: normal;
   font-size: $fontBase;
   color: $colorText;
   line-height: $lineHeight;
   background: $colorGrayXDark;
 
   @include breakpoint(medium) {
-    font-size: $fontBase - 2;
     &.show-nav {
       height: 100%;
       overflow-y: hidden;
@@ -35,6 +36,8 @@ p, ul, ol {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   @include fontBold();
+  font-family: $fontRegular;
+  font-style: normal;
   color: $colorGrayXDark;
   line-height: $lineHeightHeader;
   text-rendering: optimizeLegibility;
@@ -65,6 +68,7 @@ h1, h2, h3, h4, h5, h6,
 
 .h3, h3 {
   font-size: $fontH3;
+  line-height: $lineHeightHeader + 0.1;
   @include breakpoint(large) {
     font-size: $fontH3 - 2;
   }
@@ -76,6 +80,7 @@ h1, h2, h3, h4, h5, h6,
 .h4, h4 {
   font-size: $fontH4;
   @include fontRegular();
+  line-height: $lineHeightHeader + 0.1;
   @include breakpoint(large) {
     font-size: $fontH4 - 2;
   }
@@ -99,9 +104,13 @@ small {
   color: $colorGray;
 }
 
+.semi {
+  @include fontSemibold();
+}
+
 .strong,
 strong {
-  font-weight: bold;
+  @include fontBold();
 }
 
 time {

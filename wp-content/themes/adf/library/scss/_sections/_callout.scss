@@ -4,10 +4,12 @@
 
 
 .callout {
-  background: url(../img/header.jpg) no-repeat center center;
+  background-image: url(../img/headers/header.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   color: #fff;
-  padding: 230px 0 170px;
+  padding: 200px 0 90px;
   margin-top: -135px;
   position: relative;
   animation: fadeIn 0.4s 0.35s both;
@@ -21,19 +23,65 @@
     animation: fadeIn 0.4s 0.5s both;
   }
 
+  .home & {
+    padding: 230px 0 170px;
+  }
+  .page-template-page-about-php & {
+    background-image: url(../img/headers/header-about.jpg);
+  }
+
   @include breakpoint(large) {
-    padding: 200px 0 140px;
+    padding: 180px 0 70px;
+    .home & {
+      padding: 190px 0 120px;
+    }
   }
   @include breakpoint(medium) {
     margin-top: -95px;
-    padding: 115px 0 60px;
+    padding: 115px 0 30px;
     transition: opacity 0.13s ease-in-out;
     animation: none;
+    .home & {
+      padding: 115px 0 60px;
+    }
     .show-nav & {
       opacity: 0.5;
     }
     h1, p, .btn {
       animation: none;
+    }
+  }
+}
+
+.nav-secondary {
+  padding: 20px 0 19px;
+  @include fontBold();
+  font-size: $fontSmall;
+  li {
+    margin: 0 15px 0 0;
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+  .current_page_item {
+    a {
+      color: $colorGrayXDark;
+    }
+  }
+  a {
+    color: $colorGrayDark;
+    &:hover,
+    &:focus {
+      color: $colorGrayXDark;
+    }
+  }
+
+  @include breakpoint(small) {
+    padding: 15px 0;
+    li {
+      display: inline-block;
+      margin: 0 10px 0 0;
+      padding: 0;
     }
   }
 }

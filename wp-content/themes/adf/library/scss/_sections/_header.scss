@@ -9,7 +9,12 @@ header {
   z-index: 10;
   position: relative;
   animation: fadeIn 0.4s 0.2s both;
-  .home & {
+  .home &,
+  .page-id-154 &,
+  .page-id-156 &,
+  .page-id-158 &,
+  .page-id-160 &,
+  .page-template-page-about-php & {
     background: transparent;
   }
   @include breakpoint(medium) {
@@ -97,7 +102,12 @@ header {
     .show-nav & {
       transform: translateX(0%);
     }
-    .home & {
+    .home &,
+    .page-id-154 &,
+    .page-id-156 &,
+    .page-id-158 &,
+    .page-id-160 &,
+    .page-template-page-about-php & {
       background: $colorGrayXDark;
     }
     .container {
@@ -185,11 +195,16 @@ header {
   li {
     margin: 0 15px 0 0;
   }
+  .current_page_item {
+    a {
+      color: $colorBlueLight;
+    }
+  }
   a {
     color: #fff;
     &:hover,
     &:focus {
-      color: $colorBlue;
+      color: $colorBlueLight;
     }
   }
 

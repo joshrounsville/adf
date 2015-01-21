@@ -1,0 +1,29 @@
+/* ==========================================================================
+  Box Outline
+========================================================================== */
+
+
+.box-outline {
+  border: 2px solid $colorBlueLight;
+  border-radius: 3px;
+  padding: 30px 20px;
+  font-size: $fontH4;
+  h3 {
+    padding: 0 0 15px;
+  }
+  p, ul {
+    &:last-of-type {
+      padding: 0;
+    }
+  }
+  strong {
+    @include fontRegular();
+  }
+
+  @include breakpoint(small) {
+    font-size: $fontH4 - 2;
+  }
+  @include breakpoint(small) {
+    font-size: $fontH4 - 4;
+  }
+}

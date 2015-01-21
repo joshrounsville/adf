@@ -4,20 +4,18 @@
 
 
 @mixin fontRegular() {
-  font-family: $fontRegular;
-  font-style: normal;
   font-weight: 400;
 }
 
 @mixin fontLight() {
-  font-family: $fontRegular;
-  font-style: normal;
   font-weight: 300;
 }
 
+@mixin fontSemibold() {
+  font-weight: 600;
+}
+
 @mixin fontBold() {
-  font-family: $fontRegular;
-  font-style: normal;
   font-weight: 700;
 }
 
