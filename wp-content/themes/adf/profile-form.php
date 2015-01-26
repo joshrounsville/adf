@@ -137,7 +137,7 @@
 
     <div class="form-row">
       <div class="form-item form-full-width form-radio">
-        <ul class="list-inline-spacer">
+        <ul class="list-inline-spacer-right">
           <?php $programSelect = esc_attr( $profileuser->program ); ?>
           <li>
             <input type="radio" name="program" value="mens-team" id="program1" <?php if ( $programSelect == 'mens-team') : ?>checked<?php endif; ?>>

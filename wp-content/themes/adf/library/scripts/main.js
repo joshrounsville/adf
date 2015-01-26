@@ -129,30 +129,100 @@ $(function() {
 
   //////// carousel setup
   var slider = $('.slider');
+  var sliderInit = function() {
 
-  slider.owlCarousel({
-    items : 3,
-    itemsDesktop : [1199, 4],
-    itemsDesktopSmall : [980, 3],
-    itemsTablet: [768, 2],
-    itemsTabletSmall: false,
-    itemsMobile : [479, 1],
-    slideSpeed : 200,
-    paginationSpeed : 800,
-    rewindSpeed : 1000,
-    autoPlay : false,
-    stopOnHover : true,
-    navigation : true,
-    rewindNav : true,
-    scrollPerPage : false,
-    pagination : true,
-    paginationNumbers: false,
-    responsive: true,
-    responsiveRefreshRate : 200,
-    responsiveBaseWidth: window,
-    baseClass : 'owl-carousel',
-    mouseDrag : false
-  });
+    slider.owlCarousel({
+      items : 4,
+      itemsDesktop : [1199, 4],
+      itemsDesktopSmall : [980, 3],
+      itemsTablet: [768, 2],
+      itemsTabletSmall: false,
+      itemsMobile : [479, 1],
+      slideSpeed : 200,
+      paginationSpeed : 800,
+      rewindSpeed : 1000,
+      autoPlay : false,
+      navigation : true,
+      pagination : false,
+      responsive: true,
+      responsiveRefreshRate : 200,
+      responsiveBaseWidth: window,
+      baseClass : 'owl-carousel',
+      mouseDrag : false,
+      beforeInit : afterInit,
+      afterAction : afterAction
+    });
+
+  };
+
+  sliderInit();
+
+
+  function afterInit() {
+    var item = $('.slider-team').find('.item');
+    var i = 0;
+
+    item.each(function() {
+      $(this).addClass('item-' + i);
+      i++;
+    });
+
+  }
+
+  function afterAction() {
+    var count = this.owl.visibleItems;
+    var item = $('.slider-team').find('.item');
+
+    item.removeClass('active');
+
+    for ( var i = 0; i < count.length; i++) {
+      slider.find('.item-' + count[i]).addClass('active');
+    }
+
+  }
+
+
+  var filterSlider = function() {
+    var btn = $('.btn--slider-filter');
+    var target;
+    var newPlayers;
+    var loader = $('.loader');
+    var playerCollection = $('.player-collection');
+
+    btn.on('click', function(e) {
+      e.preventDefault();
+
+      loader.addClass('loading');
+      target = $(this).attr('data-target');
+
+      btn.removeClass('active');
+      $(this).addClass('active');
+
+      $('.slider-team').data('owlCarousel').destroy();
+      $(slider).find('.item').remove();
+
+      if ( target === 'all' ) {
+        newPlayers = playerCollection.find('.item');
+      } else {
+        newPlayers = playerCollection.find('.item[data-position=' + target + ']');
+      }
+
+      setTimeout(function() {
+        newPlayers.clone().appendTo(slider);
+        sliderInit();
+
+        loader.removeClass('loading');
+      }, 400);
+
+
+    });
+
+  };
+
+  filterSlider();
+
+
+
 
 
 
@@ -318,6 +388,8 @@ $(function() {
   });
 
   playVideo();
+
+
 
 
 

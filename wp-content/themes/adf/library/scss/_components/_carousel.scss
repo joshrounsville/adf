@@ -41,6 +41,7 @@
 }
 
 .owl-wrapper {
+  backface-visibility: hidden;
   @include clearfix();
 }
 
@@ -56,7 +57,6 @@
     transform: translate3d(0, 0, 0);
   }
   .owl-wrapper-outer {
-    overflow: hidden;
     position: relative;
     width: 100%;
     &.autoHeight {
@@ -139,3 +139,72 @@
 .owl-fadeUp-out {
   animation: scaleUpTo .5s ease both;
 }
+
+
+
+
+
+.loader {
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 5px solid #fff;
+  border-right: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+  border-left: 5px solid $colorBlueLight;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -20px 0 0 -20px;
+  opacity: 0;
+  animation: loader 0.7s infinite linear;
+  transition: opacity 0.1s ease-in-out;
+  &:after {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+  &.loading {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+/**** **** Team Slider **** ****/
+
+.slider-team {
+  margin: 0 -15px;
+  width: auto;
+  backface-visibility: hidden;
+  height: 290px;
+  .owl-item {
+    padding: 0 15px;
+  }
+  .item {
+    overflow: hidden;
+  }
+}
+
+.btn--slider-filter {
+  &.active {
+    border-color: $colorBlueLight;
+    background: $colorBlueLight;
+    color: $colorBlueDark;
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: $colorBlueLight;
+      background: $colorBlueLight;
+      color: $colorBlueDark;
+    }
+  }
+}
+

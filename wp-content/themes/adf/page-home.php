@@ -93,7 +93,7 @@
 
     <div class="row">
       <div class="span12">
-        <ul class="list-inline-middle list-inline-spacer">
+        <ul class="list-inline-middle list-inline-spacer-right">
           <li><h3>Upcoming Events</h3></li>
           <li><a href="#" class="btn">See All Events</a></li>
         </ul>
@@ -105,7 +105,7 @@
         <a href="#" class="box-event">
           <time datetime="2014-11-02">November 2, 2014</time>
           <h3>Event 1: A Short Title</h3>
-          <span class="view-event">
+          <span class="view-item">
             View Event
             <span class="icon icon-arrow-right-line">
               <svg class="icon-svg">
@@ -119,7 +119,7 @@
         <a href="#" class="box-event">
           <time datetime="2014-11-02">November 2, 2014</time>
           <h3>Event 2: This One Has a Longer Title</h3>
-          <span class="view-event">
+          <span class="view-item">
             View Event
             <span class="icon icon-arrow-right-line">
               <svg class="icon-svg">
@@ -133,7 +133,7 @@
         <a href="#" class="box-event">
           <time datetime="2014-11-02">November 2, 2014</time>
           <h3>Event 3: A Short Title</h3>
-          <span class="view-event">
+          <span class="view-item">
             View Event
             <span class="icon icon-arrow-right-line">
               <svg class="icon-svg">
@@ -147,7 +147,7 @@
         <a href="#" class="box-event">
           <time datetime="2014-11-02">November 2, 2014</time>
           <h3>Event 4: A Short Title</h3>
-          <span class="view-event">
+          <span class="view-item">
             View Event
             <span class="icon icon-arrow-right-line">
               <svg class="icon-svg">
@@ -170,7 +170,7 @@
 
     <div class="row">
       <div class="span12">
-        <ul class="list-inline-middle list-inline-spacer">
+        <ul class="list-inline-middle list-inline-spacer-right">
           <li><h3>Latest Videos</h3></li>
           <li><a href="#" class="btn">See All Videos</a></li>
         </ul>
@@ -203,7 +203,7 @@
 
     <div class="row">
       <div class="span12">
-        <ul class="list-inline-spacer">
+        <ul class="list-inline-spacer-right">
           <li><h4>Our Partners:</h4></li>
           <li>
             <img src="<?php echo get_template_directory_uri(); ?>/library/img/lids.png" alt="placeholder">

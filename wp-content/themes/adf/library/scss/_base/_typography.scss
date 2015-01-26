@@ -7,7 +7,7 @@ html, body, button {
 }
 
 body {
-  @include fontLight();
+  @include fontRegular();
   font-family: $fontRegular;
   font-style: normal;
   font-size: $fontBase;

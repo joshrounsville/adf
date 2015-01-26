@@ -29,6 +29,9 @@
   .page-template-page-about-php & {
     background-image: url(../img/headers/header-about.jpg);
   }
+  .page-template-page-team-php & {
+    background-image: url(../img/headers/header-teams.jpg);
+  }
 
   @include breakpoint(large) {
     padding: 180px 0 70px;

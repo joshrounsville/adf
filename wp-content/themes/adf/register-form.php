@@ -100,7 +100,7 @@
 
     <div class="form-row">
       <div class="form-item form-full-width form-radio">
-        <ul class="list-inline-spacer">
+        <ul class="list-inline-spacer-right">
           <li>
             <input type="radio" name="program" value="mens-team" id="program1">
             <label for="program1">Men's Team</label>
