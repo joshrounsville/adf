@@ -52,7 +52,7 @@
     <div class="row text-center pad-b">
       <div class="span12">
 
-        <nav class="nav-carousel">
+        <nav class="nav-carousel" data-state="multi">
           <ul class="list-inline-middle list-inline-spacer">
             <li class="pad-r"><h3>Meet the Players</h3></li>
             <li><a href="#" class="btn btn--secondary btn--outline-gray btn--slider-filter active" data-target="all">All Players</a></li>
@@ -69,314 +69,1306 @@
     <div class="row">
       <div class="span12">
 
-        <div class="loader">Loading...</div>
+        <div class="slider-main-wrap">
 
-        <div class="slider slider-team">
-
-          <div class="item" data-position="goalkeeper">
-            <a href="#" class="box-carousel box-player-short">
-              <span class="img-wrap">
-                <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1.jpg" alt="Player Name">
-              </span>
-              <span class="bottom">
-                <h5>James Litton</h5>
-                <span class="view-item">
-                  <span class="icon icon-arrow-right-line">
-                    <svg class="icon-svg">
-                      <use xlink:href="#icon-arrow-right-line" />
-                    </svg>
-                  </span>
-                </span>
-              </span>
-              <span class="player-short-overview">
-                <h3>ADF Grey Team</h3>
-                <h6>Goal Keeper</h6>
-              </span>
-            </a>
+          <div class="loader">
+            Loading...
           </div>
 
-          <div class="item" data-position="defense">
-            <a href="#" class="box-carousel box-player-short">
-              <span class="img-wrap">
-                <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-2.jpg" alt="Player Name">
-              </span>
-              <span class="bottom">
-                <h5>Anthony Charles</h5>
-                <span class="view-item">
-                  <span class="icon icon-arrow-right-line">
-                    <svg class="icon-svg">
-                      <use xlink:href="#icon-arrow-right-line" />
-                    </svg>
+           <a href="#" class="view-multi">
+            <span class="icon icon-grid">
+              <svg class="icon-svg">
+                <use xlink:href="#icon-grid" />
+              </svg>
+            </span>
+            All Players
+          </a>
+
+          <div class="slider slider-multi">
+
+            <div class="item" data-position="goalkeeper">
+              <a href="#" class="box-carousel box-carousel-short">
+                <div class="img-wrap">
+                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1.jpg" alt="Player Name">
+                </div>
+                <div class="bottom">
+                  <h5>James Litton</h5>
+                  <span class="view-item">
+                    <span class="icon icon-arrow-right-line">
+                      <svg class="icon-svg">
+                        <use xlink:href="#icon-arrow-right-line" />
+                      </svg>
+                    </span>
                   </span>
-                </span>
-              </span>
-              <span class="player-short-overview">
-                <h3>ADF Grey Team</h3>
-                <h6>Defense</h6>
-              </span>
-            </a>
+                </div>
+                <div class="carousel-short-overview">
+                  <h3>ADF Grey Team</h3>
+                  <h6>Goal Keeper</h6>
+                </div>
+              </a>
+            </div>
+
+            <div class="item" data-position="goalkeeper">
+              <a href="#" class="box-carousel box-carousel-short">
+                <div class="img-wrap">
+                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-2.jpg" alt="Player Name">
+                </div>
+                <div class="bottom">
+                  <h5>James Litton</h5>
+                  <span class="view-item">
+                    <span class="icon icon-arrow-right-line">
+                      <svg class="icon-svg">
+                        <use xlink:href="#icon-arrow-right-line" />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+                <div class="carousel-short-overview">
+                  <h3>ADF Grey Team</h3>
+                  <h6>Goal Keeper</h6>
+                </div>
+              </a>
+            </div>
+
+            <div class="item" data-position="defense">
+              <a href="#" class="box-carousel box-carousel-short">
+                <div class="img-wrap">
+                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-3.jpg" alt="Player Name">
+                </div>
+                <div class="bottom">
+                  <h5>James Litton</h5>
+                  <span class="view-item">
+                    <span class="icon icon-arrow-right-line">
+                      <svg class="icon-svg">
+                        <use xlink:href="#icon-arrow-right-line" />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+                <div class="carousel-short-overview">
+                  <h3>ADF Grey Team</h3>
+                  <h6>Defense</h6>
+                </div>
+              </a>
+            </div>
+
+            <div class="item" data-position="defense">
+              <a href="#" class="box-carousel box-carousel-short">
+                <div class="img-wrap">
+                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1.jpg" alt="Player Name">
+                </div>
+                <div class="bottom">
+                  <h5>James Litton</h5>
+                  <span class="view-item">
+                    <span class="icon icon-arrow-right-line">
+                      <svg class="icon-svg">
+                        <use xlink:href="#icon-arrow-right-line" />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+                <div class="carousel-short-overview">
+                  <h3>ADF Grey Team</h3>
+                  <h6>Defense</h6>
+                </div>
+              </a>
+            </div>
+
+            <div class="item" data-position="defense">
+              <a href="#" class="box-carousel box-carousel-short">
+                <div class="img-wrap">
+                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-2.jpg" alt="Player Name">
+                </div>
+                <div class="bottom">
+                  <h5>James Litton</h5>
+                  <span class="view-item">
+                    <span class="icon icon-arrow-right-line">
+                      <svg class="icon-svg">
+                        <use xlink:href="#icon-arrow-right-line" />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+                <div class="carousel-short-overview">
+                  <h3>ADF Grey Team</h3>
+                  <h6>Defense</h6>
+                </div>
+              </a>
+            </div>
+
+            <div class="item" data-position="defense">
+              <a href="#" class="box-carousel box-carousel-short">
+                <div class="img-wrap">
+                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-3.jpg" alt="Player Name">
+                </div>
+                <div class="bottom">
+                  <h5>James Litton</h5>
+                  <span class="view-item">
+                    <span class="icon icon-arrow-right-line">
+                      <svg class="icon-svg">
+                        <use xlink:href="#icon-arrow-right-line" />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+                <div class="carousel-short-overview">
+                  <h3>ADF Grey Team</h3>
+                  <h6>Defense</h6>
+                </div>
+              </a>
+            </div>
+
+            <div class="item" data-position="midfielder">
+              <a href="#" class="box-carousel box-carousel-short">
+                <div class="img-wrap">
+                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1.jpg" alt="Player Name">
+                </div>
+                <div class="bottom">
+                  <h5>James Litton</h5>
+                  <span class="view-item">
+                    <span class="icon icon-arrow-right-line">
+                      <svg class="icon-svg">
+                        <use xlink:href="#icon-arrow-right-line" />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+                <div class="carousel-short-overview">
+                  <h3>ADF Grey Team</h3>
+                  <h6>Midfielder</h6>
+                </div>
+              </a>
+            </div>
+
+            <div class="item" data-position="midfielder">
+              <a href="#" class="box-carousel box-carousel-short">
+                <div class="img-wrap">
+                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-2.jpg" alt="Player Name">
+                </div>
+                <div class="bottom">
+                  <h5>James Litton</h5>
+                  <span class="view-item">
+                    <span class="icon icon-arrow-right-line">
+                      <svg class="icon-svg">
+                        <use xlink:href="#icon-arrow-right-line" />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+                <div class="carousel-short-overview">
+                  <h3>ADF Grey Team</h3>
+                  <h6>Midfielder</h6>
+                </div>
+              </a>
+            </div>
+
+            <div class="item" data-position="midfielder">
+              <a href="#" class="box-carousel box-carousel-short">
+                <div class="img-wrap">
+                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-3.jpg" alt="Player Name">
+                </div>
+                <div class="bottom">
+                  <h5>James Litton</h5>
+                  <span class="view-item">
+                    <span class="icon icon-arrow-right-line">
+                      <svg class="icon-svg">
+                        <use xlink:href="#icon-arrow-right-line" />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+                <div class="carousel-short-overview">
+                  <h3>ADF Grey Team</h3>
+                  <h6>Midfielder</h6>
+                </div>
+              </a>
+            </div>
+
+            <div class="item" data-position="midfielder">
+              <a href="#" class="box-carousel box-carousel-short">
+                <div class="img-wrap">
+                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1.jpg" alt="Player Name">
+                </div>
+                <div class="bottom">
+                  <h5>James Litton</h5>
+                  <span class="view-item">
+                    <span class="icon icon-arrow-right-line">
+                      <svg class="icon-svg">
+                        <use xlink:href="#icon-arrow-right-line" />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+                <div class="carousel-short-overview">
+                  <h3>ADF Grey Team</h3>
+                  <h6>Midfielder</h6>
+                </div>
+              </a>
+            </div>
+
+            <div class="item" data-position="forward">
+              <a href="#" class="box-carousel box-carousel-short">
+                <div class="img-wrap">
+                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-2.jpg" alt="Player Name">
+                </div>
+                <div class="bottom">
+                  <h5>James Litton</h5>
+                  <span class="view-item">
+                    <span class="icon icon-arrow-right-line">
+                      <svg class="icon-svg">
+                        <use xlink:href="#icon-arrow-right-line" />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+                <div class="carousel-short-overview">
+                  <h3>ADF Grey Team</h3>
+                  <h6>Forward</h6>
+                </div>
+              </a>
+            </div>
+
+            <div class="item" data-position="forward">
+              <a href="#" class="box-carousel box-carousel-short">
+                <div class="img-wrap">
+                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-3.jpg" alt="Player Name">
+                </div>
+                <div class="bottom">
+                  <h5>James Litton</h5>
+                  <span class="view-item">
+                    <span class="icon icon-arrow-right-line">
+                      <svg class="icon-svg">
+                        <use xlink:href="#icon-arrow-right-line" />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+                <div class="carousel-short-overview">
+                  <h3>ADF Grey Team</h3>
+                  <h6>Forward</h6>
+                </div>
+              </a>
+            </div>
+
+            <div class="item" data-position="forward">
+              <a href="#" class="box-carousel box-carousel-short">
+                <div class="img-wrap">
+                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1.jpg" alt="Player Name">
+                </div>
+                <div class="bottom">
+                  <h5>James Litton</h5>
+                  <span class="view-item">
+                    <span class="icon icon-arrow-right-line">
+                      <svg class="icon-svg">
+                        <use xlink:href="#icon-arrow-right-line" />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+                <div class="carousel-short-overview">
+                  <h3>ADF Grey Team</h3>
+                  <h6>Forward</h6>
+                </div>
+              </a>
+            </div>
+
+            <div class="item" data-position="forward">
+              <a href="#" class="box-carousel box-carousel-short">
+                <div class="img-wrap">
+                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-2.jpg" alt="Player Name">
+                </div>
+                <div class="bottom">
+                  <h5>James Litton</h5>
+                  <span class="view-item">
+                    <span class="icon icon-arrow-right-line">
+                      <svg class="icon-svg">
+                        <use xlink:href="#icon-arrow-right-line" />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+                <div class="carousel-short-overview">
+                  <h3>ADF Grey Team</h3>
+                  <h6>Forward</h6>
+                </div>
+              </a>
+            </div>
+
+            <div class="item" data-position="forward">
+              <a href="#" class="box-carousel box-carousel-short">
+                <div class="img-wrap">
+                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-3.jpg" alt="Player Name">
+                </div>
+                <div class="bottom">
+                  <h5>James Litton</h5>
+                  <span class="view-item">
+                    <span class="icon icon-arrow-right-line">
+                      <svg class="icon-svg">
+                        <use xlink:href="#icon-arrow-right-line" />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+                <div class="carousel-short-overview">
+                  <h3>ADF Grey Team</h3>
+                  <h6>Forward</h6>
+                </div>
+              </a>
+            </div>
+
           </div>
 
-          <div class="item" data-position="defense">
-            <a href="#" class="box-carousel box-player-short">
-              <span class="img-wrap">
-                <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-3.jpg" alt="Player Name">
-              </span>
-              <span class="bottom">
-                <h5>Benjamin Folger-Vent</h5>
-                <span class="view-item">
-                  <span class="icon icon-arrow-right-line">
-                    <svg class="icon-svg">
-                      <use xlink:href="#icon-arrow-right-line" />
-                    </svg>
-                  </span>
-                </span>
-              </span>
-              <span class="player-short-overview">
-                <h3>ADF Grey Team</h3>
-                <h6>Defense</h6>
-              </span>
-            </a>
-          </div>
 
-          <div class="item" data-position="forward">
-            <a href="#" class="box-carousel box-player-short">
-              <span class="img-wrap">
-                <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1.jpg" alt="Player Name">
-              </span>
-              <span class="bottom">
-                <h5>James Litton</h5>
-                <span class="view-item">
-                  <span class="icon icon-arrow-right-line">
-                    <svg class="icon-svg">
-                      <use xlink:href="#icon-arrow-right-line" />
-                    </svg>
-                  </span>
-                </span>
-              </span>
-              <span class="player-short-overview">
-                <h3>ADF Grey Team</h3>
-                <h6>Forward</h6>
-              </span>
-            </a>
-          </div>
+          <div class="slider slider-single">
 
-          <div class="item" data-position="forward">
-            <a href="#" class="box-carousel box-player-short">
-              <span class="img-wrap">
-                <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1.jpg" alt="Player Name">
-              </span>
-              <span class="bottom">
-                <h5>James Litton</h5>
-                <span class="view-item">
-                  <span class="icon icon-arrow-right-line">
-                    <svg class="icon-svg">
-                      <use xlink:href="#icon-arrow-right-line" />
-                    </svg>
-                  </span>
-                </span>
-              </span>
-              <span class="player-short-overview">
-                <h3>ADF Grey Team</h3>
-                <h6>Forward</h6>
-              </span>
-            </a>
-          </div>
-
-          <div class="item"  data-position="forward">
-            <a href="#" class="box-carousel box-player-short">
-              <span class="img-wrap">
-                <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-2.jpg" alt="Player Name">
-              </span>
-              <span class="bottom">
-                <h5>Anthony Charles</h5>
-                <span class="view-item">
-                  <span class="icon icon-arrow-right-line">
-                    <svg class="icon-svg">
-                      <use xlink:href="#icon-arrow-right-line" />
-                    </svg>
-                  </span>
-                </span>
-              </span>
-              <span class="player-short-overview">
-                <h3>ADF Grey Team</h3>
-                <h6>Forward</h6>
-              </span>
-            </a>
-          </div>
-
-          <div class="item" data-position="forward">
-            <a href="#" class="box-carousel box-player-short">
-              <span class="img-wrap">
-                <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-3.jpg" alt="Player Name">
-              </span>
-              <span class="bottom">
-                <h5>Benjamin Folger-Vent</h5>
-                <span class="view-item">
-                  <span class="icon icon-arrow-right-line">
-                    <svg class="icon-svg">
-                      <use xlink:href="#icon-arrow-right-line" />
-                    </svg>
-                  </span>
-                </span>
-              </span>
-              <span class="player-short-overview">
-                <h3>ADF Grey Team</h3>
-                <h6>Forward</h6>
-              </span>
-            </a>
-          </div>
-
-          <div class="item" data-position="forward">
-            <a href="#" class="box-carousel box-player-short">
-              <span class="img-wrap">
-                <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1.jpg" alt="Player Name">
-              </span>
-              <span class="bottom">
-                <h5>James Litton</h5>
-                <span class="view-item">
-                  <span class="icon icon-arrow-right-line">
-                    <svg class="icon-svg">
-                      <use xlink:href="#icon-arrow-right-line" />
-                    </svg>
-                  </span>
-                </span>
-              </span>
-              <span class="player-short-overview">
-                <h3>ADF Grey Team</h3>
-                <h6>Forward</h6>
-              </span>
-            </a>
-          </div>
-
-          <div class="item" data-position="midfielder">
-            <a href="#" class="box-carousel box-player-short">
-              <span class="img-wrap">
-                <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1.jpg" alt="Player Name">
-              </span>
-              <span class="bottom">
-                <h5>James Litton</h5>
-                <span class="view-item">
-                  <span class="icon icon-arrow-right-line">
-                    <svg class="icon-svg">
-                      <use xlink:href="#icon-arrow-right-line" />
-                    </svg>
-                  </span>
-                </span>
-              </span>
-              <span class="player-short-overview">
-                <h3>ADF Grey Team</h3>
-                <h6>Midfielder</h6>
-              </span>
-            </a>
-          </div>
-
-          <div class="item" data-position="midfielder">
-            <a href="#" class="box-carousel box-player-short">
-              <span class="img-wrap">
-                <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1.jpg" alt="Player Name">
-              </span>
-              <span class="bottom">
-                <h5>James Litton</h5>
-                <span class="view-item">
-                  <span class="icon icon-arrow-right-line">
-                    <svg class="icon-svg">
-                      <use xlink:href="#icon-arrow-right-line" />
-                    </svg>
-                  </span>
-                </span>
-              </span>
-              <span class="player-short-overview">
-                <h3>ADF Grey Team</h3>
-                <h6>Midfielder</h6>
-              </span>
-            </a>
-          </div>
-
-        </div>
-
-        <!-- <div class="row">
-          <div class="span6 offset3">
-
-            <div class="player-box-full">
-              <div class="content-wrap-upper">
-                <div class="content-wrap-inner">
-                  <h3>Anthony Charles</h3>
-                  <h6>Forward, Age 12</h6>
-                  <ul class="list-inline">
-                    <li class="social facebook">
-                      <a href="#" target="_blank">
-                        <span class="icon icon-facebook">
-                          <svg class="icon-svg">
-                            <use xlink:href="#icon-facebook" />
-                          </svg>
-                        </span>
-                      </a>
+            <div class="item" data-position="goalkeeper">
+              <div class="carousel-box-full">
+                <div class="content-wrap-upper">
+                  <div class="content-wrap-inner">
+                    <h3>James Litton</h3>
+                    <h6>GoalKeeper, Age 12</h6>
+                    <ul class="list-inline">
+                      <li class="social facebook">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-facebook">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-facebook" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social instagram">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-instagram">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-instagram" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social twitter">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-twitter">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-twitter" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1-wide.jpg" alt="Player Name">
+                  </div>
+                </div>
+                <div class="content-wrap">
+                  <ul class="list-detail">
+                    <li>
+                      <h6>Favorite Player</h6>
+                      <p>David Beckham</p>
                     </li>
-                    <li class="social instagram">
-                      <a href="#" target="_blank">
-                        <span class="icon icon-instagram">
-                          <svg class="icon-svg">
-                            <use xlink:href="#icon-instagram" />
-                          </svg>
-                        </span>
-                      </a>
+                    <li>
+                      <h6>Favorite Team</h6>
+                      <p>Real Salt Lake</p>
                     </li>
-                    <li class="social twitter">
-                      <a href="#" target="_blank">
-                        <span class="icon icon-twitter">
-                          <svg class="icon-svg">
-                            <use xlink:href="#icon-twitter" />
-                          </svg>
-                        </span>
-                      </a>
+                    <li>
+                      <h6>Position</h6>
+                      <p>GoalKeeper</p>
+                    </li>
+                    <li>
+                      <h6>Current Club</h6>
+                      <p>Academia de Futebol Training</p>
                     </li>
                   </ul>
                 </div>
-                <div class="img-wrap">
-                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1-wide.jpg" alt="Player Name">
-                </div>
-              </div>
-              <div class="content-wrap">
-                <ul class="list-detail">
-                  <li>
-                    <h6>Favorite Player</h6>
-                    <p>David Beckham</p>
-                  </li>
-                  <li>
-                    <h6>Favorite Team</h6>
-                    <p>Real Salt Lake</p>
-                  </li>
-                  <li>
-                    <h6>Position</h6>
-                    <p>Forward</p>
-                  </li>
-                  <li>
-                    <h6>Current Club</h6>
-                    <p>Academia de Futebol Training</p>
-                  </li>
-                </ul>
               </div>
             </div>
 
-            <a href="#" class="next-player">
-              Next Player
-              <span class="icon icon-arrow-right-line">
-                <svg class="icon-svg">
-                  <use xlink:href="#icon-arrow-right-line" />
-                </svg>
-              </span>
-            </a>
-            <a href="#" class="previous-player">
-              <span class="icon icon-arrow-left-line">
-                <svg class="icon-svg">
-                  <use xlink:href="#icon-arrow-left-line" />
-                </svg>
-              </span>
-              Previous Player
-            </a>
+             <div class="item" data-position="goalkeeper">
+              <div class="carousel-box-full">
+                <div class="content-wrap-upper">
+                  <div class="content-wrap-inner">
+                    <h3>James Litton</h3>
+                    <h6>GoalKeeper, Age 12</h6>
+                    <ul class="list-inline">
+                      <li class="social facebook">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-facebook">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-facebook" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social instagram">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-instagram">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-instagram" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social twitter">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-twitter">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-twitter" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1-wide.jpg" alt="Player Name">
+                  </div>
+                </div>
+                <div class="content-wrap">
+                  <ul class="list-detail">
+                    <li>
+                      <h6>Favorite Player</h6>
+                      <p>David Beckham</p>
+                    </li>
+                    <li>
+                      <h6>Favorite Team</h6>
+                      <p>Real Salt Lake</p>
+                    </li>
+                    <li>
+                      <h6>Position</h6>
+                      <p>GoalKeeper</p>
+                    </li>
+                    <li>
+                      <h6>Current Club</h6>
+                      <p>Academia de Futebol Training</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="item" data-position="defense">
+              <div class="carousel-box-full">
+                <div class="content-wrap-upper">
+                  <div class="content-wrap-inner">
+                    <h3>James Litton</h3>
+                    <h6>Defense, Age 12</h6>
+                    <ul class="list-inline">
+                      <li class="social facebook">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-facebook">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-facebook" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social instagram">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-instagram">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-instagram" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social twitter">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-twitter">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-twitter" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1-wide.jpg" alt="Player Name">
+                  </div>
+                </div>
+                <div class="content-wrap">
+                  <ul class="list-detail">
+                    <li>
+                      <h6>Favorite Player</h6>
+                      <p>David Beckham</p>
+                    </li>
+                    <li>
+                      <h6>Favorite Team</h6>
+                      <p>Real Salt Lake</p>
+                    </li>
+                    <li>
+                      <h6>Position</h6>
+                      <p>Defense</p>
+                    </li>
+                    <li>
+                      <h6>Current Club</h6>
+                      <p>Academia de Futebol Training</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="item" data-position="defense">
+              <div class="carousel-box-full">
+                <div class="content-wrap-upper">
+                  <div class="content-wrap-inner">
+                    <h3>James Litton</h3>
+                    <h6>Defense, Age 12</h6>
+                    <ul class="list-inline">
+                      <li class="social facebook">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-facebook">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-facebook" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social instagram">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-instagram">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-instagram" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social twitter">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-twitter">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-twitter" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1-wide.jpg" alt="Player Name">
+                  </div>
+                </div>
+                <div class="content-wrap">
+                  <ul class="list-detail">
+                    <li>
+                      <h6>Favorite Player</h6>
+                      <p>David Beckham</p>
+                    </li>
+                    <li>
+                      <h6>Favorite Team</h6>
+                      <p>Real Salt Lake</p>
+                    </li>
+                    <li>
+                      <h6>Position</h6>
+                      <p>Defense</p>
+                    </li>
+                    <li>
+                      <h6>Current Club</h6>
+                      <p>Academia de Futebol Training</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="item" data-position="defense">
+              <div class="carousel-box-full">
+                <div class="content-wrap-upper">
+                  <div class="content-wrap-inner">
+                    <h3>James Litton</h3>
+                    <h6>Defense, Age 12</h6>
+                    <ul class="list-inline">
+                      <li class="social facebook">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-facebook">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-facebook" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social instagram">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-instagram">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-instagram" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social twitter">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-twitter">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-twitter" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1-wide.jpg" alt="Player Name">
+                  </div>
+                </div>
+                <div class="content-wrap">
+                  <ul class="list-detail">
+                    <li>
+                      <h6>Favorite Player</h6>
+                      <p>David Beckham</p>
+                    </li>
+                    <li>
+                      <h6>Favorite Team</h6>
+                      <p>Real Salt Lake</p>
+                    </li>
+                    <li>
+                      <h6>Position</h6>
+                      <p>Defense</p>
+                    </li>
+                    <li>
+                      <h6>Current Club</h6>
+                      <p>Academia de Futebol Training</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="item" data-position="defense">
+              <div class="carousel-box-full">
+                <div class="content-wrap-upper">
+                  <div class="content-wrap-inner">
+                    <h3>James Litton</h3>
+                    <h6>Defense, Age 12</h6>
+                    <ul class="list-inline">
+                      <li class="social facebook">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-facebook">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-facebook" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social instagram">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-instagram">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-instagram" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social twitter">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-twitter">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-twitter" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1-wide.jpg" alt="Player Name">
+                  </div>
+                </div>
+                <div class="content-wrap">
+                  <ul class="list-detail">
+                    <li>
+                      <h6>Favorite Player</h6>
+                      <p>David Beckham</p>
+                    </li>
+                    <li>
+                      <h6>Favorite Team</h6>
+                      <p>Real Salt Lake</p>
+                    </li>
+                    <li>
+                      <h6>Position</h6>
+                      <p>Defense</p>
+                    </li>
+                    <li>
+                      <h6>Current Club</h6>
+                      <p>Academia de Futebol Training</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="item" data-position="midfielder">
+              <div class="carousel-box-full">
+                <div class="content-wrap-upper">
+                  <div class="content-wrap-inner">
+                    <h3>James Litton</h3>
+                    <h6>Midfielder, Age 12</h6>
+                    <ul class="list-inline">
+                      <li class="social facebook">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-facebook">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-facebook" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social instagram">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-instagram">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-instagram" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social twitter">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-twitter">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-twitter" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1-wide.jpg" alt="Player Name">
+                  </div>
+                </div>
+                <div class="content-wrap">
+                  <ul class="list-detail">
+                    <li>
+                      <h6>Favorite Player</h6>
+                      <p>David Beckham</p>
+                    </li>
+                    <li>
+                      <h6>Favorite Team</h6>
+                      <p>Real Salt Lake</p>
+                    </li>
+                    <li>
+                      <h6>Position</h6>
+                      <p>Midfielder</p>
+                    </li>
+                    <li>
+                      <h6>Current Club</h6>
+                      <p>Academia de Futebol Training</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="item" data-position="midfielder">
+              <div class="carousel-box-full">
+                <div class="content-wrap-upper">
+                  <div class="content-wrap-inner">
+                    <h3>James Litton</h3>
+                    <h6>Midfielder, Age 12</h6>
+                    <ul class="list-inline">
+                      <li class="social facebook">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-facebook">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-facebook" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social instagram">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-instagram">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-instagram" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social twitter">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-twitter">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-twitter" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1-wide.jpg" alt="Player Name">
+                  </div>
+                </div>
+                <div class="content-wrap">
+                  <ul class="list-detail">
+                    <li>
+                      <h6>Favorite Player</h6>
+                      <p>David Beckham</p>
+                    </li>
+                    <li>
+                      <h6>Favorite Team</h6>
+                      <p>Real Salt Lake</p>
+                    </li>
+                    <li>
+                      <h6>Position</h6>
+                      <p>Midfielder</p>
+                    </li>
+                    <li>
+                      <h6>Current Club</h6>
+                      <p>Academia de Futebol Training</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="item" data-position="midfielder">
+              <div class="carousel-box-full">
+                <div class="content-wrap-upper">
+                  <div class="content-wrap-inner">
+                    <h3>James Litton</h3>
+                    <h6>Midfielder, Age 12</h6>
+                    <ul class="list-inline">
+                      <li class="social facebook">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-facebook">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-facebook" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social instagram">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-instagram">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-instagram" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social twitter">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-twitter">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-twitter" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1-wide.jpg" alt="Player Name">
+                  </div>
+                </div>
+                <div class="content-wrap">
+                  <ul class="list-detail">
+                    <li>
+                      <h6>Favorite Player</h6>
+                      <p>David Beckham</p>
+                    </li>
+                    <li>
+                      <h6>Favorite Team</h6>
+                      <p>Real Salt Lake</p>
+                    </li>
+                    <li>
+                      <h6>Position</h6>
+                      <p>Midfielder</p>
+                    </li>
+                    <li>
+                      <h6>Current Club</h6>
+                      <p>Academia de Futebol Training</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="item" data-position="midfielder">
+              <div class="carousel-box-full">
+                <div class="content-wrap-upper">
+                  <div class="content-wrap-inner">
+                    <h3>James Litton</h3>
+                    <h6>Midfielder, Age 12</h6>
+                    <ul class="list-inline">
+                      <li class="social facebook">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-facebook">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-facebook" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social instagram">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-instagram">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-instagram" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social twitter">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-twitter">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-twitter" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1-wide.jpg" alt="Player Name">
+                  </div>
+                </div>
+                <div class="content-wrap">
+                  <ul class="list-detail">
+                    <li>
+                      <h6>Favorite Player</h6>
+                      <p>David Beckham</p>
+                    </li>
+                    <li>
+                      <h6>Favorite Team</h6>
+                      <p>Real Salt Lake</p>
+                    </li>
+                    <li>
+                      <h6>Position</h6>
+                      <p>Midfielder</p>
+                    </li>
+                    <li>
+                      <h6>Current Club</h6>
+                      <p>Academia de Futebol Training</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="item" data-position="forward">
+              <div class="carousel-box-full">
+                <div class="content-wrap-upper">
+                  <div class="content-wrap-inner">
+                    <h3>James Litton</h3>
+                    <h6>Forward, Age 12</h6>
+                    <ul class="list-inline">
+                      <li class="social facebook">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-facebook">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-facebook" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social instagram">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-instagram">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-instagram" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social twitter">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-twitter">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-twitter" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1-wide.jpg" alt="Player Name">
+                  </div>
+                </div>
+                <div class="content-wrap">
+                  <ul class="list-detail">
+                    <li>
+                      <h6>Favorite Player</h6>
+                      <p>David Beckham</p>
+                    </li>
+                    <li>
+                      <h6>Favorite Team</h6>
+                      <p>Real Salt Lake</p>
+                    </li>
+                    <li>
+                      <h6>Position</h6>
+                      <p>Forward</p>
+                    </li>
+                    <li>
+                      <h6>Current Club</h6>
+                      <p>Academia de Futebol Training</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="item" data-position="forward">
+              <div class="carousel-box-full">
+                <div class="content-wrap-upper">
+                  <div class="content-wrap-inner">
+                    <h3>James Litton</h3>
+                    <h6>Forward, Age 12</h6>
+                    <ul class="list-inline">
+                      <li class="social facebook">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-facebook">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-facebook" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social instagram">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-instagram">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-instagram" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social twitter">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-twitter">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-twitter" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1-wide.jpg" alt="Player Name">
+                  </div>
+                </div>
+                <div class="content-wrap">
+                  <ul class="list-detail">
+                    <li>
+                      <h6>Favorite Player</h6>
+                      <p>David Beckham</p>
+                    </li>
+                    <li>
+                      <h6>Favorite Team</h6>
+                      <p>Real Salt Lake</p>
+                    </li>
+                    <li>
+                      <h6>Position</h6>
+                      <p>Forward</p>
+                    </li>
+                    <li>
+                      <h6>Current Club</h6>
+                      <p>Academia de Futebol Training</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="item" data-position="forward">
+              <div class="carousel-box-full">
+                <div class="content-wrap-upper">
+                  <div class="content-wrap-inner">
+                    <h3>James Litton</h3>
+                    <h6>Forward, Age 12</h6>
+                    <ul class="list-inline">
+                      <li class="social facebook">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-facebook">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-facebook" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social instagram">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-instagram">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-instagram" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social twitter">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-twitter">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-twitter" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1-wide.jpg" alt="Player Name">
+                  </div>
+                </div>
+                <div class="content-wrap">
+                  <ul class="list-detail">
+                    <li>
+                      <h6>Favorite Player</h6>
+                      <p>David Beckham</p>
+                    </li>
+                    <li>
+                      <h6>Favorite Team</h6>
+                      <p>Real Salt Lake</p>
+                    </li>
+                    <li>
+                      <h6>Position</h6>
+                      <p>Forward</p>
+                    </li>
+                    <li>
+                      <h6>Current Club</h6>
+                      <p>Academia de Futebol Training</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="item" data-position="forward">
+              <div class="carousel-box-full">
+                <div class="content-wrap-upper">
+                  <div class="content-wrap-inner">
+                    <h3>James Litton</h3>
+                    <h6>Forward, Age 12</h6>
+                    <ul class="list-inline">
+                      <li class="social facebook">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-facebook">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-facebook" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social instagram">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-instagram">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-instagram" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social twitter">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-twitter">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-twitter" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1-wide.jpg" alt="Player Name">
+                  </div>
+                </div>
+                <div class="content-wrap">
+                  <ul class="list-detail">
+                    <li>
+                      <h6>Favorite Player</h6>
+                      <p>David Beckham</p>
+                    </li>
+                    <li>
+                      <h6>Favorite Team</h6>
+                      <p>Real Salt Lake</p>
+                    </li>
+                    <li>
+                      <h6>Position</h6>
+                      <p>Forward</p>
+                    </li>
+                    <li>
+                      <h6>Current Club</h6>
+                      <p>Academia de Futebol Training</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="item" data-position="forward">
+              <div class="carousel-box-full">
+                <div class="content-wrap-upper">
+                  <div class="content-wrap-inner">
+                    <h3>James Litton</h3>
+                    <h6>Forward, Age 12</h6>
+                    <ul class="list-inline">
+                      <li class="social facebook">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-facebook">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-facebook" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social instagram">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-instagram">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-instagram" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social twitter">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-twitter">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-twitter" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1-wide.jpg" alt="Player Name">
+                  </div>
+                </div>
+                <div class="content-wrap">
+                  <ul class="list-detail">
+                    <li>
+                      <h6>Favorite Player</h6>
+                      <p>David Beckham</p>
+                    </li>
+                    <li>
+                      <h6>Favorite Team</h6>
+                      <p>Real Salt Lake</p>
+                    </li>
+                    <li>
+                      <h6>Position</h6>
+                      <p>Forward</p>
+                    </li>
+                    <li>
+                      <h6>Current Club</h6>
+                      <p>Academia de Futebol Training</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
           </div>
-        </div> -->
+
+        </div>
 
       </div>
     </div>
@@ -384,229 +1376,5 @@
   </div>
 </section>
 
-
- <div class="player-collection hide">
-
-  <div class="item" data-position="goalkeeper">
-    <a href="#" class="box-carousel box-player-short">
-      <span class="img-wrap">
-        <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1.jpg" alt="Player Name">
-      </span>
-      <span class="bottom">
-        <h5>James Litton</h5>
-        <span class="view-item">
-          <span class="icon icon-arrow-right-line">
-            <svg class="icon-svg">
-              <use xlink:href="#icon-arrow-right-line" />
-            </svg>
-          </span>
-        </span>
-      </span>
-      <span class="player-short-overview">
-        <h3>ADF Grey Team</h3>
-        <h6>Goal Keeper</h6>
-      </span>
-    </a>
-  </div>
-
-  <div class="item" data-position="defense">
-    <a href="#" class="box-carousel box-player-short">
-      <span class="img-wrap">
-        <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-2.jpg" alt="Player Name">
-      </span>
-      <span class="bottom">
-        <h5>Anthony Charles</h5>
-        <span class="view-item">
-          <span class="icon icon-arrow-right-line">
-            <svg class="icon-svg">
-              <use xlink:href="#icon-arrow-right-line" />
-            </svg>
-          </span>
-        </span>
-      </span>
-      <span class="player-short-overview">
-        <h3>ADF Grey Team</h3>
-        <h6>Defense</h6>
-      </span>
-    </a>
-  </div>
-
-  <div class="item" data-position="defense">
-    <a href="#" class="box-carousel box-player-short">
-      <span class="img-wrap">
-        <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-3.jpg" alt="Player Name">
-      </span>
-      <span class="bottom">
-        <h5>Benjamin Folger-Vent</h5>
-        <span class="view-item">
-          <span class="icon icon-arrow-right-line">
-            <svg class="icon-svg">
-              <use xlink:href="#icon-arrow-right-line" />
-            </svg>
-          </span>
-        </span>
-      </span>
-      <span class="player-short-overview">
-        <h3>ADF Grey Team</h3>
-        <h6>Defense</h6>
-      </span>
-    </a>
-  </div>
-
-  <div class="item" data-position="forward">
-    <a href="#" class="box-carousel box-player-short">
-      <span class="img-wrap">
-        <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1.jpg" alt="Player Name">
-      </span>
-      <span class="bottom">
-        <h5>James Litton</h5>
-        <span class="view-item">
-          <span class="icon icon-arrow-right-line">
-            <svg class="icon-svg">
-              <use xlink:href="#icon-arrow-right-line" />
-            </svg>
-          </span>
-        </span>
-      </span>
-      <span class="player-short-overview">
-        <h3>ADF Grey Team</h3>
-        <h6>Forward</h6>
-      </span>
-    </a>
-  </div>
-
-  <div class="item" data-position="forward">
-    <a href="#" class="box-carousel box-player-short">
-      <span class="img-wrap">
-        <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1.jpg" alt="Player Name">
-      </span>
-      <span class="bottom">
-        <h5>James Litton</h5>
-        <span class="view-item">
-          <span class="icon icon-arrow-right-line">
-            <svg class="icon-svg">
-              <use xlink:href="#icon-arrow-right-line" />
-            </svg>
-          </span>
-        </span>
-      </span>
-      <span class="player-short-overview">
-        <h3>ADF Grey Team</h3>
-        <h6>Forward</h6>
-      </span>
-    </a>
-  </div>
-
-  <div class="item"  data-position="forward">
-    <a href="#" class="box-carousel box-player-short">
-      <span class="img-wrap">
-        <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-2.jpg" alt="Player Name">
-      </span>
-      <span class="bottom">
-        <h5>Anthony Charles</h5>
-        <span class="view-item">
-          <span class="icon icon-arrow-right-line">
-            <svg class="icon-svg">
-              <use xlink:href="#icon-arrow-right-line" />
-            </svg>
-          </span>
-        </span>
-      </span>
-      <span class="player-short-overview">
-        <h3>ADF Grey Team</h3>
-        <h6>Forward</h6>
-      </span>
-    </a>
-  </div>
-
-  <div class="item" data-position="forward">
-    <a href="#" class="box-carousel box-player-short">
-      <span class="img-wrap">
-        <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-3.jpg" alt="Player Name">
-      </span>
-      <span class="bottom">
-        <h5>Benjamin Folger-Vent</h5>
-        <span class="view-item">
-          <span class="icon icon-arrow-right-line">
-            <svg class="icon-svg">
-              <use xlink:href="#icon-arrow-right-line" />
-            </svg>
-          </span>
-        </span>
-      </span>
-      <span class="player-short-overview">
-        <h3>ADF Grey Team</h3>
-        <h6>Forward</h6>
-      </span>
-    </a>
-  </div>
-
-  <div class="item" data-position="forward">
-    <a href="#" class="box-carousel box-player-short">
-      <span class="img-wrap">
-        <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1.jpg" alt="Player Name">
-      </span>
-      <span class="bottom">
-        <h5>James Litton</h5>
-        <span class="view-item">
-          <span class="icon icon-arrow-right-line">
-            <svg class="icon-svg">
-              <use xlink:href="#icon-arrow-right-line" />
-            </svg>
-          </span>
-        </span>
-      </span>
-      <span class="player-short-overview">
-        <h3>ADF Grey Team</h3>
-        <h6>Forward</h6>
-      </span>
-    </a>
-  </div>
-
-  <div class="item" data-position="midfielder">
-    <a href="#" class="box-carousel box-player-short">
-      <span class="img-wrap">
-        <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1.jpg" alt="Player Name">
-      </span>
-      <span class="bottom">
-        <h5>James Litton</h5>
-        <span class="view-item">
-          <span class="icon icon-arrow-right-line">
-            <svg class="icon-svg">
-              <use xlink:href="#icon-arrow-right-line" />
-            </svg>
-          </span>
-        </span>
-      </span>
-      <span class="player-short-overview">
-        <h3>ADF Grey Team</h3>
-        <h6>Midfielder</h6>
-      </span>
-    </a>
-  </div>
-
-  <div class="item" data-position="midfielder">
-    <a href="#" class="box-carousel box-player-short">
-      <span class="img-wrap">
-        <img src="<?php echo get_template_directory_uri(); ?>/library/img/players/player-1.jpg" alt="Player Name">
-      </span>
-      <span class="bottom">
-        <h5>James Litton</h5>
-        <span class="view-item">
-          <span class="icon icon-arrow-right-line">
-            <svg class="icon-svg">
-              <use xlink:href="#icon-arrow-right-line" />
-            </svg>
-          </span>
-        </span>
-      </span>
-      <span class="player-short-overview">
-        <h3>ADF Grey Team</h3>
-        <h6>Midfielder</h6>
-      </span>
-    </a>
-  </div>
-
-</div>
 
 <?php get_footer(); ?>

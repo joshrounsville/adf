@@ -37,10 +37,6 @@
   text-align: right;
 }
 
-.text-white {
-  color: #fff;
-}
-
 .text-uppercase {
   text-transform: uppercase;
 }
@@ -52,6 +48,26 @@
   @include breakpoint(medium) {
     font-size: $fontLarge - 2;
   }
+}
+
+
+
+/*==========  TEXT COLOR ==========*/
+
+.text-white {
+  color: #fff;
+}
+
+.text-red-dark {
+  color: $colorRedDark;
+}
+
+
+
+/*==========  BORDERS ==========*/
+
+.border-radius {
+  border-radius: 4px;
 }
 
 
@@ -119,6 +135,23 @@
   background-size: cover;
 }
 
+.bg-map {
+  position: relative;
+  overflow: hidden;
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+  }
+  iframe {
+    position: absolute;
+    top: -150px;
+    z-index: -1;
+  }
+}
 
 
 /*==========  ALIGNMENT  ==========*/
@@ -182,6 +215,11 @@
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.on-top {
+  position: relative;
+  z-index: 10;
 }
 
 

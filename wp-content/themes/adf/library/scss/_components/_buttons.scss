@@ -69,8 +69,39 @@
     }
   }
 
+  &.btn--block {
+    display: block;
+  }
+
+  &.loading {
+    position: relative;
+    &:after {
+      content: "";
+      display: block;
+      width: 12px;
+      height: 12px;
+      border: 2px solid $colorBlueLight;
+      border-right: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      border-radius: 100%;
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      margin-top: -6px;
+      animation: spinner 0.4s infinite linear;
+    }
+  }
+
   @include breakpoint(small) {
     width: 100%;
     font-size: $fontSmall;
+  }
+}
+
+.btn--wrap-outline {
+  a {
+    @extend .btn;
+    @extend .btn--outline;
+    @extend .btn--block;
   }
 }

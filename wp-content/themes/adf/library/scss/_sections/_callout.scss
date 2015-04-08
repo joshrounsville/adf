@@ -29,8 +29,14 @@
   .page-template-page-about-php & {
     background-image: url(../img/headers/header-about.jpg);
   }
+  .page-template-page-about-contact-php & {
+    background-image: url(../img/headers/header-about.jpg);
+  }
   .page-template-page-team-php & {
     background-image: url(../img/headers/header-teams.jpg);
+  }
+  .post-type-archive-video & {
+    background-image: url(../img/headers/header-about.jpg);
   }
 
   @include breakpoint(large) {

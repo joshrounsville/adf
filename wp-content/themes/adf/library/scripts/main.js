@@ -128,19 +128,24 @@ $(function() {
 
 
   //////// carousel setup
-  var slider = $('.slider');
-  var sliderInit = function() {
+  var sliderWrap = $('.slider-main-wrap');
+  var sliderMulti = $('.slider-multi');
+  var sliderSingle = $('.slider-single');
 
-    slider.owlCarousel({
+  var nextHtml = '<span class="next-item">Next<span class="icon icon-arrow-right-line"><svg class="icon-svg"><use xlink:href="#icon-arrow-right-line" /></svg></span></span>';
+  var prevHtml = '<span class="previous-item"><span class="icon icon-arrow-left-line"><svg class="icon-svg"><use xlink:href="#icon-arrow-left-line" /></svg></span>Previous</span>';
+
+  var sliderInit = function() {
+    var multiOptions = {
       items : 4,
       itemsDesktop : [1199, 4],
       itemsDesktopSmall : [980, 3],
       itemsTablet: [768, 2],
       itemsTabletSmall: false,
       itemsMobile : [479, 1],
-      slideSpeed : 200,
+      slideSpeed : 400,
       paginationSpeed : 800,
-      rewindSpeed : 1000,
+      rewindNav: false,
       autoPlay : false,
       navigation : true,
       pagination : false,
@@ -149,17 +154,96 @@ $(function() {
       responsiveBaseWidth: window,
       baseClass : 'owl-carousel',
       mouseDrag : false,
-      beforeInit : afterInit,
+      navigationText : [ prevHtml, nextHtml ],
+      beforeInit : function() {
+        beforeInit(sliderMulti);
+      },
       afterAction : afterAction
-    });
+    };
+
+    sliderMulti.owlCarousel(multiOptions);
+
+    sliderWrap.removeClass('single');
+    sliderWrap.addClass('multi');
 
   };
 
   sliderInit();
 
 
-  function afterInit() {
-    var item = $('.slider-team').find('.item');
+
+  var singleSlider = function(el) {
+    var loader = $('.loader');
+    var itemPosition;
+    var owlSingle;
+    var navCarousel = $('.nav-carousel');
+    var owlMulti = $(sliderMulti).data('owlCarousel');
+    var singleOptions = {
+      singleItem : true,
+      slideSpeed : 400,
+      paginationSpeed : 800,
+      rewindSpeed: 1000,
+      autoPlay : false,
+      navigation : true,
+      pagination : false,
+      responsive: true,
+      responsiveRefreshRate : 200,
+      responsiveBaseWidth: window,
+      baseClass : 'owl-carousel',
+      mouseDrag : false,
+      navigationText : [ prevHtml, nextHtml ],
+      beforeInit : function() {
+        beforeInit(sliderSingle);
+      },
+      afterAction : afterAction
+    };
+
+    loader.addClass('loading');
+
+    sliderWrap.removeClass('multi');
+    sliderWrap.addClass('single');
+
+    itemPosition = $('.box-carousel').index(el);
+
+    owlMulti.destroy();
+
+    navCarousel.addClass('single');
+
+    setTimeout(function() {
+      sliderSingle.owlCarousel(singleOptions);
+
+      owlSingle = $(sliderSingle).data('owlCarousel');
+      owlSingle.jumpTo(itemPosition);
+      loader.removeClass('loading');
+
+    }, 250);
+
+  };
+
+
+
+
+  var singleSliderClick = function() {
+    var btn = $('.owl-item .box-carousel');
+    var el;
+
+    btn.on('click', function(e) {
+      e.preventDefault();
+
+      el = this;
+      singleSlider(el);
+    });
+
+
+  };
+
+  singleSliderClick();
+
+
+
+
+  function beforeInit(target) {
+    var item = $(target).find('.item');
     var i = 0;
 
     item.each(function() {
@@ -171,49 +255,43 @@ $(function() {
 
   function afterAction() {
     var count = this.owl.visibleItems;
-    var item = $('.slider-team').find('.item');
+    var item = $('.slider-multi').find('.item');
 
     item.removeClass('active');
 
     for ( var i = 0; i < count.length; i++) {
-      slider.find('.item-' + count[i]).addClass('active');
+      sliderMulti.find('.item-' + count[i]).addClass('active');
     }
 
   }
 
-
   var filterSlider = function() {
     var btn = $('.btn--slider-filter');
     var target;
-    var newPlayers;
-    var loader = $('.loader');
-    var playerCollection = $('.player-collection');
+    var targetItem;
+    var targetItemIndex;
+    var itemCollection;
+    var owl;
 
     btn.on('click', function(e) {
       e.preventDefault();
 
-      loader.addClass('loading');
+      if ( $('.nav-carousel').hasClass('single') ) {
+        owl = $(sliderSingle).data('owlCarousel');
+      } else {
+        owl = $(sliderMulti).data('owlCarousel');
+      }
+
+      itemCollection = $('.owl-wrapper');
       target = $(this).attr('data-target');
+      targetItem = $(itemCollection).find('.item[data-position=' + target + ']').parent();
+      targetItem = targetItem[0];
+      targetItemIndex = $('.owl-item').index(targetItem);
+
+      owl.goTo(targetItemIndex);
 
       btn.removeClass('active');
       $(this).addClass('active');
-
-      $('.slider-team').data('owlCarousel').destroy();
-      $(slider).find('.item').remove();
-
-      if ( target === 'all' ) {
-        newPlayers = playerCollection.find('.item');
-      } else {
-        newPlayers = playerCollection.find('.item[data-position=' + target + ']');
-      }
-
-      setTimeout(function() {
-        newPlayers.clone().appendTo(slider);
-        sliderInit();
-
-        loader.removeClass('loading');
-      }, 400);
-
 
     });
 
@@ -222,6 +300,39 @@ $(function() {
   filterSlider();
 
 
+  var viewMulti = function() {
+    var btn = $('.view-multi');
+    var owlSingle;
+    var navCarousel = $('.nav-carousel');
+    var loader = $('.loader');
+    var filterBtn = $('.btn--slider-filter');
+
+    btn.on('click', function(e) {
+      e.preventDefault();
+
+      loader.addClass('loading');
+      owlSingle = $(sliderSingle).data('owlCarousel');
+
+      owlSingle.destroy();
+
+      navCarousel.removeClass('single');
+
+      if ( filterBtn.length ) {
+        filterBtn.removeClass('active');
+        filterBtn.first().addClass('active');
+      }
+
+      setTimeout(function() {
+        sliderInit();
+        loader.removeClass('loading');
+      }, 250);
+
+    });
+
+
+  };
+
+  viewMulti();
 
 
 
@@ -287,64 +398,67 @@ $(function() {
       var contentTarget = $(el).find('.video-title');
       var vidId = $(this).attr('data-id');
 
-      $.getJSON('https://www.googleapis.com/youtube/v3/videos?id=' + vidId + '&part=snippet,contentDetails&key=' + key, function(data) {
+      if ( $(el).find('img').length <= 0 ) {
+
+        $.getJSON('https://www.googleapis.com/youtube/v3/videos?id=' + vidId + '&part=snippet,contentDetails&key=' + key, function(data) {
+
+          // get the title
+          var title = data.items[0].snippet.title;
 
 
-        // get the title
-        var title = data.items[0].snippet.title;
+          // get the screenshot
+          var imgSrc = data.items[0].snippet.thumbnails.standard.url;
 
 
-        // get the screenshot
-        var imgSrc = data.items[0].snippet.thumbnails.standard.url;
+          // format the time
+          var time = data.items[0].contentDetails.duration;
+              time = time.split('PT')[1];
+          var formattedTime;
+          var seconds;
+          var minutes;
 
+          if (time.indexOf('M') >= 0) {
 
-        // format the time
-        var time = data.items[0].contentDetails.duration;
-            time = time.split('PT')[1];
-        var formattedTime;
-        var seconds;
-        var minutes;
+            minutes = time.split('M')[0];
+            seconds = time.split('M')[1];
+            seconds = seconds.split('S')[0];
 
-        if (time.indexOf('M') >= 0) {
+            if ( seconds.length < 2 ) {
+              seconds = '0' + seconds;
+            }
 
-          minutes = time.split('M')[0];
-          seconds = time.split('M')[1];
-          seconds = seconds.split('S')[0];
+            formattedTime = minutes + ':' + seconds;
 
-          if ( seconds.length < 2 ) {
-            seconds = '0' + seconds;
+          } else {
+
+            seconds = time.split('S')[0];
+
+            if ( seconds.length < 2 ) {
+              seconds = '0' + seconds;
+            }
+
+            formattedTime = '0:' + seconds;
+
           }
 
-          formattedTime = minutes + ':' + seconds;
 
-        } else {
+          // build the layout
+          $('<h3>', {
+            'html': title
+          }).appendTo(contentTarget);
 
-          seconds = time.split('S')[0];
+          $('<h6>', {
+            'html': formattedTime
+          }).appendTo(contentTarget);
 
-          if ( seconds.length < 2 ) {
-            seconds = '0' + seconds;
-          }
+          $('<img>', {
+            'src': imgSrc,
+            'title': title
+          }).appendTo(el);
 
-          formattedTime = '0:' + seconds;
+        });
 
-        }
-
-
-        // build the layout
-        $('<h3>', {
-          'html': title
-        }).appendTo(contentTarget);
-
-        $('<h6>', {
-          'html': formattedTime
-        }).appendTo(contentTarget);
-
-        $('<img>', {
-          'src': imgSrc,
-          'title': title
-        }).appendTo(el);
-
-      });
+      }
 
     });
 
@@ -391,6 +505,46 @@ $(function() {
 
 
 
+
+  //////// infinite scroll setup
+
+  var infiniteScrollGo = function() {
+    var btn = $('.js--scroll-link a');
+
+    $('.js--scroll-wrap').infinitescroll({
+      navSelector: '.js--scroll-pages',
+      nextSelector: btn,
+      itemSelector: '.js--scroll-wrap .row',
+      loading: {
+        finishedMsg: '<h4>Check back soon for more videos</h4>',
+        finished: function() {
+          video();
+          $(btn).removeClass('loading');
+        }
+      }
+    });
+
+    $(window).unbind('.infscr');
+
+    $(btn).on('touchstart click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      $(this).addClass('loading');
+      $('.js--scroll-wrap').infinitescroll('retrieve');
+    });
+
+    $(document).ajaxError(function(e,xhr,opt) {
+      if ( xhr.status === 404 ) {
+        $(btn).remove();
+      }
+    });
+
+  };
+
+  if ( $('.js--scroll-wrap').length ) {
+    infiniteScrollGo();
+  }
 
 
 });

@@ -1,6 +1,6 @@
 <?php
 /*
- Template Name: About Page
+ Template Name: About Section - About ADF
 */
 ?>
 
@@ -30,45 +30,13 @@
 
     <div class="row">
       <div class="span12">
-        <h2>Mission Statement</h2>
+        <h2>ADF History</h2>
       </div>
     </div>
 
     <div class="row pad-t--20">
       <div class="span8">
-        <p class="text-highlight pad-b--0">We truly believe every player has the right to reach their highest potential – first team on an academy, High School Varsity, D1 College or Pro player – it’s okay to dream, work hard and see how far you can go!</p>
-      </div>
-    </div>
-
-    <div class="row pad-v--2x">
-      <div class="span6">
-        <div class="box-outline">
-          <h3>What do we do for it?</h3>
-          <ul>
-            <li><strong>Youth players</strong> – Boys and Girls ages 6 to 17</li>
-            <li><strong>Adult players</strong> – Men and Women 18+</li>
-          </ul>
-        </div>
-      </div>
-      <div class="span6">
-        <div class="box-outline">
-          <h3>What do we do?</h3>
-          <p>We are a premier soccer academy that provides the highest level training so players can realize their highest potential</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="span5">
-        <p class="h4 semi pad-b-s--0">We offer academy players the opportunity to play and gain experience on competitive teams in regional, national and international competitions</p>
-      </div>
-      <div class="span3 pad-b-s--0">
-        <p>We offer training in both individual and group settings</p>
-        <p>We offer a mix of development opportunities in a variety of venues – outdoor, indoor, futsal and street</p>
-      </div>
-      <div class="span3">
-        <p>We provide sports agency representation for current and future professional players</p>
-        <p>We sponsor two adult men’s teams</p>
+        <p class="text-highlight pad-b--0">Academia de Futeboltraining was founded in 2014 by Joaquim Capuia to give the NW soccer community a much needed academy program for youth development. Prior to founding the Academy, Joaquim was the owner and head trainer of Futeboltraining.  From its inception in 2011 Futeboltraininghas helped over 400 players develop and improve their soccer skills. Training with Futeboltraining helps players increase their technical abilities, learn to play faster, think quicker and make better decisions. Numerous Futeboltraining players have gone on to ODP, D1 College, MLS Academy and professional careers.</p>
       </div>
     </div>
 
@@ -76,53 +44,12 @@
 </section>
 
 
-<section class="pad-v--3x bg-red bg-red-img">
+<section class="pad-v--2x bg-red">
   <div class="container">
 
     <div class="row text-center">
-      <div class="span12">
-        <h3 class="h2">How do we do it?</h3>
-        <p class="h3 text-white semi pad-t--20 pad-b-s--0">We develop players using our unique training curriculum that fosters creativity and individualism. We encourage consistent training – frequent touches and repetition are essential for player development.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<section class="pad-v--2x">
-  <div class="container">
-
-    <div class="row pad-b--20 pad-b-s--0">
-      <div class="span6 pad-b-s--0">
-        <p class="h3 semi">We place players in training sessions based upon their skill and ability not based upon age – highly skilled younger players often train with older players and skilled older players train with adults</p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="span5 offset1 pad-b-s--0">
-        <p>We encourage fast-pace training to prepare players for real-game situations</p>
-        <p>We have partnered with a academy in Brazil to facilitate exchanges for our academy players so they gain valuable international experience</p>
-        <p>We employ only high quality, experienced trainers / coaches that are able to demonstrate skills and techniques at an expert level – our staff still play soccer at the highest amateur level so they understand the modern game</p>
-      </div>
-      <div class="span5">
-        <p>We provide sports agency representation for current and future professional players</p>
-        <p>We teach game strategy and tactics when age and skill appropriate – young trainees spend the majority of their time learning proper technique, more experienced trainees receive a blend of technical and tactical training</p>
-        <p class="pad-b-s--0">We use small sided games to develop touch, technique and quick decision making</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<section class="pad-v--3x bg-blue bg-blue-img">
-  <div class="container">
-
-    <div class="row text-center">
-      <div class="span12">
-        <h3 class="h2">What value are we bringing?</h3>
-        <p class="h3 text-white semi pad-t--20 pad-b-s--0"><span class="break">We provide players with exceptional training that is equivalent to what they would find in the</span> finest soccer academies in the world - players have the chance to realize their full potential.</p>
+      <div class="span8 offset2">
+        <p class="h3 text-red-dark semi pad-b--0">Joaquim and his staff not only train players to improve technically, they also coach, mentor and guide players to help them realize their goals.</p>
       </div>
     </div>
 
@@ -134,23 +61,500 @@
   <div class="container">
 
     <div class="row">
-      <div class="span5 pad-b-s--0">
-        <p class="h4 semi">We are highly creative in our approach and realize every player has their own unique style of learning – we take the time to understand what motivates every player so they work hard but have fun too</p>
+      <div class="span12">
+        <h3>A New Era for Portland</h3>
       </div>
-      <div class="span3 pad-b-s--0">
-        <p>We provide players with the individual attention required to improve soccer skills</p>
-        <p>We objectively and consistently evaluate every player’s skills and abilities to develop a customized training regime that is modified as they develop and mature</p>
-      </div>
-      <div class="span3">
-        <p class="pad-b-s--0">We have a proven track record of developing players who have realized their full potential: College scholarships, MLS academy teams, US Youth and Men’s National teams and Professional contracts</p>
+    </div>
+
+    <div class="row pad-t--20">
+      <div class="span8">
+        <p class="text-highlight pad-b--0">From Joaquim’s invaluable experience gained developing top players and discussing their goals he realized that the Northwest was lacking a world class soccer academy. Throughout Europe and South America the best players are part of an academy. A professional academy is a place where players thrive and grow by working with the best trainers and coaches and by interacting with the best players. Academia de Futeboltraining was established to provide players with exactly that type of world class environment so that they can realize their full potential.</p>
       </div>
     </div>
 
   </div>
 </section>
+
+
+<section class="bg-gray pad-v--2x overflow-hidden">
+  <div class="container">
+
+    <div class="row pad-b">
+      <div class="span12">
+        <h3>Board of Directors</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="span12">
+
+        <div class="slider-main-wrap">
+
+          <div class="loader">
+            Loading...
+          </div>
+
+           <a href="#" class="view-multi">
+            <span class="icon icon-grid">
+              <svg class="icon-svg">
+                <use xlink:href="#icon-grid" />
+              </svg>
+            </span>
+            View All
+          </a>
+
+          <div class="slider slider-multi">
+
+            <div class="item">
+              <a href="#" class="box-carousel box-carousel-short">
+                <div class="img-wrap">
+                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/board-of-directors/bod-placeholder.png" alt="Placeholder Name">
+                </div>
+                <div class="bottom">
+                  <h5>Jerry Fay</h5>
+                  <span class="view-item">
+                    <span class="icon icon-arrow-right-line">
+                      <svg class="icon-svg">
+                        <use xlink:href="#icon-arrow-right-line" />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+                <div class="carousel-short-overview">
+                  <h3>Title Lorem</h3>
+                  <h6>Lorem Ipsum set Dolor</h6>
+                </div>
+              </a>
+            </div>
+
+            <div class="item">
+              <a href="#" class="box-carousel box-carousel-short">
+                <div class="img-wrap">
+                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/board-of-directors/bod-placeholder.png" alt="Placeholder Name">
+                </div>
+                <div class="bottom">
+                  <h5>Zeno Katterle</h5>
+                  <span class="view-item">
+                    <span class="icon icon-arrow-right-line">
+                      <svg class="icon-svg">
+                        <use xlink:href="#icon-arrow-right-line" />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+                <div class="carousel-short-overview">
+                  <h3>Title Lorem</h3>
+                  <h6>Lorem Ipsum set Dolor</h6>
+                </div>
+              </a>
+            </div>
+
+            <div class="item">
+              <a href="#" class="box-carousel box-carousel-short">
+                <div class="img-wrap">
+                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/board-of-directors/bod-placeholder.png" alt="Placeholder Name">
+                </div>
+                <div class="bottom">
+                  <h5>Michael Hebert</h5>
+                  <span class="view-item">
+                    <span class="icon icon-arrow-right-line">
+                      <svg class="icon-svg">
+                        <use xlink:href="#icon-arrow-right-line" />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+                <div class="carousel-short-overview">
+                  <h3>Title Lorem</h3>
+                  <h6>Lorem Ipsum set Dolor</h6>
+                </div>
+              </a>
+            </div>
+
+            <div class="item">
+              <a href="#" class="box-carousel box-carousel-short">
+                <div class="img-wrap">
+                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/board-of-directors/bod-placeholder.png" alt="Placeholder Name">
+                </div>
+                <div class="bottom">
+                  <h5>Jeff Chan</h5>
+                  <span class="view-item">
+                    <span class="icon icon-arrow-right-line">
+                      <svg class="icon-svg">
+                        <use xlink:href="#icon-arrow-right-line" />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+                <div class="carousel-short-overview">
+                  <h3>Title Lorem</h3>
+                  <h6>Lorem Ipsum set Dolor</h6>
+                </div>
+              </a>
+            </div>
+
+            <div class="item">
+              <a href="#" class="box-carousel box-carousel-short">
+                <div class="img-wrap">
+                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/board-of-directors/bod-placeholder.png" alt="Placeholder Name">
+                </div>
+                <div class="bottom">
+                  <h5>Full Name</h5>
+                  <span class="view-item">
+                    <span class="icon icon-arrow-right-line">
+                      <svg class="icon-svg">
+                        <use xlink:href="#icon-arrow-right-line" />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+                <div class="carousel-short-overview">
+                  <h3>Title Lorem</h3>
+                  <h6>Lorem Ipsum set Dolor</h6>
+                </div>
+              </a>
+            </div>
+
+            <div class="item">
+              <a href="#" class="box-carousel box-carousel-short">
+                <div class="img-wrap">
+                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/board-of-directors/bod-placeholder.png" alt="Placeholder Name">
+                </div>
+                <div class="bottom">
+                  <h5>Jane Doe</h5>
+                  <span class="view-item">
+                    <span class="icon icon-arrow-right-line">
+                      <svg class="icon-svg">
+                        <use xlink:href="#icon-arrow-right-line" />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+                <div class="carousel-short-overview">
+                  <h3>Title Lorem</h3>
+                  <h6>Lorem Ipsum set Dolor</h6>
+                </div>
+              </a>
+            </div>
+
+          </div>
+
+
+          <div class="slider slider-single">
+
+            <div class="item">
+              <div class="carousel-box-full">
+                <div class="content-wrap-upper">
+                  <div class="content-wrap-inner">
+                    <h3>Jerry Fay</h3>
+                    <h6>Title Lorem</h6>
+                    <ul class="list-inline">
+                      <li class="social facebook">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-facebook">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-facebook" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social instagram">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-instagram">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-instagram" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social twitter">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-twitter">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-twitter" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/board-of-directors/bod-header-placeholder.png" alt="Director Name">
+                  </div>
+                </div>
+                <div class="content-wrap">
+                  <div class="detail-wrap">
+                    <h5>Lorem Ipsum</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, eum, harum, temporibus quo dicta cupiditate amet nemo qui cumque culpa reprehenderit error ullam veritatis. Necessitatibus voluptates odit eum quod. Magni!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, cum natus dolorum accusantium soluta. Ut, vitae, maxime, quod ducimus repudiandae ipsam aut neque natus saepe excepturi tempore fugiat a debitis.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="carousel-box-full">
+                <div class="content-wrap-upper">
+                  <div class="content-wrap-inner">
+                    <h3>Zeno Katterle</h3>
+                    <h6>Title Lorem</h6>
+                    <ul class="list-inline">
+                      <li class="social facebook">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-facebook">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-facebook" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social instagram">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-instagram">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-instagram" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social twitter">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-twitter">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-twitter" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/board-of-directors/bod-header-placeholder.png" alt="Director Name">
+                  </div>
+                </div>
+                <div class="content-wrap">
+                  <div class="detail-wrap">
+                    <h5>Lorem Ipsum</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, eum, harum, temporibus quo dicta cupiditate amet nemo qui cumque culpa reprehenderit error ullam veritatis. Necessitatibus voluptates odit eum quod. Magni!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, cum natus dolorum accusantium soluta. Ut, vitae, maxime, quod ducimus repudiandae ipsam aut neque natus saepe excepturi tempore fugiat a debitis.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="carousel-box-full">
+                <div class="content-wrap-upper">
+                  <div class="content-wrap-inner">
+                    <h3>Michael Hebert</h3>
+                    <h6>Title Lorem</h6>
+                    <ul class="list-inline">
+                      <li class="social facebook">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-facebook">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-facebook" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social instagram">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-instagram">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-instagram" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social twitter">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-twitter">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-twitter" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/board-of-directors/bod-header-placeholder.png" alt="Director Name">
+                  </div>
+                </div>
+                <div class="content-wrap">
+                  <div class="detail-wrap">
+                    <h5>Lorem Ipsum</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, eum, harum, temporibus quo dicta cupiditate amet nemo qui cumque culpa reprehenderit error ullam veritatis. Necessitatibus voluptates odit eum quod. Magni!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, cum natus dolorum accusantium soluta. Ut, vitae, maxime, quod ducimus repudiandae ipsam aut neque natus saepe excepturi tempore fugiat a debitis.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="carousel-box-full">
+                <div class="content-wrap-upper">
+                  <div class="content-wrap-inner">
+                    <h3>Jeff Chan</h3>
+                    <h6>Title Lorem</h6>
+                    <ul class="list-inline">
+                      <li class="social facebook">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-facebook">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-facebook" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social instagram">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-instagram">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-instagram" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social twitter">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-twitter">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-twitter" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/board-of-directors/bod-header-placeholder.png" alt="Director Name">
+                  </div>
+                </div>
+                <div class="content-wrap">
+                  <div class="detail-wrap">
+                    <h5>Lorem Ipsum</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, eum, harum, temporibus quo dicta cupiditate amet nemo qui cumque culpa reprehenderit error ullam veritatis. Necessitatibus voluptates odit eum quod. Magni!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, cum natus dolorum accusantium soluta. Ut, vitae, maxime, quod ducimus repudiandae ipsam aut neque natus saepe excepturi tempore fugiat a debitis.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="carousel-box-full">
+                <div class="content-wrap-upper">
+                  <div class="content-wrap-inner">
+                    <h3>Full Name</h3>
+                    <h6>Title Lorem</h6>
+                    <ul class="list-inline">
+                      <li class="social facebook">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-facebook">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-facebook" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social instagram">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-instagram">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-instagram" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social twitter">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-twitter">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-twitter" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/board-of-directors/bod-header-placeholder.png" alt="Director Name">
+                  </div>
+                </div>
+                <div class="content-wrap">
+                  <div class="detail-wrap">
+                    <h5>Lorem Ipsum</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, eum, harum, temporibus quo dicta cupiditate amet nemo qui cumque culpa reprehenderit error ullam veritatis. Necessitatibus voluptates odit eum quod. Magni!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, cum natus dolorum accusantium soluta. Ut, vitae, maxime, quod ducimus repudiandae ipsam aut neque natus saepe excepturi tempore fugiat a debitis.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="carousel-box-full">
+                <div class="content-wrap-upper">
+                  <div class="content-wrap-inner">
+                    <h3>Jane Doe</h3>
+                    <h6>Title Lorem</h6>
+                    <ul class="list-inline">
+                      <li class="social facebook">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-facebook">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-facebook" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social instagram">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-instagram">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-instagram" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="social twitter">
+                        <a href="#" target="_blank">
+                          <span class="icon icon-twitter">
+                            <svg class="icon-svg">
+                              <use xlink:href="#icon-twitter" />
+                            </svg>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="img-wrap">
+                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/board-of-directors/bod-header-placeholder.png" alt="Director Name">
+                  </div>
+                </div>
+                <div class="content-wrap">
+                  <div class="detail-wrap">
+                    <h5>Lorem Ipsum</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, eum, harum, temporibus quo dicta cupiditate amet nemo qui cumque culpa reprehenderit error ullam veritatis. Necessitatibus voluptates odit eum quod. Magni!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, cum natus dolorum accusantium soluta. Ut, vitae, maxime, quod ducimus repudiandae ipsam aut neque natus saepe excepturi tempore fugiat a debitis.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
 <?php if ( !is_user_logged_in() ) : ?>
-<section class="bg-gray pad-v">
+<section class="pad-v">
   <div class="container">
 
     <div class="row text-center">

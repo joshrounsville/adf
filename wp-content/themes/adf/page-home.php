@@ -172,7 +172,7 @@
       <div class="span12">
         <ul class="list-inline-middle list-inline-spacer-right">
           <li><h3>Latest Videos</h3></li>
-          <li><a href="#" class="btn">See All Videos</a></li>
+          <li><a href="/video/" class="btn">See All Videos</a></li>
         </ul>
       </div>
     </div>

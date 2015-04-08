@@ -37,7 +37,7 @@
         ),
         'has_archive' => 'video',
         'capability_type' => 'post',
-        'hierarchical' => false,
+        'hierarchical' => true,
         'supports' => array(
           'title',
           'editor',

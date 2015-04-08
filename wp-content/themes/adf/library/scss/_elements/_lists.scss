@@ -105,3 +105,46 @@ ol {
     }
   }
 }
+
+.list-staff-contact {
+  display: block;
+  width: 100%;
+  border: 1px solid $colorGrayLight;
+  border-radius: 4px;
+  li {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid $colorGrayLight;
+    padding: 12px 15px;
+    @include clearfix();
+    &:last-of-type {
+      border-bottom: none;
+    }
+    &:nth-of-type(even) {
+      background-color: $colorGrayXLight;
+    }
+  }
+  a {
+    float: right;
+    @include fontBold();
+  }
+
+  @include breakpoint(large) {
+    font-size: $fontSmall;
+  }
+  @include breakpoint(medium) {
+    a {
+      float: none;
+      display: block;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+

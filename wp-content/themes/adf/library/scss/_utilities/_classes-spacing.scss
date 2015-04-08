@@ -65,6 +65,10 @@
   }
 }
 
+.pad-t--30 {
+  padding-top: 30px;
+}
+
 .pad-t--20 {
   padding-top: 20px;
 }
@@ -95,6 +99,10 @@
   @include breakpoint(medium) {
     padding-bottom: 40px;
   }
+}
+
+.pad-b--30 {
+  padding-bottom: 30px;
 }
 
 .pad-b--20 {
