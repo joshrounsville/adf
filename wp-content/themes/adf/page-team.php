@@ -42,6 +42,35 @@
       </div>
     </div>
 
+    <div class="row pad-t">
+      <div class="span12">
+        <?php
+          global $post;
+          $page_id = get_the_ID();
+          $page_name = get_the_title();
+
+          $args = array(
+            'blog_id' => $GLOBALS['blog_id'],
+            'role' => 'Player',
+            'meta_key' => 'current_club_2',
+            'meta_value' => $page_id,
+            'orderby' => 'login',
+            'order' => 'ASC'
+          );
+        ?>
+
+        <ul>
+        <?php
+          $blogusers = get_users( $args );
+          foreach ( $blogusers as $user ) {
+            echo '<li>' . esc_html( $user->first_name ) . ' ' . esc_html( $page_name ) . '</li>';
+          }
+        ?>
+        </ul>
+
+      </div>
+    </div>
+
   </div>
 </section>
 

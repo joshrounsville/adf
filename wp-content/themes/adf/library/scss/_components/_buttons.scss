@@ -73,6 +73,20 @@
     display: block;
   }
 
+  &.btn--filter {
+    &.active {
+      border-color: $colorBlueLight;
+      background: $colorBlueLight;
+      color: $colorBlueDark;
+      &:hover,
+      &:focus {
+        border-color: $colorBlueLight;
+        background: $colorBlueLight;
+        color: $colorBlueDark;
+      }
+    }
+  }
+
   &.loading {
     position: relative;
     &:after {

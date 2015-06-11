@@ -76,6 +76,16 @@
 </section>
 
 
+<?php
+  $boardArgs = array(
+    'post_type' => 'board',
+    'posts_per_page' => -1,
+    'order' => ASC
+  );
+?>
+<?php $boardQuery = new WP_Query( $boardArgs ); ?>
+<?php if ( $boardQuery->have_posts() ) : ?>
+
 <section class="bg-gray pad-v--2x overflow-hidden">
   <div class="container">
 
@@ -104,14 +114,14 @@
           </a>
 
           <div class="slider slider-multi">
-
+            <?php while ($boardQuery->have_posts()) : $boardQuery->the_post(); ?>
             <div class="item">
               <a href="#" class="box-carousel box-carousel-short">
                 <div class="img-wrap">
-                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/board-of-directors/bod-placeholder.png" alt="Placeholder Name">
+                  <?php the_post_thumbnail('box-carousel-small'); ?>
                 </div>
                 <div class="bottom">
-                  <h5>Jerry Fay</h5>
+                  <h5><?php the_title(); ?></h5>
                   <span class="view-item">
                     <span class="icon icon-arrow-right-line">
                       <svg class="icon-svg">
@@ -121,136 +131,26 @@
                   </span>
                 </div>
                 <div class="carousel-short-overview">
-                  <h3>Title Lorem</h3>
-                  <h6>Lorem Ipsum set Dolor</h6>
+                  <h3><?php the_field('title'); ?></h3>
                 </div>
               </a>
             </div>
-
-            <div class="item">
-              <a href="#" class="box-carousel box-carousel-short">
-                <div class="img-wrap">
-                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/board-of-directors/bod-placeholder.png" alt="Placeholder Name">
-                </div>
-                <div class="bottom">
-                  <h5>Zeno Katterle</h5>
-                  <span class="view-item">
-                    <span class="icon icon-arrow-right-line">
-                      <svg class="icon-svg">
-                        <use xlink:href="#icon-arrow-right-line" />
-                      </svg>
-                    </span>
-                  </span>
-                </div>
-                <div class="carousel-short-overview">
-                  <h3>Title Lorem</h3>
-                  <h6>Lorem Ipsum set Dolor</h6>
-                </div>
-              </a>
-            </div>
-
-            <div class="item">
-              <a href="#" class="box-carousel box-carousel-short">
-                <div class="img-wrap">
-                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/board-of-directors/bod-placeholder.png" alt="Placeholder Name">
-                </div>
-                <div class="bottom">
-                  <h5>Michael Hebert</h5>
-                  <span class="view-item">
-                    <span class="icon icon-arrow-right-line">
-                      <svg class="icon-svg">
-                        <use xlink:href="#icon-arrow-right-line" />
-                      </svg>
-                    </span>
-                  </span>
-                </div>
-                <div class="carousel-short-overview">
-                  <h3>Title Lorem</h3>
-                  <h6>Lorem Ipsum set Dolor</h6>
-                </div>
-              </a>
-            </div>
-
-            <div class="item">
-              <a href="#" class="box-carousel box-carousel-short">
-                <div class="img-wrap">
-                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/board-of-directors/bod-placeholder.png" alt="Placeholder Name">
-                </div>
-                <div class="bottom">
-                  <h5>Jeff Chan</h5>
-                  <span class="view-item">
-                    <span class="icon icon-arrow-right-line">
-                      <svg class="icon-svg">
-                        <use xlink:href="#icon-arrow-right-line" />
-                      </svg>
-                    </span>
-                  </span>
-                </div>
-                <div class="carousel-short-overview">
-                  <h3>Title Lorem</h3>
-                  <h6>Lorem Ipsum set Dolor</h6>
-                </div>
-              </a>
-            </div>
-
-            <div class="item">
-              <a href="#" class="box-carousel box-carousel-short">
-                <div class="img-wrap">
-                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/board-of-directors/bod-placeholder.png" alt="Placeholder Name">
-                </div>
-                <div class="bottom">
-                  <h5>Full Name</h5>
-                  <span class="view-item">
-                    <span class="icon icon-arrow-right-line">
-                      <svg class="icon-svg">
-                        <use xlink:href="#icon-arrow-right-line" />
-                      </svg>
-                    </span>
-                  </span>
-                </div>
-                <div class="carousel-short-overview">
-                  <h3>Title Lorem</h3>
-                  <h6>Lorem Ipsum set Dolor</h6>
-                </div>
-              </a>
-            </div>
-
-            <div class="item">
-              <a href="#" class="box-carousel box-carousel-short">
-                <div class="img-wrap">
-                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/board-of-directors/bod-placeholder.png" alt="Placeholder Name">
-                </div>
-                <div class="bottom">
-                  <h5>Jane Doe</h5>
-                  <span class="view-item">
-                    <span class="icon icon-arrow-right-line">
-                      <svg class="icon-svg">
-                        <use xlink:href="#icon-arrow-right-line" />
-                      </svg>
-                    </span>
-                  </span>
-                </div>
-                <div class="carousel-short-overview">
-                  <h3>Title Lorem</h3>
-                  <h6>Lorem Ipsum set Dolor</h6>
-                </div>
-              </a>
-            </div>
-
+            <?php endwhile; ?>
           </div>
 
 
           <div class="slider slider-single">
-
+            <?php while ($boardQuery->have_posts()) : $boardQuery->the_post(); ?>
             <div class="item">
               <div class="carousel-box-full">
                 <div class="content-wrap-upper">
                   <div class="content-wrap-inner">
-                    <h3>Jerry Fay</h3>
-                    <h6>Title Lorem</h6>
+                    <h3><?php the_title(); ?></h3>
+                    <h6><?php the_field('title'); ?></h6>
                     <ul class="list-inline">
+                      <?php if ( get_field('facebook_account') ): ?>
                       <li class="social facebook">
-                        <a href="#" target="_blank">
+                        <a href="<?php the_field('facebook_account'); ?>" target="_blank">
                           <span class="icon icon-facebook">
                             <svg class="icon-svg">
                               <use xlink:href="#icon-facebook" />
@@ -258,8 +158,10 @@
                           </span>
                         </a>
                       </li>
+                      <?php endif; ?>
+                      <?php if ( get_field('instagram_account') ) : ?>
                       <li class="social instagram">
-                        <a href="#" target="_blank">
+                        <a href="<?php the_field('instagram_account'); ?>" target="_blank">
                           <span class="icon icon-instagram">
                             <svg class="icon-svg">
                               <use xlink:href="#icon-instagram" />
@@ -267,8 +169,10 @@
                           </span>
                         </a>
                       </li>
+                      <?php endif; ?>
+                      <?php if ( get_field('twitter_account') ): ?>
                       <li class="social twitter">
-                        <a href="#" target="_blank">
+                        <a href="<?php the_field('twitter_account'); ?>" target="_blank">
                           <span class="icon icon-twitter">
                             <svg class="icon-svg">
                               <use xlink:href="#icon-twitter" />
@@ -276,272 +180,21 @@
                           </span>
                         </a>
                       </li>
+                      <?php endif; ?>
                     </ul>
                   </div>
                   <div class="img-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/board-of-directors/bod-header-placeholder.png" alt="Director Name">
+                    <?php the_post_thumbnail('box-carousel-large'); ?>
                   </div>
                 </div>
                 <div class="content-wrap">
                   <div class="detail-wrap">
-                    <h5>Lorem Ipsum</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, eum, harum, temporibus quo dicta cupiditate amet nemo qui cumque culpa reprehenderit error ullam veritatis. Necessitatibus voluptates odit eum quod. Magni!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, cum natus dolorum accusantium soluta. Ut, vitae, maxime, quod ducimus repudiandae ipsam aut neque natus saepe excepturi tempore fugiat a debitis.</p>
+                    <?php the_content(); ?>
                   </div>
                 </div>
               </div>
             </div>
-
-            <div class="item">
-              <div class="carousel-box-full">
-                <div class="content-wrap-upper">
-                  <div class="content-wrap-inner">
-                    <h3>Zeno Katterle</h3>
-                    <h6>Title Lorem</h6>
-                    <ul class="list-inline">
-                      <li class="social facebook">
-                        <a href="#" target="_blank">
-                          <span class="icon icon-facebook">
-                            <svg class="icon-svg">
-                              <use xlink:href="#icon-facebook" />
-                            </svg>
-                          </span>
-                        </a>
-                      </li>
-                      <li class="social instagram">
-                        <a href="#" target="_blank">
-                          <span class="icon icon-instagram">
-                            <svg class="icon-svg">
-                              <use xlink:href="#icon-instagram" />
-                            </svg>
-                          </span>
-                        </a>
-                      </li>
-                      <li class="social twitter">
-                        <a href="#" target="_blank">
-                          <span class="icon icon-twitter">
-                            <svg class="icon-svg">
-                              <use xlink:href="#icon-twitter" />
-                            </svg>
-                          </span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="img-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/board-of-directors/bod-header-placeholder.png" alt="Director Name">
-                  </div>
-                </div>
-                <div class="content-wrap">
-                  <div class="detail-wrap">
-                    <h5>Lorem Ipsum</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, eum, harum, temporibus quo dicta cupiditate amet nemo qui cumque culpa reprehenderit error ullam veritatis. Necessitatibus voluptates odit eum quod. Magni!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, cum natus dolorum accusantium soluta. Ut, vitae, maxime, quod ducimus repudiandae ipsam aut neque natus saepe excepturi tempore fugiat a debitis.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="carousel-box-full">
-                <div class="content-wrap-upper">
-                  <div class="content-wrap-inner">
-                    <h3>Michael Hebert</h3>
-                    <h6>Title Lorem</h6>
-                    <ul class="list-inline">
-                      <li class="social facebook">
-                        <a href="#" target="_blank">
-                          <span class="icon icon-facebook">
-                            <svg class="icon-svg">
-                              <use xlink:href="#icon-facebook" />
-                            </svg>
-                          </span>
-                        </a>
-                      </li>
-                      <li class="social instagram">
-                        <a href="#" target="_blank">
-                          <span class="icon icon-instagram">
-                            <svg class="icon-svg">
-                              <use xlink:href="#icon-instagram" />
-                            </svg>
-                          </span>
-                        </a>
-                      </li>
-                      <li class="social twitter">
-                        <a href="#" target="_blank">
-                          <span class="icon icon-twitter">
-                            <svg class="icon-svg">
-                              <use xlink:href="#icon-twitter" />
-                            </svg>
-                          </span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="img-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/board-of-directors/bod-header-placeholder.png" alt="Director Name">
-                  </div>
-                </div>
-                <div class="content-wrap">
-                  <div class="detail-wrap">
-                    <h5>Lorem Ipsum</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, eum, harum, temporibus quo dicta cupiditate amet nemo qui cumque culpa reprehenderit error ullam veritatis. Necessitatibus voluptates odit eum quod. Magni!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, cum natus dolorum accusantium soluta. Ut, vitae, maxime, quod ducimus repudiandae ipsam aut neque natus saepe excepturi tempore fugiat a debitis.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="carousel-box-full">
-                <div class="content-wrap-upper">
-                  <div class="content-wrap-inner">
-                    <h3>Jeff Chan</h3>
-                    <h6>Title Lorem</h6>
-                    <ul class="list-inline">
-                      <li class="social facebook">
-                        <a href="#" target="_blank">
-                          <span class="icon icon-facebook">
-                            <svg class="icon-svg">
-                              <use xlink:href="#icon-facebook" />
-                            </svg>
-                          </span>
-                        </a>
-                      </li>
-                      <li class="social instagram">
-                        <a href="#" target="_blank">
-                          <span class="icon icon-instagram">
-                            <svg class="icon-svg">
-                              <use xlink:href="#icon-instagram" />
-                            </svg>
-                          </span>
-                        </a>
-                      </li>
-                      <li class="social twitter">
-                        <a href="#" target="_blank">
-                          <span class="icon icon-twitter">
-                            <svg class="icon-svg">
-                              <use xlink:href="#icon-twitter" />
-                            </svg>
-                          </span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="img-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/board-of-directors/bod-header-placeholder.png" alt="Director Name">
-                  </div>
-                </div>
-                <div class="content-wrap">
-                  <div class="detail-wrap">
-                    <h5>Lorem Ipsum</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, eum, harum, temporibus quo dicta cupiditate amet nemo qui cumque culpa reprehenderit error ullam veritatis. Necessitatibus voluptates odit eum quod. Magni!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, cum natus dolorum accusantium soluta. Ut, vitae, maxime, quod ducimus repudiandae ipsam aut neque natus saepe excepturi tempore fugiat a debitis.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="carousel-box-full">
-                <div class="content-wrap-upper">
-                  <div class="content-wrap-inner">
-                    <h3>Full Name</h3>
-                    <h6>Title Lorem</h6>
-                    <ul class="list-inline">
-                      <li class="social facebook">
-                        <a href="#" target="_blank">
-                          <span class="icon icon-facebook">
-                            <svg class="icon-svg">
-                              <use xlink:href="#icon-facebook" />
-                            </svg>
-                          </span>
-                        </a>
-                      </li>
-                      <li class="social instagram">
-                        <a href="#" target="_blank">
-                          <span class="icon icon-instagram">
-                            <svg class="icon-svg">
-                              <use xlink:href="#icon-instagram" />
-                            </svg>
-                          </span>
-                        </a>
-                      </li>
-                      <li class="social twitter">
-                        <a href="#" target="_blank">
-                          <span class="icon icon-twitter">
-                            <svg class="icon-svg">
-                              <use xlink:href="#icon-twitter" />
-                            </svg>
-                          </span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="img-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/board-of-directors/bod-header-placeholder.png" alt="Director Name">
-                  </div>
-                </div>
-                <div class="content-wrap">
-                  <div class="detail-wrap">
-                    <h5>Lorem Ipsum</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, eum, harum, temporibus quo dicta cupiditate amet nemo qui cumque culpa reprehenderit error ullam veritatis. Necessitatibus voluptates odit eum quod. Magni!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, cum natus dolorum accusantium soluta. Ut, vitae, maxime, quod ducimus repudiandae ipsam aut neque natus saepe excepturi tempore fugiat a debitis.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="carousel-box-full">
-                <div class="content-wrap-upper">
-                  <div class="content-wrap-inner">
-                    <h3>Jane Doe</h3>
-                    <h6>Title Lorem</h6>
-                    <ul class="list-inline">
-                      <li class="social facebook">
-                        <a href="#" target="_blank">
-                          <span class="icon icon-facebook">
-                            <svg class="icon-svg">
-                              <use xlink:href="#icon-facebook" />
-                            </svg>
-                          </span>
-                        </a>
-                      </li>
-                      <li class="social instagram">
-                        <a href="#" target="_blank">
-                          <span class="icon icon-instagram">
-                            <svg class="icon-svg">
-                              <use xlink:href="#icon-instagram" />
-                            </svg>
-                          </span>
-                        </a>
-                      </li>
-                      <li class="social twitter">
-                        <a href="#" target="_blank">
-                          <span class="icon icon-twitter">
-                            <svg class="icon-svg">
-                              <use xlink:href="#icon-twitter" />
-                            </svg>
-                          </span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="img-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/board-of-directors/bod-header-placeholder.png" alt="Director Name">
-                  </div>
-                </div>
-                <div class="content-wrap">
-                  <div class="detail-wrap">
-                    <h5>Lorem Ipsum</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, eum, harum, temporibus quo dicta cupiditate amet nemo qui cumque culpa reprehenderit error ullam veritatis. Necessitatibus voluptates odit eum quod. Magni!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, cum natus dolorum accusantium soluta. Ut, vitae, maxime, quod ducimus repudiandae ipsam aut neque natus saepe excepturi tempore fugiat a debitis.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+            <?php endwhile; ?>
           </div>
 
         </div>
@@ -551,6 +204,8 @@
 
   </div>
 </section>
+<?php endif; ?>
+<?php wp_reset_postdata(); ?>
 
 
 <?php if ( !is_user_logged_in() ) : ?>

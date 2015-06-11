@@ -87,7 +87,26 @@
   </div>
 </section>
 
+<?php
+  $today = date('Ymd');
 
+  $args = array(
+    'meta_key' => 'event_date',
+    'orderby' => 'meta_value_num',
+    'order' => 'ASC',
+    'post_type' => 'event',
+    'posts_per_page' => 4,
+    'meta_query' => array(
+      array(
+        'key' => 'event_date',
+        'value'   => $today,
+        'compare' => '>'
+      )
+    )
+  );
+?>
+<?php $eventQuery = new WP_Query( $args ); ?>
+<?php if ( $eventQuery->have_posts() ) : ?>
 <section class="bg-gray pad-v">
   <div class="container">
 
@@ -95,16 +114,18 @@
       <div class="span12">
         <ul class="list-inline-middle list-inline-spacer-right">
           <li><h3>Upcoming Events</h3></li>
-          <li><a href="#" class="btn">See All Events</a></li>
+          <li><a href="/events/" class="btn">See All Events</a></li>
         </ul>
       </div>
     </div>
 
     <div class="row pad-t">
+      <?php while ($eventQuery->have_posts()) : $eventQuery->the_post(); ?>
       <div class="span3">
-        <a href="#" class="box-event">
-          <time datetime="2014-11-02">November 2, 2014</time>
-          <h3>Event 1: A Short Title</h3>
+        <a href="<?php the_permalink(); ?>" class="box-event">
+          <?php $eventDate = DateTime::createFromFormat('Ymd', get_field('event_date')); ?>
+          <time datetime="<?php echo $eventDate->format('Y-m-d'); ?>"><?php echo $eventDate->format('F j, Y'); ?></time>
+          <h3><?php the_title(); ?></h3>
           <span class="view-item">
             View Event
             <span class="icon icon-arrow-right-line">
@@ -115,56 +136,17 @@
           </span>
         </a>
       </div>
-      <div class="span3">
-        <a href="#" class="box-event">
-          <time datetime="2014-11-02">November 2, 2014</time>
-          <h3>Event 2: This One Has a Longer Title</h3>
-          <span class="view-item">
-            View Event
-            <span class="icon icon-arrow-right-line">
-              <svg class="icon-svg">
-                <use xlink:href="#icon-arrow-right-line" />
-              </svg>
-            </span>
-          </span>
-        </a>
-      </div>
-      <div class="span3">
-        <a href="#" class="box-event">
-          <time datetime="2014-11-02">November 2, 2014</time>
-          <h3>Event 3: A Short Title</h3>
-          <span class="view-item">
-            View Event
-            <span class="icon icon-arrow-right-line">
-              <svg class="icon-svg">
-                <use xlink:href="#icon-arrow-right-line" />
-              </svg>
-            </span>
-          </span>
-        </a>
-      </div>
-      <div class="span3">
-        <a href="#" class="box-event">
-          <time datetime="2014-11-02">November 2, 2014</time>
-          <h3>Event 4: A Short Title</h3>
-          <span class="view-item">
-            View Event
-            <span class="icon icon-arrow-right-line">
-              <svg class="icon-svg">
-                <use xlink:href="#icon-arrow-right-line" />
-              </svg>
-            </span>
-          </span>
-        </a>
-      </div>
+      <?php endwhile; ?>
     </div>
 
   </div>
 </section>
+<?php endif; ?>
+<?php wp_reset_postdata(); ?>
 
 
-<?php $query = new WP_Query( array('posts_per_page' => 3, 'post_type' => 'video') ); ?>
-<?php if ( $query->have_posts() ) : ?>
+<?php $videoQuery = new WP_Query( array('posts_per_page' => 3, 'post_type' => 'video') ); ?>
+<?php if ( $videoQuery->have_posts() ) : ?>
 <section class="pad-v--2x">
   <div class="container">
 
@@ -172,13 +154,13 @@
       <div class="span12">
         <ul class="list-inline-middle list-inline-spacer-right">
           <li><h3>Latest Videos</h3></li>
-          <li><a href="/video/" class="btn">See All Videos</a></li>
+          <li><a href="/videos/" class="btn">See All Videos</a></li>
         </ul>
       </div>
     </div>
 
-    <div class="row pad-t">
-      <?php while ($query->have_posts()) : $query->the_post(); ?>
+    <div class="row pad-t" id="js--video-wrap">
+      <?php while ($videoQuery->have_posts()) : $videoQuery->the_post(); ?>
       <div class="span4">
         <a href="#" class="box-video video-wrap" data-id="<?php the_field('youtube_id'); ?>">
           <span class="icon icon-arrow-right">
@@ -265,7 +247,6 @@
   </div>
 </section>
 
+<?php get_template_part( 'library/partials/modal', 'video' ); ?>
 
 <?php get_footer(); ?>
-
-<?php get_template_part( 'library/partials/modal', 'video' ); ?>

@@ -31,6 +31,10 @@
   }
 }
 
+.box-event--border {
+  box-shadow: 0 0 1px 0 $colorGray;
+}
+
 .view-item {
   color: $colorGrayDark;
   position: absolute;

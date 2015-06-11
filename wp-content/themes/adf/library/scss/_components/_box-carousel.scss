@@ -89,6 +89,7 @@
   position: relative;
   z-index: 5;
   display: block;
+  padding: 0 20px;
   transition: opacity 0.13s ease-in-out, transform 0.13s ease-in-out;
   @include vAlign();
   transform: translateY(-95%);

@@ -30,6 +30,8 @@ function bones_ahoy() {
 
   // USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
   require_once( 'library/custom-post-types/video.php' );
+  require_once( 'library/custom-post-types/event.php' );
+  require_once( 'library/custom-post-types/board.php' );
 
   // launching operation cleanup
   add_action( 'init', 'bones_head_cleanup' );
@@ -76,6 +78,8 @@ if ( ! isset( $content_width ) ) {
 // Thumbnail sizes
 add_image_size( 'bones-thumb-600', 600, 150, true );
 add_image_size( 'bones-thumb-300', 300, 100, true );
+add_image_size( 'box-carousel-small', 263, 282, true );
+add_image_size( 'box-carousel-large', 568, 141, true );
 
 /*
 to add more sizes, simply copy a line from above
@@ -103,6 +107,8 @@ function bones_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
         'bones-thumb-600' => __('600px by 150px'),
         'bones-thumb-300' => __('300px by 100px'),
+        'box-carousel-small' => __('263px by 282px'),
+        'box-carousel-large' => __('568px by 141px')
     ) );
 }
 

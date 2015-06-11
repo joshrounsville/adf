@@ -27,7 +27,6 @@ $(function() {
 
 
 
-
   //////// setup request animation frame shim
   var animationFrame = function() {
     var lastTime = 0;
@@ -398,7 +397,9 @@ $(function() {
       var contentTarget = $(el).find('.video-title');
       var vidId = $(this).attr('data-id');
 
-      if ( $(el).find('img').length <= 0 ) {
+      if ( $(el).find('img').length <= 0 && !$(el).hasClass('loaded') ) {
+
+        $(this).addClass('loaded');
 
         $.getJSON('https://www.googleapis.com/youtube/v3/videos?id=' + vidId + '&part=snippet,contentDetails&key=' + key, function(data) {
 
@@ -441,7 +442,6 @@ $(function() {
 
           }
 
-
           // build the layout
           $('<h3>', {
             'html': title
@@ -470,14 +470,9 @@ $(function() {
 
 
 
-  var playVideo = function() {
-    var playBtn = $('.video-wrap');
+  var playVideo = function(el) {
     var videoTarget = $('.video-target');
-
-    playBtn.on('click', function(e) {
-      e.preventDefault();
-
-      var videoID = $(this).attr('data-id');
+    var videoID = el.attr('data-id');
 
       $('<iframe>', {
         'src': '//www.youtube.com/embed/' + videoID + '?rel=0&autoplay=1&vq=hd720',
@@ -486,13 +481,17 @@ $(function() {
         'allowfullscreen' : true
       }).appendTo(videoTarget);
 
-      $('#video-modal').modal();
+    $('#video-modal').modal();
 
-      fluidVid();
-
-    });
+    fluidVid();
 
   };
+
+  $('#js--video-wrap').on('click', '.video-wrap', function(e) {
+    e.preventDefault();
+    var el = $(this);
+    playVideo(el);
+  });
 
   $('#video-modal').on('hide.bs.modal', function() {
     setTimeout(function() {
@@ -501,14 +500,13 @@ $(function() {
     }, 200);
   });
 
-  playVideo();
 
 
 
 
-  //////// infinite scroll setup
+  //////// infinite scroll (click) setup
 
-  var infiniteScrollGo = function() {
+  var infiniteScrollGo = function(type) {
     var btn = $('.js--scroll-link a');
 
     $('.js--scroll-wrap').infinitescroll({
@@ -516,10 +514,10 @@ $(function() {
       nextSelector: btn,
       itemSelector: '.js--scroll-wrap .row',
       loading: {
-        finishedMsg: '<h4>Check back soon for more videos</h4>',
+        finishedMsg: '<h4>Check back soon for more ' + type + 's</h4>',
         finished: function() {
-          video();
           $(btn).removeClass('loading');
+          video();
         }
       }
     });
@@ -543,7 +541,8 @@ $(function() {
   };
 
   if ( $('.js--scroll-wrap').length ) {
-    infiniteScrollGo();
+    var type = $('.js--scroll-wrap').attr('data-type');
+    infiniteScrollGo(type);
   }
 
 

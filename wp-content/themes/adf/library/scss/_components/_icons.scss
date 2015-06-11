@@ -129,3 +129,33 @@
     stroke: #fff;
   }
 }
+
+
+/////////////// add circles
+
+.icon-circle-wrap {
+  color: $colorGray;
+  &:hover,
+  &:focus {
+    .icon-svg {
+      transform: scale(1.05);
+    }
+  }
+  .icon {
+    width: 32px;
+    height: 32px;
+    border: 2px solid $colorBlueLight;
+    border-radius: 100%;
+    position: relative;
+    bottom: -11px;
+    margin: 0 5px 0 0;
+    padding: 5px 0 0 0;
+    text-align: center;
+    .icon-svg {
+      width: 17px;
+      height: 18px;
+      backface-visibility: hidden;
+      margin: 0 auto;
+    }
+  }
+}

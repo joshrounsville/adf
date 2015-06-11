@@ -23,8 +23,8 @@
 
     <div class="form-row">
       <div class="form-item form-full-width">
-        <label for="user_login<?php $template->the_instance(); ?>">Username</label>
-        <input type="text" name="user_login" id="user_login<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->user_login ); ?>" disabled="disabled">
+        <label>Username</label>
+        <h3><?php echo esc_attr( $profileuser->user_login ); ?></h3>
         <small>Your Username Cannot be Changed</small>
       </div>
     </div>

@@ -183,13 +183,6 @@
 .slider-main-wrap {
   position: relative;
   min-height: 337px;
-  transition: height 0.16s ease-in-out;
-  &.multi {
-    height: 337px;
-  }
-  &.single {
-    height: 438px;
-  }
 }
 
 .slider {
@@ -290,7 +283,6 @@
 }
 
 .view-multi {
-  position: relative;
   z-index: -1;
   position: absolute;
   top: 0;

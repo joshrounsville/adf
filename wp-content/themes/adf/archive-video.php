@@ -24,7 +24,7 @@
       </div>
     </div>
 
-    <div class="js--scroll-wrap">
+    <div class="js--scroll-wrap" id="js--video-wrap" data-type="video">
 
     <?php $post_count = 1; if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -71,7 +71,6 @@
   </div>
 </section>
 
+<?php get_template_part( 'library/partials/modal', 'video' ); ?>
 
 <?php get_footer(); ?>
-
-<?php get_template_part( 'library/partials/modal', 'video' ); ?>
