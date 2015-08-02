@@ -1,0 +1,35 @@
+/* ==========================================================================
+  Box - Map
+========================================================================== */
+
+
+.box-map-outer {
+  position: relative;
+  overflow: visible;
+  height: 380px;
+}
+
+.box-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 380px;
+  overflow: hidden;
+  iframe {
+    position: absolute;
+    top: -150px;
+    left: -25%;
+    width: 100%;
+    pointer-events: none;
+  }
+}
+
+.box-map-left {
+  right: 0;
+  left: auto;
+  iframe {
+    right: -25%;
+    left: auto;
+  }
+}

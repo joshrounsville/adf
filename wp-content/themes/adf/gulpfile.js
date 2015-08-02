@@ -1,97 +1,104 @@
-// call the plugins and set variables
+/*
+  Based on Nathan Searles Day One Gulp Starter Kit - https://github.com/nathansearles/Day-One-Gulp-Starter-Kit
+*/
 
-var gulp = require('gulp'),
-    autoprefixer = require('gulp-autoprefixer'),
-    sass = require('gulp-ruby-sass'),
-    minifycss = require('gulp-minify-css'),
-    imagemin = require('gulp-imagemin'),
-    pngcrush = require('imagemin-pngcrush'),
-    cache = require('gulp-cache'),
-    jshint = require('gulp-jshint'),
-    uglify = require('gulp-uglify'),
-    rename = require('gulp-rename'),
-    livereload = require('gulp-livereload'),
-    connect = require ('connect'),
-    http = require('http'),
-    path = require('path'),
-    lr = require('tiny-lr'),
-    server = lr(),
-    cp  = require ('child_process'),
-    port = 3000,
-    gutil = require('gulp-util'),
-    concat = require('gulp-concat'),
-    rimraf = require('gulp-rimraf'),
-    serveStatic = require('serve-static'),
-    serveIndex = require('serve-index');
+/* ====================================
+ * Define paths
+ * ==================================== */
+var source = 'library';
+var build = 'build';
 
 
+/* ====================================
+ * Load required plug-ins
+ * ==================================== */
+var gulp = require('gulp');
+var $ = require('gulp-load-plugins')();
+var runSequence = require('run-sequence');
 
-// set basic tasks
+var plumberConfig = {errorHandler: $.notify.onError("Error: <%= error.message %>")};
 
-gulp.task('css', function() {
-  return gulp.src('./library/scss/components.scss')
-    .pipe(sass({
-      'sourcemap=none': true,
-      style: 'expanded',
-      lineNumbers: true
-    }))
-    .on('error', gutil.log)
-    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-    .pipe(minifycss())
-    .pipe(rename({
+
+/* ====================================
+ * Styles
+ * ==================================== */
+gulp.task('styles', function () {
+  return gulp.src(source + '/scss/**/components.scss')
+    .pipe($.plumber(plumberConfig))
+    .pipe($.rubySass())
+    .pipe($.autoprefixer((["last 2  version", "> 1%", "ie 8", "ie 7"], { cascade: true })))
+    .pipe($.minifyCss())
+    .pipe($.rename({
       basename: 'styles',
       suffix: '.min'
     }))
-    .pipe(gulp.dest('./library/styles/'))
-    .pipe(livereload(server));
+    .pipe(gulp.dest(source + '/styles/'));
 });
 
-gulp.task('clear', function() {
-  return gulp.src('./library/styles/*.scss', { read: false })
-    .pipe(rimraf({ force: true }));
+
+/* ====================================
+ * Scripts
+ * ==================================== */
+ gulp.task('jshint', function() {
+  return gulp.src(source + '/scripts/main.js')
+    .pipe($.plumber(plumberConfig))
+    .pipe($.jshint())
+    .pipe($.jshint.reporter('default'));
 });
 
-gulp.task('lint', function() {
-  return gulp.src('./library/scripts/main.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'));
+gulp.task('scripts', function () {
+  return gulp.src([source + '/scripts/plugins.js', source + '/scripts/main.js'])
+    .pipe($.plumber(plumberConfig))
+    .pipe($.concat('scripts.js'))
+    .pipe($.uglify())
+    .pipe($.rename({suffix: '.min'}))
+    .pipe(gulp.dest(source + '/scripts'));
 });
 
-gulp.task('minify', function(){
-  gulp.src(['./library/scripts/plugins.js', './library/scripts/main.js', '!./library/scripts/vendor/*.js', '!./library/scripts/*.min.js'])
-    .pipe(concat('scripts.js'))
-    .pipe(uglify())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(gulp.dest('./library/scripts/'))
-    .pipe(livereload(server));
-});
 
-gulp.task('images', function () {
-  return gulp.src(['./library/img/**', '!*.svg'])
-    .pipe(cache(imagemin({
-      optimizationLevel: 5,
+/* ====================================
+ * Images
+ * ==================================== */
+gulp.task('images', function() {
+  return gulp.src([source + '/img/**/*'])
+    .pipe($.plumber(plumberConfig))
+    .pipe($.imagemin({
+      optimizationLevel: 3,
       progressive: true,
       interlaced: true,
-      svgoPlugins: [{removeViewBox: false}],
-      use: [pngcrush()]
-    })))
-    .pipe(livereload(server));
+      svgoPlugins: [
+        { removeViewBox: false },
+        { removeUselessStrokeAndFill: false }
+      ],
+    }))
+    .pipe(gulp.dest(source + '/img'));
 });
 
 
 
-// set working tasks
+/* ====================================
+ * Gulp tasks
+ * ==================================== */
 
-gulp.task('run', [ 'css', 'lint', 'minify' ]);
+// For local development
+gulp.task('default', function(){
+  runSequence(
+    ['images', 'styles', 'scripts'],
+    ['watch']
+  );
+});
 
-gulp.task('default', [ 'run', 'images' ], function() {
+// For staging/production deployment
 
-  gulp.watch('./library/scss/**/*.scss', [ 'css', 'clear' ]);
 
-  gulp.watch('./library/scripts/main.js', [ 'lint' ] );
 
-  gulp.watch('./library/scripts/*.js', [ 'minify' ]);
+/* ====================================
+ * Watch
+ * ==================================== */
+gulp.task('watch', function() {
+  gulp.watch(source + '/scss/**/*.scss', ['styles']);
 
+  gulp.watch([source + '/scripts/**/*.js', '!' + source + '/scripts/scripts.min.js'], ['jshint', 'scripts']);
+
+  gulp.watch(source + '/img/**/*', ['images']);
 });

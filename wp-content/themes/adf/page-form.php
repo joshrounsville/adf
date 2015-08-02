@@ -12,7 +12,7 @@
   <div class="container">
 
     <div class="row">
-      <div class="span6 offset3 span-l-8 offset-l-2 span-m-10 offset-m-1">
+      <div class="span4 offset4 span-l-8 offset-l-2 span-m-10 offset-m-1">
 
         <div class="form-wrap">
           <?php if (have_posts()) : while (have_posts()) : the_post(); ?>

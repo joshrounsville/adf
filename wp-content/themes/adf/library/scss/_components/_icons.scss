@@ -8,6 +8,11 @@
   overflow: hidden;
 }
 
+.icon-inline {
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
 .icon-circle {
   width: 70px;
   height: 70px;
@@ -80,6 +85,12 @@
   fill: $colorGrayLight;
 }
 
+.icon-arrow-down-line {
+  width: 14px;
+  height: 9px;
+  fill: $colorBlueLight;
+}
+
 .icon-arrow-right {
   width: 25px;
   height: 21px;
@@ -114,6 +125,11 @@
   width: 15px;
   height: 14px;
   fill: #fff;
+}
+
+.icon-instagram-large {
+  width: 30px;
+  height: 28px;
 }
 
 .icon-twitter {

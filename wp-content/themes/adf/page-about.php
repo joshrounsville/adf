@@ -21,9 +21,7 @@
   </div>
 </section>
 
-
 <?php get_template_part( 'library/partials/nav', 'subpage' ); ?>
-
 
 <section class="pad-v--2x">
   <div class="container">
@@ -80,6 +78,7 @@
   $boardArgs = array(
     'post_type' => 'board',
     'posts_per_page' => -1,
+    'orderby' => 'name',
     'order' => ASC
   );
 ?>
@@ -184,7 +183,7 @@
                     </ul>
                   </div>
                   <div class="img-wrap">
-                    <?php the_post_thumbnail('box-carousel-large'); ?>
+                    <?php the_post_thumbnail('full'); ?>
                   </div>
                 </div>
                 <div class="content-wrap">

@@ -71,6 +71,7 @@
 
   &.btn--block {
     display: block;
+    width: 100%;
   }
 
   &.btn--filter {
@@ -106,8 +107,19 @@
     }
   }
 
+  @include breakpoint(medium) {
+    padding: 7px 12px 6px;
+    &.btn--primary {
+      padding: 10px 13px 9px;
+    }
+    &.btn--secondary {
+      padding: 5px 9px 4px;
+    }
+  }
   @include breakpoint(small) {
     width: 100%;
+    padding-right: 0;
+    padding-left: 0;
     font-size: $fontSmall;
   }
 }

@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 18.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-300 393 10 7"
-	 enable-background="new -300 393 10 7" xml:space="preserve">
-<title>Dropdown Icon</title>
-<desc>Created with Sketch.</desc>
-<g id="Page-1" sketch:type="MSPage">
-	<polygon id="Dropdown-Icon" sketch:type="MSShapeGroup" fill="#DDE0E0" points="-295,400 -300,393 -290,393 	">
-	</polygon>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-300 393 10 7" enable-background="new -300 393 10 7"><title>Dropdown Icon</title><desc>Created with Sketch.</desc><path fill="#DDE0E0" d="M-295 400l-5-7h10z"/></svg>

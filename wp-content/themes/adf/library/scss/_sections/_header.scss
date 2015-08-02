@@ -5,7 +5,7 @@
 
 header {
   background: transparent;
-  padding: 15px 0 20px;
+  padding: 5px 0 20px;
   z-index: 10;
   position: relative;
   animation: fadeIn 0.4s 0.2s both;
@@ -84,6 +84,7 @@ header {
 
 .header-main {
   @include breakpoint(medium) {
+    background: $colorGrayXDark;
     position: fixed;
     top: 0;
     right: 0;
@@ -93,17 +94,9 @@ header {
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     transform: translateX(100%);
-    transition: transform 0.15s ease-in-out;
+    transition: transform 0.13s ease-in-out;
     .show-nav & {
       transform: translateX(0%);
-    }
-    .home &,
-    .page-id-154 &,
-    .page-id-156 &,
-    .page-id-158 &,
-    .page-id-160 &,
-    .page-template-page-about-php & {
-      background: $colorGrayXDark;
     }
     .container {
       width: auto;
@@ -122,25 +115,57 @@ header {
   font-size: $fontH6;
   text-transform: lowercase;
   position: relative;
+  float: right;
+  padding: 4px 10px;
+  border: 2px solid transparent;
+  border-radius: 3px;
   z-index: 2;
   animation: fadeIn 0.4s 0.55s both;
+  transition: border 0.13s ease-in-out;
   @include fontBold();
+  @include clearfix();
+
+  &:hover {
+    border-color: #fff;
+    color: #fff;
+  }
+
   a {
     color: #fff;
     &:hover,
     &:focus {
-      color: $colorBlue;
+      color: #fff;
+    }
+  }
+
+  &.show-dropdown {
+    border-color: $colorBlue;
+    border-color-bottom: transparent;
+    background: #fff;
+    a {
+      color: $colorGrayXDark;
+      &:hover,
+      &:focus {
+        color: $colorGrayXDark;
+      }
     }
   }
 
   @include breakpoint(medium) {
     display: inline-block;
+    float: none;
   }
 }
 
 .show-dropdown {
+  .hide-show-dropdown {
+    span {
+      transform: rotate(180deg);
+      color: $colorBlue;
+    }
+  }
   .list-dropdown {
-    height: 57px;
+    height: 76px;
     opacity: 1;
   }
 }
@@ -148,9 +173,7 @@ header {
 .hide-show-dropdown {
   &:hover,
   &:focus {
-    span {
-      transform: translateY(2px);
-    }
+    color: #fff;
   }
   span {
     margin-left: 7px;
@@ -160,13 +183,37 @@ header {
 
 .list-dropdown {
   position: absolute;
-  padding: 5px 15px 0 0;
+  padding: 5px 10px;
   top: 100%;
-  right: 0;
+  right: -2px;
+  left: -2px;
+  margin-top: -2px;
   opacity: 0;
   height: 0;
   overflow: hidden;
+  background: #fff;
+  border: 2px solid $colorBlue;
+  border-top: none;
+  border-radius: 0 0 3px 3px;
+  text-transform: none;
+  text-align: left;
   transition: opacity 0.13s ease-in-out, height 0.1s ease-in-out;
+
+  li {
+    padding: 0 0 3px;
+    &:last-of-type {
+      padding: 0;
+    }
+  }
+
+  .show-dropdown & {
+    a {
+      color: $colorGrayXDark;
+      &:hover {
+        color: $colorBlue;
+      }
+    }
+  }
 }
 
 

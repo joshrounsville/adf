@@ -56,6 +56,8 @@
 
     <?php
       $today = date('Ymd');
+      global $post;
+      $postId = $post->ID;
 
       $args = array(
         'meta_key' => 'event_date',
@@ -63,6 +65,7 @@
         'order' => 'ASC',
         'post_type' => 'event',
         'posts_per_page' => 4,
+        'post__not_in' => array($postId),
         'meta_query' => array(
           array(
             'key' => 'event_date',

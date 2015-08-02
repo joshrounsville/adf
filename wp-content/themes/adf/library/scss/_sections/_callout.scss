@@ -44,6 +44,9 @@
   .post-type-archive-video & {
     background-image: url(../img/headers/header-about.jpg);
   }
+  .page-template-page-programs & {
+    background-image: url(../img/headers/header-about.jpg);
+  }
 
   @include breakpoint(large) {
     padding: 180px 0 70px;
@@ -65,6 +68,46 @@
     h1, p, .btn {
       animation: none;
     }
+  }
+}
+
+.callout-video {
+  background-image: none;
+  background-color: $colorGrayXDark;
+  .container {
+    z-index: 3;
+  }
+}
+
+.callout-video-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  animation: fadeIn 0.5s 0.8s both;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(34, 41, 41, 0.8);
+    z-index: 2;
+  }
+
+  video {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 1;
   }
 }
 

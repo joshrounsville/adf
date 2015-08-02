@@ -3,7 +3,8 @@
 ========================================================================= */
 
 
-.box-carousel-short {
+.box-carousel-short,
+.box-carousel-tall {
   display: block;
   position: relative;
   height: 290px;
@@ -21,7 +22,8 @@
     .icon-svg {
       transform: translateX(2px);
     }
-    .carousel-short-overview {
+    .carousel-short-overview,
+    .carousel-tall-overview {
       opacity: 1;
       transform: translateY(-110%);
       h6 {
@@ -83,8 +85,16 @@
   }
 }
 
+.box-carousel-tall {
+  height: 430px;
+  img {
+    transform: translateY(-15px);
+  }
+}
 
-.carousel-short-overview {
+
+.carousel-short-overview,
+.carousel-tall-overview {
   opacity: 0;
   position: relative;
   z-index: 5;
@@ -126,7 +136,8 @@
   border-radius: 3px;
   width: 570px;
   margin: 0 auto;
-  min-height: 300px;
+  background: #fff;
+  min-height: 250px;
   .content-wrap-upper {
     position: relative;
     height: 130px;
@@ -151,6 +162,12 @@
     img {
       filter: blur(2px);
       opacity: 0.9;
+      min-width: 120%;
+      width: 120%;
+      position: absolute;
+      top: 0;
+      left: -10%;
+      transform: translateY(-17%);
     }
   }
   .no-cssfilters & {
@@ -200,5 +217,12 @@
         padding: 0;
       }
     }
+  }
+
+  @include breakpoint(medium) {
+    width: 70%;
+  }
+  @include breakpoint(small) {
+    width: 64%;
   }
 }

@@ -20,6 +20,11 @@
     .icon-svg {
       transform: translateX(2px);
     }
+    .view-item-horz {
+      .icon-svg {
+        transform: translateY(2px);
+      }
+    }
   }
 
   @include breakpoint(medium) {
@@ -59,5 +64,15 @@
   @include breakpoint(medium) {
     bottom: 15px;
     right: 10px;
+  }
+}
+
+.view-item-horz {
+  span {
+    padding: 10px 0 0 0;
+    .icon-svg {
+      width: 14px;
+      height: 9px;
+    }
   }
 }

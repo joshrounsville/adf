@@ -203,9 +203,31 @@
 }
 
 .slider-single {
+  transition: height 0.18s ease-in-out;
+  overflow: hidden;
+  position: relative;
+
   .owl-controls {
-    width: 600px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
     margin: 0 auto;
+  }
+  .owl-buttons {
+    width: 600px;
+    margin: auto;
+  }
+
+  @include breakpoint(medium) {
+    .owl-buttons {
+      width: 80%;
+    }
+  }
+  @include breakpoint(small) {
+    .owl-buttons {
+      width: 100%;
+    }
   }
 }
 
@@ -315,5 +337,14 @@
   .single & {
     z-index: 100;
     opacity: 1;
+  }
+
+  @include breakpoint(medium) {
+    left: 0;
+    margin-left: 0;
+  }
+  @include breakpoint(small) {
+    left: 0;
+    margin-left: 0;
   }
 }

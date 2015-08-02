@@ -52,6 +52,17 @@
           <li>Be primarily responsible for coaching, and rely on the board and other individuals for administrative support.</li>
           <li>Continually look for opportunities to improve his/her knowledge about soccer, such as through advanced licensing.</li>
         </ul>
+
+        <h4>Coaches Shall:</h4>
+        <ul class="pad-b--20">
+          <li>Be of high moral character.</li>
+          <li>Be knowledgeable in basic soccer skills and the principles of team play.</li>
+          <li>Provide opportunities for individual growth of all players in the areas of physical strength, coordination, soccer skills, sportsmanship, and team play.</li>
+          <li>Maintain a positive environment.</li>
+          <li>Be primarily responsible for coaching, and rely on the board and other individuals for administrative support.</li>
+          <li>Continually look for opportunities to improve his/her knowledge about soccer, such as through advanced licensing.</li>
+        </ul>
+
         <p><strong>Coach licensing requirements</strong> – each licensing paid for by the Academia De Futeboltraining, effective 1-1-15, will have the following commitment to the academy: E – 1 year, D – 2 years, C – 2 years, additional licensing commitment to be determined. Upon termination of coaching during the commitment period, the coach agrees to repay the academy the entire licensing fee paid by the academy within 2 months of terminating as a coach unless the coach retires from coaching for the remainder of the obligation.</p>
 
         <h4>Parents Shall:</h4>

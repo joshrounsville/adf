@@ -33,47 +33,18 @@
       <div class="span6">
         <h2 class="pad-b--20">Staff Contact</h2>
         <ul class="list-staff-contact mar-b--20">
-          <li><strong>Joaquim Capuia</strong>, President <a href="mailto:joaquim@adftraining.org" target="_blank">joaquim@adftraining.org</a></li>
-          <li><strong>Jb Cunha</strong>, Coach <a href="mailto:jcunha@adftraining.org" target="_blank">jcunha@adftraining.org</a></li>
-          <li><strong>Gracy Mosquera</strong>, Coach <a href="mailto:GM@adftraining.org" target="_blank">GM@adftraining.org</a></li>
-          <li><strong>Foday Kabba</strong>, Coach <a href="mailto:foday@adftraining.org" target="_blank">foday@adftraining.org</a></li>
-          <li><strong>Sorin Popovich</strong>, Goal Keeper Trainer <a href="mailto:spopovich@adftraining.org" target="_blank">spopovich@adftraining.org</a></li>
+          <li><strong>Joaquim Capuia</strong>, President <a href="mailto:joaquim@futeboltraining.com" target="_blank">joaquim@futeboltraining.com </a></li>
+          <li><strong>Jb Cunha</strong>, Coach <a href="mailto:Jbcunha-jb@futeboltraining.com" target="_blank">Jbcunha-jb@futeboltraining.com</a></li>
+          <li><strong>Chris Thurley</strong>, Coach <a href="mailto:christ@futeboltraining.com" target="_blank">christ@futeboltraining.com</a></li>
+          <li><strong>Wandi Ali</strong>, Coach <a href="mailto:wandi@futeboltraining.com" target="_blank">wandi@futeboltraining.com</a></li>
         </ul>
       </div>
       <div class="span6">
         <h2 class="pad-b--20">General Inquiries</h2>
         <p class="pad-b--30">Join us Now : Learn The Technique, Learn The Art!</p>
-        <form action="#" class="form-validate">
-          <div class="form-row">
-            <div class="form-item form-left">
-              <label for="first_name">First Name</label>
-              <input type="text" name="first_name" id="first_name" required>
-            </div>
-           <div class="form-item form-right">
-              <label for="last_name">Last Name</label>
-              <input type="text" name="last_name" id="last_name" required>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-item form-left">
-              <label for="email_address">Email Address</label>
-              <input type="email" name="email_address" id="email_address" required>
-            </div>
-           <div class="form-item form-right">
-              <label for="phone_number">Phone Number</label>
-              <input type="tel" name="phone_number" id="phone_number" required>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-item form-full-width">
-              <label for="message">Message</label>
-              <textarea name="message" id="message" rows="6" cols="50" required></textarea>
-            </div>
-          </div>
-          <div class="form-row text-right">
-            <input type="submit" name="submit" class="btn btn--primary" id="submit" value="Send">
-          </div>
-        </form>
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+          <?php the_content(); ?>
+        <?php endwhile; endif; ?>
       </div>
     </div>
 

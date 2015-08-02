@@ -57,6 +57,94 @@ $(function() {
 
 
 
+
+
+
+
+  //////// setup instagram feed
+  var instagramTemplate = '<div class="span3"><a href="{{link}}" target=_"blank" class="box-instagram"><div class="img-wrap"><img src="{{image}}" alt="Academia de Futebol Training"></div><div class="bottom"><h5>{{model.create_time_ago}}</h5><span class="view-item"><span class="icon icon-instagram icon-instagram-large"><svg class="icon-svg"><use xlink:href="#icon-instagram" /></svg></span></span></div><div class="instagram-overview"><h4>{{caption}}</h4></div></a></div>';
+
+  var feed = new Instafeed({
+    get: 'user',
+    limit: 4,
+    resolution: 'low_resolution',
+    userId: 298961055,
+    clientId: '5338b8a15bfb4679ab7efcedd8b65e80',
+    accessToken: '11843940.1677ed0.3663b085b97e4a75904ada0c8950b838',
+    filter: function(image) {
+      var imageDate = new Date(image.created_time * 1000);
+      var timeAgo = moment(imageDate).fromNow();
+
+      image.create_time_ago = timeAgo;
+      return true;
+    },
+    template: instagramTemplate,
+    target: 'js--instagram-feed'
+  });
+
+  if ( body.hasClass('home') ) {
+    feed.run();
+  }
+
+
+
+
+  //////// manage equal height columns
+  var equalHeight = function() {
+    var parent = $('.js--equal-height-parent');
+    var targets;
+
+    $(parent).each(function() {
+      targets = $(this).find('.js--equal-height');
+      getChildHeights(targets);
+    });
+
+  };
+
+  var getChildHeights = function(targets) {
+    var heights = [];
+    var highest;
+
+    $(targets).each(function() {
+      var height = $(this).height();
+      heights.push(height);
+    });
+
+    highest = Math.max.apply( Math, heights );
+    targets.height(highest);
+  };
+
+  if ( !isPhone ) {
+    equalHeight();
+  }
+
+  $(window).resize(function() {
+
+    if ( isPhone ) {
+      $('.js--equal-height').height('auto');
+    } else {
+      $('.js--equal-height').height('auto');
+      equalHeight();
+    }
+
+  });
+
+
+
+
+  //////// prevent scrolling on the maps
+  $('.js--maps').on('click', function() {
+    $(this).find('iframe').css('pointer-events', 'auto');
+  });
+
+  $('.js--maps').on('mouseleave', function() {
+    $(this).find('iframe').css('pointer-events', 'none');
+  });
+
+
+
+
+
   //////// call fitvids
   var fluidVid = function() {
     var vid = $('.responsive-vid');
@@ -191,6 +279,7 @@ $(function() {
       baseClass : 'owl-carousel',
       mouseDrag : false,
       navigationText : [ prevHtml, nextHtml ],
+      //autoHeight : true,
       beforeInit : function() {
         beforeInit(sliderSingle);
       },
@@ -255,6 +344,13 @@ $(function() {
   function afterAction() {
     var count = this.owl.visibleItems;
     var item = $('.slider-multi').find('.item');
+
+    if ( this.owl.userOptions.singleItem !== undefined && this.owl.userOptions.singleItem === true ) {
+      var itemNumber = this.currentItem;
+      var activeItem = this.$owlItems[itemNumber];
+
+      $('.slider-single.owl-carousel, .owl-wrapper-outer, .owl-wrapper').height( $(activeItem).height() + 80 );
+    }
 
     item.removeClass('active');
 

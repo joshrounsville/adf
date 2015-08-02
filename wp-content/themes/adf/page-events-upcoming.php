@@ -13,7 +13,7 @@
 
     <div class="row">
       <div class="span6 span-m-8">
-        <h1 class="pad-b--20 text-white text-uppercase">Events</h1>
+        <h1 class="pad-b--20 text-white text-uppercase">Upcoming Events</h1>
         <h4 class="pad-b text-white strong">Find out what's coming up</h4>
       </div>
     </div>
@@ -28,10 +28,16 @@
     <div class="row">
       <div class="span12">
         <ul class="list-inline-middle list-inline-spacer">
-            <li class="pad-r"><h3>Upcoming Events</h3></li>
-            <li><a href="/events/" class="btn btn--secondary btn--outline-gray btn--filter">All Events</a></li>
-            <li><a href="/upcoming-events/" class="btn btn--secondary btn--outline-gray btn--filter active">Upcoming Events</a></li>
-            <li><a href="/past-events/" class="btn btn--secondary btn--outline-gray btn--filter">Past Events</a></li>
+            <li class="pad-r"><h3>Events</h3></li>
+            <li>
+              <a href="/upcoming-events/" class="btn btn--secondary btn--outline-gray btn--filter active">Upcoming Events</a>
+            </li>
+            <li>
+              <a href="/past-events/" class="btn btn--secondary btn--outline-gray btn--filter">Past Events</a>
+            </li>
+            <li>
+              <a href="/all-events/" class="btn btn--secondary btn--outline-gray btn--filter">All Events</a>
+            </li>
         </ul>
       </div>
     </div>

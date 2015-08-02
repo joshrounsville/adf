@@ -16,6 +16,15 @@ footer {
       color: $colorBlue;
     }
   }
+  h5 {
+    a {
+      color: #fff;
+      &:hover,
+      &:focus {
+        color: $colorBlue;
+      }
+    }
+  }
   .list-inline {
     li {
       padding: 0 8px 0 0;

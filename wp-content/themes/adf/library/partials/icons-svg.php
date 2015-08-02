@@ -4,6 +4,10 @@
     <polygon points="-295,400 -300,393 -290,393"></polygon>
   </symbol>
 
+  <symbol id="icon-arrow-down-line" viewBox="-298.1 392.6 14.1 8.5">
+    <path d="M-296.7,392.6l-1.4,1.4l7.1,7.1l7.1-7.1l-1.4-1.4 l-5.7,5.7 L-296.7,392.6z"/>
+  </symbol>
+
   <symbol id="icon-arrow-right" viewBox="-293.1 384.1 21.2 25">
     <polygon points="-271.9,396.6 -293.1,409.1 -293.1,384.1"></polygon>
   </symbol>

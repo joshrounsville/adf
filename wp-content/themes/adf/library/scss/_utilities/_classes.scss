@@ -66,12 +66,28 @@
   color: $colorGray;
 }
 
+.text-gray-dark {
+  color: $colorGrayDark;
+}
+
+.text-blue {
+  color: $colorBlue;
+}
+
 
 
 /*==========  BORDERS ==========*/
 
 .border-radius {
   border-radius: 4px;
+}
+
+.border-gray {
+  border: 1px solid $colorGrayLight;
+}
+
+.border-top--gray {
+  border-top: 1px solid $colorGrayLight;
 }
 
 .border-top--blue {
@@ -119,6 +135,10 @@
 
 .bg-gray-dark {
   background-color: $colorGrayLight;
+}
+
+.bg-black {
+  background-color: $colorGrayXDark;
 }
 
 .bg-red {

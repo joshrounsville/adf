@@ -8,21 +8,8 @@
 <?php get_header(); ?>
 
 
-<section class="callout">
+<section class="callout callout-video">
   <div class="container relative">
-
-   <!--  <div class="carousel">
-      <span class="icon icon-arrow-left-line">
-        <svg class="icon-svg">
-          <use xlink:href="#icon-arrow-left-line" />
-        </svg>
-      </span>
-      <span class="icon icon-arrow-right-line">
-        <svg class="icon-svg">
-          <use xlink:href="#icon-arrow-right-line" />
-        </svg>
-      </span>
-    </div> -->
 
     <div class="row">
       <div class="span6 span-m-8">
@@ -32,6 +19,14 @@
       </div>
     </div>
 
+  </div>
+
+  <div class="callout-video-bg">
+    <div class="overlay"></div>
+    <video autoplay loop poster="<?php echo get_template_directory_uri(); ?>/library/img/headers/header.jpg">
+      <source src="<?php echo get_template_directory_uri(); ?>/library/video/header.mp4" type="video/mp4">
+      <source src="<?php echo get_template_directory_uri(); ?>/library/video/header.webm" type="video/webm">
+    </video>
   </div>
 </section>
 
@@ -114,7 +109,7 @@
       <div class="span12">
         <ul class="list-inline-middle list-inline-spacer-right">
           <li><h3>Upcoming Events</h3></li>
-          <li><a href="/events/" class="btn">See All Events</a></li>
+          <li><a href="/upcoming-events/" class="btn">See All Events</a></li>
         </ul>
       </div>
     </div>
@@ -180,26 +175,63 @@
 <?php wp_reset_postdata(); ?>
 
 
-<section class="bg-gray pad-v">
+<?php $sponsorQuery = new WP_Query( array('posts_per_page' => '-1', 'post_type' => 'sponsor', 'orderby' => 'name') ); ?>
+<?php if ( $sponsorQuery->have_posts() ) : ?>
+<section class="bg-white border-top--gray pad-v--2x">
+  <div class="container">
+
+    <div class="row pad-b">
+      <div class="span12">
+        <ul class="list-inline-middle list-inline-spacer-right">
+          <li><h3>Our Partners</h3></li>
+          <li><a href="/sponsors/" class="btn">Sponsorship Opportunities</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="span12">
+        <ul class="list-inline-spacer-right list-partners">
+          <?php while ($sponsorQuery->have_posts()) : $sponsorQuery->the_post(); ?>
+          <li>
+            <?php $sponsorImage = get_field('sponsor_logo'); ?>
+            <img src="<?php echo $sponsorImage['sizes']['sponsor']; ?>" alt="ADF Sponsor">
+          </li>
+          <?php endwhile; ?>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+<?php endif; ?>
+<?php wp_reset_postdata(); ?>
+
+
+<section class="bg-black pad-v--2x">
   <div class="container">
 
     <div class="row">
       <div class="span12">
-        <ul class="list-inline-spacer-right">
-          <li><h4>Our Partners:</h4></li>
+        <ul class="list-inline-middle list-inline-spacer-right">
           <li>
-            <img src="<?php echo get_template_directory_uri(); ?>/library/img/lids.png" alt="placeholder">
+            <span class="icon icon-instagram icon-instagram-large">
+              <svg class="icon-svg">
+                <use xlink:href="#icon-instagram" />
+              </svg>
+            </span>
           </li>
-          <li>
-            <img src="<?php echo get_template_directory_uri(); ?>/library/img/butler.png" alt="placeholder">
-          </li>
-          <li>
-            <img src="<?php echo get_template_directory_uri(); ?>/library/img/efac.png" alt="placeholder">
-          </li>
-          <li>
-            <img src="<?php echo get_template_directory_uri(); ?>/library/img/physical-therapy.png" alt="placeholder">
-          </li>
+          <li><h3 class="text-white">ADF on Instagram</h3></li>
+          <li><a href="https://instagram.com/futeboltraining/" target="_blank" class="btn">Follow Us</a></li>
         </ul>
+      </div>
+    </div>
+
+    <div class="row pad-t">
+      <div class="span12">
+        <div class="row">
+          <div id="js--instagram-feed"></div>
+        </div>
       </div>
     </div>
 

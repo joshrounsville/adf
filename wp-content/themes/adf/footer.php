@@ -10,46 +10,41 @@
 
             <nav class="nav-footer">
               <ul>
-                <li><h5>Location</h5></li>
-                <li><a href="#">Training Fields</a></li>
-                <li><a href="#">Calendar</a></li>
+                <li><h5><a href="/locations/">Locations</h5></li>
+                <li><a href="/locations/">Training Fields</a></li>
+                <li><a href="/upcoming-events/">Events</a></li>
               </ul>
             </nav>
 
             <nav class="nav-footer">
               <ul>
-                <li><h5>Sponsors</h5></li>
-                <li><a href="#">Platinum</a></li>
-                <li><a href="#">Gold</a></li>
-                <li><a href="#">Silver</a></li>
-                <li><a href="#">Player</a></li>
+                <li><h5><a href="/sponsors/">Sponsors</a></h5></li>
+                <li><a href="/sponsors/">Sponsors</a></li>
+                <li><a href="/scholarships/">Scholarships</a></li>
               </ul>
             </nav>
 
             <nav class="nav-footer">
               <ul>
-                <li><h5>Contact</h5></li>
-                <li><a href="#">USA</a></li>
-                <li><a href="#">International</a></li>
+                <li><h5><a href="/about/contact/">Contact</a></h5></li>
+                <li><a href="/about/contact/">USA</a></li>
+                <li><a href="mailto:exchange@futeboltraining.com" target="_blank">International</a></li>
               </ul>
             </nav>
 
             <nav class="nav-footer">
               <ul>
-                <li><h5>Resources</h5></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Club Expectations</a></li>
-                <li><a href="#">Club Policies</a></li>
-                <li><a href="#">Forms</a></li>
+                <li><h5><a href="/resources/">Resources</a></h5></li>
+                <li><a href="/resources/">FAQ</a></li>
+                <li><a href="/resources/club-expectations/">Club Expectations</a></li>
+                <li><a href="/resources/club-policies/">Club Policies</a></li>
+                <li><a href="/resources/forms/">Forms</a></li>
               </ul>
             </nav>
 
             <nav class="nav-footer">
               <ul>
-                <li><h5>Accomplishments</h5></li>
-                <li><a href="#">Lorem</a></li>
-                <li><a href="#">Ipsum</a></li>
-                <li><a href="#">Set Dolor</a></li>
+                <li><h5><a href="/accomplishments/">Accomplishments</a></h5></li>
               </ul>
             </nav>
 
@@ -58,7 +53,7 @@
                 <li><h5>Social</h5>
                   <ul class="list-inline">
                     <li class="social facebook">
-                      <a href="#" target="_blank">
+                      <a href="https://www.facebook.com/pages/Academia-De-Futeboltraining/" target="_blank">
                         <span class="icon icon-facebook">
                           <svg class="icon-svg">
                             <use xlink:href="#icon-facebook" />
@@ -67,7 +62,7 @@
                       </a>
                     </li>
                     <li class="social instagram">
-                      <a href="#" target="_blank">
+                      <a href="https://instagram.com/futeboltraining/" target="_blank">
                         <span class="icon icon-instagram">
                           <svg class="icon-svg">
                             <use xlink:href="#icon-instagram" />
@@ -76,7 +71,7 @@
                       </a>
                     </li>
                     <li class="social twitter">
-                      <a href="#" target="_blank">
+                      <a href="https://twitter.com/Futeboltraining" target="_blank">
                         <span class="icon icon-twitter">
                           <svg class="icon-svg">
                             <use xlink:href="#icon-twitter" />
