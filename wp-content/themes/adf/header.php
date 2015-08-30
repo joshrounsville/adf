@@ -109,7 +109,7 @@
           <nav class="nav-utility">
             <ul class="list-inline">
               <li class="social facebook">
-                <a href="#" target="_blank">
+                <a href="https://www.facebook.com/pages/Academia-De-Futeboltraining/617889128237790" target="_blank">
                   <span class="icon icon-facebook">
                     <svg class="icon-svg">
                       <use xlink:href="#icon-facebook" />
@@ -118,7 +118,7 @@
                 </a>
               </li>
               <li class="social instagram">
-                <a href="#" target="_blank">
+                <a href="https://instagram.com/futeboltraining/" target="_blank">
                   <span class="icon icon-instagram">
                     <svg class="icon-svg">
                       <use xlink:href="#icon-instagram" />
@@ -127,7 +127,7 @@
                 </a>
               </li>
               <li class="social twitter">
-                <a href="#" target="_blank">
+                <a href="https://twitter.com/Futeboltraining" target="_blank">
                   <span class="icon icon-twitter">
                     <svg class="icon-svg">
                       <use xlink:href="#icon-twitter" />

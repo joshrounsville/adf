@@ -65,7 +65,17 @@
       </div>
     </div>
 
-    <div class="row pad-t--20">
+    <?php if ( has_post_thumbnail() ) : ?>
+
+    <div class="row pad-t--20 pad-b--20">
+      <div class="span12">
+        <?php the_post_thumbnail('team'); ?>
+      </div>
+    </div>
+
+    <?php endif; ?>
+
+    <div class="row">
       <div class="span8">
         <?php the_content(); ?>
       </div>
@@ -76,6 +86,7 @@
 </section>
 
 
+<?php if ( get_field('players') ): ?>
 <section class="bg-gray pad-v--2x overflow-hidden">
   <div class="container">
 
@@ -399,6 +410,8 @@
 
   </div>
 </section>
+
+<?php endif; ?>
 
 
 <?php get_footer(); ?>

@@ -77,6 +77,20 @@
           <p>Players also get many more touches which is ideal for their development. ADF provides players with futsal specific skill development and competes in premier winter leagues around the Portland metro area.</p>
         </div>
       </div>
+      <div class="span6">
+        <div class="bg-white border-gray border-top--blue pad-v pad-h--20 border-radius">
+          <h3 class="pad-b--20">
+            <span class="icon icon-inline icon-circle icon-soccer-pitch">
+              <svg class="icon-svg">
+                <use xlink:href="#icon-soccer-pitch" />
+              </svg>
+            </span>
+            Training Academy
+          </h3>
+          <p class="pad-b">Futeboltraining is a year round training program open to all boys and girl players 6 years and older that would like to improve their technical skills. The academy focuses on ball mastery, fitness, coordination and help build player confidence. Register today to Learn The Technique, Learn The Art.</p>
+          <a href="http://www.futeboltraining.com/" class="btn btn--primary">Visit Website</a>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -120,7 +134,7 @@
         <div class="bg-white border-top--blue pad-v pad-h--20 border-radius js--equal-height">
           <h3 class="pad-b--20">Barefoot Tournament</h3>
           <p>This annual event is a celebration of the beautiful game and local community. Participants play soccer the way it’s played in many parts of the world; barefoot. In addition to playing soccer, players, parents and fans can enjoy a carnival, live music and tasty food. All proceeds from the event benefit Grassroots Soccer.</p>
-          <p><a href="#" target="_blank">Grassroots Soccer</a> is a non-profit organization that uses the power of soccer to educate, inspire and mobilize communities to stop the spread of HIV. Over 630,000 adolescents and teens have graduated from its programs in 16 African countries.</p>
+          <p><a href="http://www.grassrootsoccer.org/" target="_blank">Grassroots Soccer</a> is a non-profit organization that uses the power of soccer to educate, inspire and mobilize communities to stop the spread of HIV. Over 630,000 adolescents and teens have graduated from its programs in 16 African countries.</p>
         </div>
       </div>
     </div>

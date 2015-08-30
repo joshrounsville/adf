@@ -1,0 +1,43 @@
+/* ==========================================================================
+  Content Pages
+========================================================================== */
+
+
+.content {
+  h1, h2 {
+    padding: 10px 0 20px;
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+  h3, h4 {
+    padding: 15px 0 10px;
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+  h5, h6 {
+    padding: 10px 0 5px;
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+  p {
+    padding: 0 0 20px;
+  }
+  ul, ol {
+    padding: 0 0 20px 30px;
+  }
+  ul {
+    list-style: disc;
+  }
+  ol {
+    list-style: decimal;
+  }
+  li {
+    padding: 0 0 4px;
+    &:last-of-type {
+      padding: 0;
+    }
+  }
+}

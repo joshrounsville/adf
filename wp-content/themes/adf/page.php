@@ -1,46 +1,36 @@
 <?php get_header(); ?>
 
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-<section>
-	<div class="container">
+<section class="callout">
+  <div class="container relative">
 
-		<div class="row">
-			<div class="span8">
-				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					<?php the_title(); ?>
-					<?php the_content(); ?>
-				<?php endwhile; endif; ?>
 
-				<a href="#" class="btn">Learn More</a>
-				<a href="#" class="btn btn--secondary">Sign In</a>
-				<a href="#" class="btn btn--yellow">button!</a>
+    <div class="row">
+      <div class="span8">
+        <h1 class="pad-b text-white text-uppercase"><?php the_title(); ?></h1>
+      </div>
+    </div>
 
-				<svg class="icon-svg">
-          <use xlink:href="#icon-globe" />
-        </svg>
-        <svg class="icon-svg">
-          <use xlink:href="#icon-map-marker" />
-        </svg>
-        <svg class="icon-svg">
-          <use xlink:href="#icon-pennant" />
-        </svg>
-        <svg class="icon-svg">
-          <use xlink:href="#icon-soccer-ball" />
-        </svg>
-        <svg class="icon-svg">
-          <use xlink:href="#icon-soccer-pitch" />
-        </svg>
-        <svg class="icon-svg">
-          <use xlink:href="#icon-trophy" />
-        </svg>
-			</div>
-			<div class="span4">
-				<?php get_sidebar(); ?>
-			</div>
-		</div>
-
-	</div>
+  </div>
 </section>
+
+
+<section class="pad-v--2x">
+  <div class="container">
+
+    <div class="row">
+      <div class="span8">
+        <div class="content">
+          <?php the_content(); ?>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<?php endwhile; endif; ?>
 
 
 <?php get_footer(); ?>

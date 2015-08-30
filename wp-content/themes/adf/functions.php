@@ -87,6 +87,7 @@ add_image_size( 'box-carousel-small', 263, 282, true );
 add_image_size( 'box-carousel-tall', 263, 410, true );
 add_image_size( 'box-carousel-large', 568, 141, true );
 add_image_size( 'sponsor', 250 );
+add_image_size( 'team', 1140 );
 
 /*
 to add more sizes, simply copy a line from above
@@ -116,7 +117,8 @@ function bones_custom_image_sizes( $sizes ) {
         'bones-thumb-300' => __('300px by 100px'),
         'box-carousel-small' => __('263px by 282px'),
         'box-carousel-large' => __('568px by 141px'),
-        'sponsor' => __('250px wide')
+        'sponsor' => __('250px wide'),
+        'team' => __('1140px wide')
     ) );
 }
 

@@ -52,7 +52,14 @@
         'paged' => $paged
       );
     ?>
-    <?php $eventQuery = new WP_Query( $args ); ?>
+
+    <?php if ( $eventQuery->found_posts == 0 ) : ?>
+      <div class="row pad-t--2x">
+        <div class="span12">
+          <h3>No events found.</h3>
+        </div>
+      </div>
+    <?php endif; ?>
 
     <?php $post_count = 1; if ( $eventQuery->have_posts() ) : while ($eventQuery->have_posts()) : $eventQuery->the_post(); ?>
 

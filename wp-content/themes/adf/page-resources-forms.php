@@ -32,50 +32,56 @@
       </div>
     </div>
 
-    <div class="row pad-b--2x">
-      <div class="span3">
-        <a href="<?php the_permalink(); ?>" class="box-event box-event--border">
-          <h5 class="text-gray">Forms</h5>
-          <h3>Parent Code of Conduct</h3>
-          <span class="view-item view-item-horz">
-            Download
-            <span class="icon icon-arrow-down-line">
-              <svg class="icon-svg">
-                <use xlink:href="#icon-arrow-down-line" />
-              </svg>
-            </span>
-          </span>
-        </a>
-      </div>
-      <div class="span3">
-        <a href="<?php the_permalink(); ?>" class="box-event box-event--border">
-          <h5 class="text-gray">Forms</h5>
-          <h3>Player Code of Conduct</h3>
-          <span class="view-item view-item-horz">
-            Download
-            <span class="icon icon-arrow-down-line">
-              <svg class="icon-svg">
-                <use xlink:href="#icon-arrow-down-line" />
-              </svg>
-            </span>
-          </span>
-        </a>
-      </div>
-    </div>
+    <?php $form_count = 1; if( have_rows('academie_forms') ) : while ( have_rows('academie_forms') ) : the_row(); ?>
 
+    <?php if ($form_count % 4 == 1): ?>
     <div class="row pad-b">
+    <?php endif; ?>
+
+      <div class="span3">
+        <a href="<?php the_sub_field('form_pdf'); ?>" target="_blank" class="box-event box-event--border">
+          <h5 class="text-gray">Forms</h5>
+          <h3><?php the_sub_field('title'); ?></h3>
+          <span class="view-item view-item-horz">
+            Download
+            <span class="icon icon-arrow-down-line">
+              <svg class="icon-svg">
+                <use xlink:href="#icon-arrow-down-line" />
+              </svg>
+            </span>
+          </span>
+        </a>
+      </div>
+
+    <?php if ($form_count % 4 == 0): ?>
+    </div>
+    <?php endif; ?>
+
+    <?php $form_count++; endwhile; endif; ?>
+
+    <?php $form_count = $form_count - 1 ; if (0 != $form_count % 4): ?>
+    </div>
+    <?php endif; ?>
+
+
+    <div class="row pad-t pad-b">
       <div class="span12">
         <h3>Health and Nutrition Resources</h3>
       </div>
     </div>
 
-    <div class="row">
+    <?php $resource_count = 1; if( have_rows('health_and_nutrition_resources') ) : while ( have_rows('health_and_nutrition_resources') ) : the_row(); ?>
+
+    <?php if ($resource_count % 4 == 1): ?>
+    <div class="row pad-b">
+    <?php endif; ?>
+
       <div class="span3">
-        <a href="<?php the_permalink(); ?>" class="box-event box-event--border">
-          <h5 class="text-gray">Health</h5>
-          <h3>Concussion Facts</h3>
+        <a href="<?php the_sub_field('link_to_resource'); ?>" target="_blank" class="box-event box-event--border">
+          <h5 class="text-gray">Forms</h5>
+          <h3><?php the_sub_field('title'); ?></h3>
           <span class="view-item view-item-horz">
-            Download
+            View Resource
             <span class="icon icon-arrow-down-line">
               <svg class="icon-svg">
                 <use xlink:href="#icon-arrow-down-line" />
@@ -84,35 +90,16 @@
           </span>
         </a>
       </div>
-      <div class="span3">
-        <a href="<?php the_permalink(); ?>" class="box-event box-event--border">
-          <h5 class="text-gray">Health</h5>
-          <h3>Injury Prevention</h3>
-          <span class="view-item view-item-horz">
-            Download
-            <span class="icon icon-arrow-down-line">
-              <svg class="icon-svg">
-                <use xlink:href="#icon-arrow-down-line" />
-              </svg>
-            </span>
-          </span>
-        </a>
-      </div>
-      <div class="span3">
-        <a href="<?php the_permalink(); ?>" class="box-event box-event--border">
-          <h5 class="text-gray">Health</h5>
-          <h3>Nutrition</h3>
-          <span class="view-item view-item-horz">
-            Download
-            <span class="icon icon-arrow-down-line">
-              <svg class="icon-svg">
-                <use xlink:href="#icon-arrow-down-line" />
-              </svg>
-            </span>
-          </span>
-        </a>
-      </div>
+
+    <?php if ($resource_count % 4 == 0): ?>
     </div>
+    <?php endif; ?>
+
+    <?php $resource_count++; endwhile; endif; ?>
+
+    <?php $resource_count = $resource_count - 1 ; if (0 != $resource_count % 4): ?>
+    </div>
+    <?php endif; ?>
 
   </div>
 </section>
