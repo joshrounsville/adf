@@ -19,7 +19,69 @@
     <?php do_action( 'profile_personal_options', $profileuser ); ?>
 
 
-    <h3 class="pad-b">Login Info</h3>
+    <h3 class="pad-b">Additional Details</h3>
+
+    <div class="form-row">
+      <div class="form-item form-left">
+        <label for="favorite_player<?php $template->the_instance(); ?>">Favorite Player</label>
+        <input type="text" name="favorite_player" id="favorite_player<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->favorite_player ); ?>">
+      </div>
+      <div class="form-item form-right">
+        <?php $positionSelect = esc_attr( $profileuser->position ); ?>
+        <label for="position<?php $template->the_instance(); ?>">Position</label>
+        <span class="select-wrap">
+          <select name="position" id="position<?php $template->the_instance(); ?>" class="styled-select">
+            <option value="Goal Keeper"<?php if ( $positionSelect == 'Goal Keeper') : ?> selected<?php endif; ?>>
+              Goal Keeper
+            </option>
+            <option value="Defense"<?php if ( $positionSelect == 'Defense') : ?> selected<?php endif; ?>>
+              Defense
+            </option>
+            <option value="Midfield"<?php if ( $positionSelect == 'Midfield') : ?> selected<?php endif; ?>>
+              Midfield
+            </option>
+            <option value="Forward"<?php if ( $positionSelect == 'Forward') : ?> selected<?php endif; ?>>
+              Forward
+            </option>
+            <option value="Striker"<?php if ( $positionSelect == 'Striker') : ?> selected<?php endif; ?>>
+              Striker
+            </option>
+          </select>
+        </span>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-item form-full-width">
+        <label for="place_of_birth<?php $template->the_instance(); ?>">Place of Birth</label>
+        <input type="text" name="place_of_birth" id="place_of_birth<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->place_of_birth ); ?>">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-item form-full-width">
+        <label for="instagram_account<?php $template->the_instance(); ?>">Instgram Account</label>
+        <input type="text" name="instagram_account" id="instagram_account<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->instagram_account ); ?>" placeholder="https://instagram.com/futeboltraining/">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-item form-full-width">
+        <label for="facebook_account<?php $template->the_instance(); ?>">Facebook Account</label>
+        <input type="text" name="facebook_account" id="facebook_account<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->facebook_account ); ?>" placeholder="https://www.facebook.com/pages/Academia-De-Futeboltraining/">
+      </div>
+    </div>
+
+    <div class="form-row pad-b">
+      <div class="form-item form-full-width">
+        <label for="twitter_account<?php $template->the_instance(); ?>">Twitter Account</label>
+        <input type="text" name="twitter_account" id="twitter_account<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->twitter_account ); ?>" placeholder="https://twitter.com/Futeboltraining">
+      </div>
+    </div>
+
+    <hr>
+
+    <h3 class="pad-v">Login Info</h3>
 
     <div class="form-row">
       <div class="form-item form-full-width">
@@ -67,8 +129,8 @@
 
     <div class="form-row">
       <div class="form-item form-left">
-        <label for="current_age<?php $template->the_instance(); ?>">Current Age</label>
-        <input type="text" name="current_age" id="current_age<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->current_age ); ?>" required>
+        <label for="date_of_birth<?php $template->the_instance(); ?>">Date of Birth (10/15/1995)</label>
+        <input type="text" name="date_of_birth" id="date_of_birth<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->date_of_birth ); ?>" required>
       </div>
       <div class="form-item form-right">
         <label for="current_club<?php $template->the_instance(); ?>">Current Club</label>
@@ -101,6 +163,28 @@
       </div>
     </div>
 
+    <h3 class="pad-t pad-b">Program</h3>
+
+    <div class="form-row">
+      <div class="form-item form-full-width form-radio">
+        <ul class="list-inline-spacer-right">
+          <?php $programSelect = esc_attr( $profileuser->program ); ?>
+          <li>
+            <input type="radio" name="program" value="mens-team" id="program1" <?php if ( $programSelect == 'mens-team') : ?>checked<?php endif; ?>>
+            <label for="program1">Men's Team</label>
+          </li>
+          <li>
+            <input type="radio" name="program" value="youth-club" id="program2" <?php if ( $programSelect == 'youth-club') : ?>checked<?php endif; ?>>
+            <label for="program2">Youth Club</label>
+          </li>
+          <li>
+            <input type="radio" name="program" value="training-academy" id="program3" <?php if ( $programSelect == 'training-academy') : ?>checked<?php endif; ?>>
+            <label for="program3">Training Academy</label>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <h3 class="pad-t pad-b">Parent/Guardian Info</h3>
 
     <div class="form-row">
@@ -129,29 +213,6 @@
       <div class="form-item form-full-width">
         <label for="hear_about_us<?php $template->the_instance(); ?>">How did you hear about us?</label>
         <textarea name="hear_about_us" id="hear_about_us<?php $template->the_instance(); ?>" required><?php echo esc_attr( $profileuser->hear_about_us ); ?></textarea>
-      </div>
-    </div>
-
-
-    <h3 class="pad-t pad-b">Program</h3>
-
-    <div class="form-row">
-      <div class="form-item form-full-width form-radio">
-        <ul class="list-inline-spacer-right">
-          <?php $programSelect = esc_attr( $profileuser->program ); ?>
-          <li>
-            <input type="radio" name="program" value="mens-team" id="program1" <?php if ( $programSelect == 'mens-team') : ?>checked<?php endif; ?>>
-            <label for="program1">Men's Team</label>
-          </li>
-          <li>
-            <input type="radio" name="program" value="youth-club" id="program2" <?php if ( $programSelect == 'youth-club') : ?>checked<?php endif; ?>>
-            <label for="program2">Youth Club</label>
-          </li>
-          <li>
-            <input type="radio" name="program" value="training-academy" id="program3" <?php if ( $programSelect == 'training-academy') : ?>checked<?php endif; ?>>
-            <label for="program3">Training Academy</label>
-          </li>
-        </ul>
       </div>
     </div>
 

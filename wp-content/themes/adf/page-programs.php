@@ -158,7 +158,7 @@
 
 
 <?php if ( !is_user_logged_in() ) : ?>
-<section class="pad-v">
+<section class="bg-gray pad-v">
   <div class="container">
 
     <div class="row text-center">

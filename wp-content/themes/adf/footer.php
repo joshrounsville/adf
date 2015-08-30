@@ -20,7 +20,6 @@
               <ul>
                 <li><h5><a href="/sponsors/">Sponsors</a></h5></li>
                 <li><a href="/sponsors/">Sponsors</a></li>
-                <li><a href="/scholarships/">Scholarships</a></li>
               </ul>
             </nav>
 
@@ -53,7 +52,7 @@
                 <li><h5>Social</h5>
                   <ul class="list-inline">
                     <li class="social facebook">
-                      <a href="https://www.facebook.com/pages/Academia-De-Futeboltraining/" target="_blank">
+                      <a href="https://www.facebook.com/pages/Academia-De-Futeboltraining/617889128237790" target="_blank">
                         <span class="icon icon-facebook">
                           <svg class="icon-svg">
                             <use xlink:href="#icon-facebook" />

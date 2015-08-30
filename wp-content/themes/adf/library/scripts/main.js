@@ -172,10 +172,6 @@ $(function() {
           minlength: 5,
           equalTo: '#pass1'
         },
-        current_age: {
-          required: true,
-          number: true
-        },
         phone_number: {
           required: true,
           phoneUS: true
@@ -192,10 +188,6 @@ $(function() {
 
     $(formValidateProfile).validate({
       rules: {
-        current_age: {
-          required: true,
-          number: true
-        },
         phone_number: {
           required: true,
           phoneUS: true
@@ -250,12 +242,30 @@ $(function() {
 
     sliderMulti.owlCarousel(multiOptions);
 
-    sliderWrap.removeClass('single');
+    sliderWrap.removeClass('single-view');
     sliderWrap.addClass('multi');
 
   };
 
-  sliderInit();
+
+  function sortData(a, b){
+    return ($(b).data('position')) < ($(a).data('position')) ? 1 : -1;
+  }
+
+  var orderPlayersByPosition = function() {
+    var elMulti = sliderMulti.find('.js--sort-item').sort(sortData);
+    var elSingle = sliderSingle.find('.js--sort-item').sort(sortData);
+
+    sliderMulti.prepend(elMulti);
+    sliderSingle.prepend(elSingle);
+
+    sliderInit();
+  };
+
+  orderPlayersByPosition();
+
+
+
 
 
 
@@ -289,13 +299,13 @@ $(function() {
     loader.addClass('loading');
 
     sliderWrap.removeClass('multi');
-    sliderWrap.addClass('single');
+    sliderWrap.addClass('single-view');
 
     itemPosition = $('.box-carousel').index(el);
 
     owlMulti.destroy();
 
-    navCarousel.addClass('single');
+    navCarousel.addClass('single-view');
 
     setTimeout(function() {
       sliderSingle.owlCarousel(singleOptions);
@@ -371,7 +381,7 @@ $(function() {
     btn.on('click', function(e) {
       e.preventDefault();
 
-      if ( $('.nav-carousel').hasClass('single') ) {
+      if ( $('.nav-carousel').hasClass('single-view') ) {
         owl = $(sliderSingle).data('owlCarousel');
       } else {
         owl = $(sliderMulti).data('owlCarousel');
@@ -410,7 +420,9 @@ $(function() {
 
       owlSingle.destroy();
 
-      navCarousel.removeClass('single');
+      navCarousel.removeClass('single-view');
+
+
 
       if ( filterBtn.length ) {
         filterBtn.removeClass('active');

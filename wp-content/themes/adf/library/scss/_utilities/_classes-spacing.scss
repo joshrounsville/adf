@@ -140,6 +140,13 @@
 
 .pad-r {
   padding-right: $padding;
+
+  @include breakpoint(large) {
+    padding-right: 10px;
+  }
+  @include breakpoint(medium) {
+    padding-right: 5px;
+  }
 }
 
 .pad-l {

@@ -30,12 +30,31 @@
 
     <div class="form-row">
       <div class="form-item form-left">
-        <label for="current_age<?php $template->the_instance(); ?>">Current Age</label>
-        <input type="text" name="current_age" id="current_age<?php $template->the_instance(); ?>" value="<?php $template->the_posted_value( 'current_age' ); ?>" required>
+        <label for="date_of_birth<?php $template->the_instance(); ?>">Date of Birth (10/15/1995)</label>
+        <input type="text" name="date_of_birth" id="date_of_birth<?php $template->the_instance(); ?>" value="<?php $template->the_posted_value( 'date_of_birth' ); ?>" required>
       </div>
       <div class="form-item form-right">
-        <label for="current_club<?php $template->the_instance(); ?>">Current Club</label>
-        <input type="text" name="current_club" id="current_club<?php $template->the_instance(); ?>" value="<?php $template->the_posted_value( 'current_club' ); ?>" required>
+        <label for="position<?php $template->the_instance(); ?>">Position</label>
+        <span class="select-wrap">
+          <select name="position" id="position<?php $template->the_instance(); ?>" class="styled-select">
+            <option>Select Position</option>
+            <option value="Goal Keeper">
+              Goal Keeper
+            </option>
+            <option value="Defense">
+              Defense
+            </option>
+            <option value="Midfield">
+              Midfield
+            </option>
+            <option value="Forward">
+              Forward
+            </option>
+            <option value="Striker">
+              Striker
+            </option>
+          </select>
+        </span>
       </div>
     </div>
 
@@ -119,6 +138,7 @@
 
     <div class="form-row text-right pad-t">
       <input type="submit" name="wp-submit" class="btn btn--primary" id="wp-submit" value="<?php esc_attr_e( 'Register' ); ?>" />
+
       <input type="hidden" name="redirect_to" value="<?php $template->the_redirect_url( 'register' ); ?>" />
       <input type="hidden" name="instance" value="<?php $template->the_instance(); ?>" />
       <input type="hidden" name="action" value="register" />

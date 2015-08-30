@@ -68,7 +68,7 @@ header {
 .nav-hide {
   position: absolute;
   top: 0px;
-  right: 10px;
+  right: -10px;
   display: none;
   &:hover,
   &:focus {
@@ -106,7 +106,7 @@ header {
     }
   }
   @include breakpoint(small) {
-    padding: 20px 0;
+    padding: 20px 30px 20px 0;
   }
 }
 
@@ -221,6 +221,10 @@ header {
   display: inline-block;
   margin: 0 40px 0 0;
   animation: fadeIn 0.4s 0.4s both;
+
+  @include breakpoint(large) {
+    margin: 0 20px 0 0;
+  }
   @include breakpoint(medium) {
     display: none;
   }
@@ -236,6 +240,9 @@ header {
   @include fontBold();
   li {
     margin: 0 15px 0 0;
+    &:last-of-type {
+      margin: 0;
+    }
   }
   .current_page_item {
     a {

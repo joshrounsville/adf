@@ -1,4 +1,5 @@
   <?php $template->the_errors(); ?>
+
   <form name="loginform" id="loginform<?php $template->the_instance(); ?>" class="form-validate" action="<?php $template->the_action_url( 'login' ); ?>" method="post">
 
     <h3 class="pad-b">Sign In</h3>
@@ -19,10 +20,12 @@
     <?php do_action( 'login_form' ); ?>
 
     <div class="form-row text-right">
-      <input type="submit" name="wp-submit" id="wp-submit<?php $template->the_instance(); ?>" class="btn btn--primary btn--block" value="Sign In">
-      <input type="hidden" name="redirect_to" value="<?php $template->the_redirect_url( 'login' ); ?>" />
-      <input type="hidden" name="instance" value="<?php $template->the_instance(); ?>" />
-      <input type="hidden" name="action" value="login" />
+      <div class="form-item-full-width">
+        <input type="submit" name="wp-submit" id="wp-submit<?php $template->the_instance(); ?>" class="btn btn--primary btn--block" value="Sign In">
+        <input type="hidden" name="redirect_to" value="<?php $template->the_redirect_url( 'login' ); ?>" />
+        <input type="hidden" name="instance" value="<?php $template->the_instance(); ?>" />
+        <input type="hidden" name="action" value="login" />
+      </div>
     </div>
 
     <div class="form-row">

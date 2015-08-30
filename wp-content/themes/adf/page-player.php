@@ -4,9 +4,10 @@
 */
 ?>
 
-
 <?php get_header(); ?>
 
+
+<?php if ( is_super_admin() ) : ?>
 
 <section class="pad-v--2x">
   <div class="container">
@@ -19,39 +20,42 @@
         <?php endwhile; endif; ?>
 
         <?php
-          global $wpdb;
-          $query = "SELECT ID from $wpdb->users";
-          $author_ids = $wpdb->get_results($query);
-          $users = array();
-          foreach($author_ids as $author) {
-            $curauth = get_userdata($author->ID);
-            $role = $curauth->roles[0];
-            if ( $role == 'player') {
-              $firstName = $curauth->first_name;
-              $lastName = $curauth->last_name;
-              $link = "/player/" . $curauth->user_nicename . "/";
-              $name = $firstName . ' ' . $lastName;
-              $users[$link] = $name;
-            }
+          $args = array(
+            'role' => 'player'
+          );
 
-          }
-          asort($users);
+          $blogusers = get_users( $args );
         ?>
-        <ol>
-          <?php
-            foreach($users as $link => $name) :
-          ?>
-          <li>
-            <a href="<?php echo $link; ?>" title="<?php echo $name; ?>"><?php echo $name; ?></a>
-          </li>
-        <?php endforeach; ?>
-        </ol>
+
+        <ul>
+          <?php foreach ( $blogusers as $user ) : ?>
+            <?php echo '<li><a href="/player/' . esc_html( $user->user_nicename ) . '">' . esc_html( $user->first_name ) . ' ' . esc_html( $user->last_name ) . '</a></li>'; ?>
+          <?php endforeach; ?>
+        </ul>
 
       </div>
     </div>
 
   </div>
 </section>
+
+<?php else : ?>
+
+<section class="pad-v--2x">
+  <div class="container">
+
+    <div class="row">
+      <div class="span6 offset3">
+        <h2 class="pad-b">Whoops...</h2>
+        <p>We can't seem to find the page you're looking for. Maybe our <a href="/">homepage</a> would be a good place to get started.</p>
+        <p>Please <a href="/contact/">Contact Us</a> if you think an error has been made.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<?php endif; ?>
 
 
 <?php get_footer(); ?>

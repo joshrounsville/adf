@@ -117,7 +117,12 @@
             <div class="item">
               <a href="#" class="box-carousel box-carousel-short">
                 <div class="img-wrap">
+
+                  <?php if ( get_the_post_thumbnail($post->ID, 'box-carousel-small') ) : ?>
                   <?php the_post_thumbnail('box-carousel-small'); ?>
+                  <?php else : ?>
+                  <img src="<?php echo get_template_directory_uri(); ?>/library/img/board-of-directors/bod-placeholder.png" alt="board of director photos">
+                  <?php endif; ?>
                 </div>
                 <div class="bottom">
                   <h5><?php the_title(); ?></h5>
@@ -183,7 +188,11 @@
                     </ul>
                   </div>
                   <div class="img-wrap">
+                    <?php if ( get_the_post_thumbnail($post->ID, 'full') ) : ?>
                     <?php the_post_thumbnail('full'); ?>
+                    <?php else : ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/library/img/board-of-directors/bod-header-placeholder.png" alt="board of director photos">
+                    <?php endif; ?>
                   </div>
                 </div>
                 <div class="content-wrap">

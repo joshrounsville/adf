@@ -75,6 +75,16 @@ ol {
     display: inline-block;
     margin: 0 5px;
   }
+  @include breakpoint(large) {
+    li {
+      margin: 0 3px;
+    }
+  }
+  @include breakpoint(medium) {
+    li {
+      margin: 0 1px;
+    }
+  }
   @include breakpoint(small) {
     display: block;
     li {
@@ -169,6 +179,17 @@ ol {
   img {
     max-width: 140px;
     height: auto;
+  }
+}
+
+.list-disc {
+  list-style: disc;
+  padding-left: 30px;
+  li {
+    padding: 0 0 8px;
+    &:last-of-type {
+      padding: 0;
+    }
   }
 }
 

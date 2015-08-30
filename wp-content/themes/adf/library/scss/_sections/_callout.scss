@@ -87,6 +87,8 @@
   left: 0;
   overflow: hidden;
   animation: fadeIn 0.5s 0.8s both;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 
   .overlay {
     position: absolute;
@@ -96,6 +98,8 @@
     left: 0;
     background: rgba(34, 41, 41, 0.8);
     z-index: 2;
+    backface-visibility: hidden;
+  transform: translateZ(0);
   }
 
   video {
@@ -108,6 +112,8 @@
     min-width: 100%;
     min-height: 100%;
     z-index: 1;
+    backface-visibility: hidden;
+  transform: translateZ(0);
   }
 }
 

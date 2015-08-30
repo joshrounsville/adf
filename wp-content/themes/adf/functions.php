@@ -35,6 +35,8 @@ function bones_ahoy() {
   require_once( 'library/custom-post-types/accomplishment.php' );
   require_once( 'library/custom-post-types/board.php' );
   require_once( 'library/custom-post-types/store.php' );
+  require_once( 'library/custom-post-types/team.php' );
+  require_once( 'library/custom-post-types/coach.php' );
 
   // launching operation cleanup
   add_action( 'init', 'bones_head_cleanup' );
@@ -82,6 +84,7 @@ if ( ! isset( $content_width ) ) {
 add_image_size( 'bones-thumb-600', 600, 150, true );
 add_image_size( 'bones-thumb-300', 300, 100, true );
 add_image_size( 'box-carousel-small', 263, 282, true );
+add_image_size( 'box-carousel-tall', 263, 410, true );
 add_image_size( 'box-carousel-large', 568, 141, true );
 add_image_size( 'sponsor', 250 );
 

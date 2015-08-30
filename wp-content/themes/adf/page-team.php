@@ -5,6 +5,23 @@
 ?>
 
 
+
+       <?php
+          $argsPlayer = array(
+            'post_type' => 'players',
+            'posts_per_page' => '-1'
+          );
+        ?>
+        <?php $queryPlayers = new WP_Query( $argsPlayer ); ?>
+
+        <ul>
+          <li>test</li>
+        <?php if ($queryPlayers->have_posts()) : while ($queryBlogFeed->have_posts()) : $queryBlogFeed->the_post(); ?>
+          <li><?php the_title(); ?></li>
+        <?php endwhile; endif; ?>
+        </ul>
+
+
 <?php get_header(); ?>
 
 
@@ -28,19 +45,21 @@
 <section class="pad-v--2x">
   <div class="container">
 
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
     <div class="row">
       <div class="span12">
-        <h2>U10</h2>
+        <h2><?php the_title(); ?></h2>
       </div>
     </div>
 
     <div class="row pad-t--20">
       <div class="span8">
-        <p class="text-highlight">International Portland Select (ADF IPS) is a premier amateur men’s soccer team. ADF IPS is based in Portland, Oregon and competes predominantly on the west coast.</p>
-        <p>Established  in 1994, the team is as talented as it is diverse. The roster represents players from over seven different nationalities. This contributes to an energizing and entertaining style of play. Players originate from Brazil, Angola, Guatemala, England, USA, Congo, Colombian, Saudi Arabia, Sierra Leone, Libera, Canada, Ethiopia and Mexico. ADF IPS is where many former pros choose to play after they retire because the team's level of play is so advanced. Some notable players that have played with ADF on their way to the top: Rubio Rubin, Danny Mwanga, Dustin Corea, Ashkaninho Tirony, Brent Richards, Alex Nimo, Kalif Alhassan, James Marcelin and numerous outstanding college players. ADF IPS's objective every year is to qualify for the US Open which affords the team the opportunity to play against MLS and USl Pro Teams.</p>
-        <p class="pad-b--0">The ADF IPS team is a valuable development resource for the Academy. When talented high school age players are ready, they train and compete with the ADF IPS team. This provides the young players an invaluable opportunity to prepare for the next level of competition be it collegiate or professional.</p>
+        <?php the_content(); ?>
       </div>
     </div>
+
+    <?php endwhile; endif; ?>
 
     <div class="row pad-t">
       <div class="span12">
@@ -52,7 +71,7 @@
           $args = array(
             'blog_id' => $GLOBALS['blog_id'],
             'role' => 'Player',
-            'meta_key' => 'current_club_2',
+            'meta_key' => 'team',
             'meta_value' => $page_id,
             'orderby' => 'login',
             'order' => 'ASC'
@@ -60,12 +79,7 @@
         ?>
 
         <ul>
-        <?php
-          $blogusers = get_users( $args );
-          foreach ( $blogusers as $user ) {
-            echo '<li>' . esc_html( $user->first_name ) . ' ' . esc_html( $page_name ) . '</li>';
-          }
-        ?>
+
         </ul>
 
       </div>

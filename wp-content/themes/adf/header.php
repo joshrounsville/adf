@@ -88,7 +88,7 @@
       </div>
 
       <div class="row pad-t--20">
-        <div class="span7 span-m-12">
+        <div class="span8 span-m-12">
 
           <a href="/" class="logo logo-main">
             <img src="<?php echo get_template_directory_uri(); ?>/library/img/logos/academia-de-futeboltraining.png" alt="Academia de futeboltraining" width="60" height="60">
@@ -105,7 +105,7 @@
 
         </div>
 
-        <div class="span5 text-right span-m-12">
+        <div class="span4 text-right span-m-12">
           <nav class="nav-utility">
             <ul class="list-inline">
               <li class="social facebook">

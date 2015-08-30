@@ -27,7 +27,7 @@
   <div class="container">
 
     <div class="row pad-b">
-      <div class="span2">
+      <div class="span12">
         <h2>FAQ</h2>
       </div>
     </div>

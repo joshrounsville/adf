@@ -27,66 +27,57 @@
   <div class="container">
 
     <div class="row pad-b">
-      <div class="span2">
-        <h2>FAQ</h2>
+      <div class="span12">
+        <h2>Player and Parent Code of Conduct</h2>
       </div>
     </div>
 
     <div class="row">
       <div class="span8">
-        <ul class="list-faq">
-          <li>
-            <h3>What are the costs involved if I'm offered a position on an ADF team?</h3>
-            <p>ADF believes that money should not be a barrier for any player to participate. Generous donations from our sponsors allow costs to be kept as low as possible. Financial aid is also available.</p>
-            <ul>
-              <li>U9-U10 (12 month team program): $780 ($65 per month)</li>
-              <li>U11-U12 (12 month team program): $975 ($81.25 per month)</li>
-            </ul>
-          </li>
-          <li>
-            <h3>What does the team player fee include?</h3>
-            <p>Uniform Kit (Home and Away), Training 2-3 times per week with a team coach, Fall and Spring leagues, State Cup, futsal training, summer tournament, coaching, registration and administrative expenses.</p>
-          </li>
-          <li>
-            <h3>What is the cost of the uniform kit?</h3>
-            <p>There is NO additional fee for the uniform kit (Home and Away).  It is included in the team player fee.</p>
-          </li>
-          <li>
-            <h3>What does the team player fee not include?</h3>
-            <p>Additional tournaments and travel expenses.</p>
-          </li>
-          <li>
-            <h3>When are tryouts (trials)?</h3>
-            <p>ADF tryouts (trials) for the 2015/16 season will be held in May (U9 – U12 Boys) shortly after State Cup competition is completed. No trials are planned for U13 and older for the 2015 / 2016 season.</p>
-          </li>
-          <li>
-            <h3>Where are the tryout (trial) locations?</h3>
-            <p>Tryout locations will vary depending on weather, age group and current season. Details will be posted on the ADF website prior to the trials.</p>
-          </li>
-          <li>
-            <h3>What if I can't make the tryouts (trials)?</h3>
-            <p>Players that miss the official trials will need to contact ADF and arrange time to be evaluated by a staff coach (additional fee may apply).</p>
-          </li>
-          <li>
-            <h3>Does ADF have teams for boys and girls?</h3>
-            <p>ADF is developing plans to field girls' teams but does not have them at this time. However, ADF's training academy strongly encourages both girls and boys to participate and improve their skills.</p>
-          </li>
-          <li>
-            <h3>What league(s) does ADF compete in?</h3>
-            <p>ADF competes in two of the top premier leagues in the state. Oregon Youth Soccer Association (OYSA) and Oregon Premier League (OPL).</p>
-          </li>
-          <li>
-            <h3>What are ADF's coaching staff qualifications?</h3>
-            <p>ADF coaches have all played professional soccer internationally. Most ADF coaches still play in semi-pro or top amateur leagues. In addition to having outstanding playing experience, every ADF coach is trained on ADF's proprietary player development curriculum and must meet a minimum educational standard. All ADF coaches have gone through a background check. ADF hosts clinics and training sessions throughout the year that involve current professionals and international guest coaches who work with the ADF team and academy players. ADF follows the guidelines of USYSA and is committed to a safe and positive experience for every player.</p>
-          </li>
-          <li>
-            <h3>What opportunities does ADF provide for international training?</h3>
-            <p>ADF has relationships established with several top clubs in Brazil and Europe. These relationships allow for player exchanges and training trips which provide US players the opportunity to experience soccer (football) at the highest level. International training can range from several weeks to longer term boarding / residency programs. Contact the ADF front office for further details.</p>
-          </li>
-          <li>
-            <h3>Does ADF provide training for players who are not on an ADF team?</h3>
-            <p>Yes. ADF offers training year round for boys and girls age 7 and older. ADF's academia has training programs for both individuals (private) and groups. ADF's development curriculum encompasses training programs for beginners all the way to professional players. Players who train in the ADF academia get to work with the same experienced ADF staff coaches who train ADF's premier teams.</p>
-          </li>
+
+        <h3 class="pad-b--10">Player Conduct</h3>
+        <p class="strong">PLAYER CODE OF CONDUCT - I HEREBY PLEDGE TO PROVIDE POSITIVE SUPPORT BY FOLLOWING THE ACADEMIA DE FUTEBOLTRAINING CODE OF CONDUCT</p>
+        <p>Players are the most important people in the sport. Playing for the team, and for the team to win, is the most fundamental part of the game. But not winning-at-all costs! Fair play and respect for all others in the game is fundamentally important.</p>
+
+        <p class="strong pad-b--10">ADF Players must abide by these simple rules.</p>
+        <ul class="list-disc pad-b--2x">
+          <li>Play for the fun of the game, and not to please friends, family, or coaches.</li>
+          <li>Attend scheduled training, practices, and games on time and appropriately equipped.</li>
+          <li>Understand that failure to meet agreed upon expectations for practices and training can negatively influence playing time.</li>
+          <li>Notify coaches when unable to attend training/practice sessions or games.</li>
+          <li>Give maximum effort and strive for the best possible performance during practices and games.</li>
+          <li>Learn teamwork, sportsmanship, and discipline.</li>
+          <li>Demonstrate respect at all times for teammates, coaches, parents, opponents, and officials.</li>
+          <li>Make every effort to develop ones abilities, in terms of skill, technique, tactics and stamina; and assist teammates to develop their abilities.</li>
+          <li>Set a positive example for others, particularly young players.</li>
+          <li>Never use inappropriate language.</li>
+          <li>Know and abide by the Laws, rules and spirit of the game.</li>
+          <li>Accept success and failure, victory and defeat, equally.</li>
+          <li>Resist any temptation to take banned substances or used banned techniques.</li>
+          <li>Treat opponents with due respect at all times, regardless of the result of the game.</li>
+          <li>Safeguard the physical fitness of opponents, avoid violence and rough play, and help injured opponents.</li>
+          <li>Control temper and resist both verbal and physical retaliation.</li>
+          <li>Applaud the good play of teammates and opponents.</li>
+          <li>Never criticize errors of teammates and be supportive when teammates make mistakes.</li>
+          <li>Never criticize or argue with the actions of officials or coaches.</li>
+          <li>Understand that officials and coaches actions are not to blame for the outcome of a game; it is ultimately the actions and efforts of the players which determine the final result.</li>
+          <li>Understand that failure to follow this code will result in disciplinary actions: from decreased playing time up to and including removal from the Academia for more serious or repeated violations</li>
+        </ul>
+
+        <h3 class="pad-b--10">Parents Code of Conduct</h3>
+        <p class="pad-b--20">I HEREBY PLEDGE TO PROVIDE POSITIVE SUPPORT, CARE, AND ENCOURAGEMENT FOR MY CHILD BY FOLLOWING ACADEMIA DE FUTEBOLTRAINING CODE OF CONDUCT</p>
+        <ul class="list-disc">
+          <li>I agree to support the Academia De Futeboltraining Soccer Club and their team in requiring players to abide by the Players Code of Conduct.</li>
+          <li>I will not use or possess alcohol, illegal drugs or weapons while attending ADF matches.</li>
+          <li>I will not under any circumstance shout abusively at my child or any other child.</li>
+          <li>I will not under any circumstance shout abusively or threaten any physical abuse to any coach or referee.</li>
+          <li>I will not dispute any call made by the referee; and I understand that the Academia De Futebotraining may sanction any spectator who verbally abuses or assaults a referee.</li>
+          <li>I will not coach my child or other children from the sideline during the game.</li>
+          <li>I will only make positive comments to the players and it is understood that coaches and not parents shall provide instructional input during games.</li>
+          <li>I understand that the game is for the children not for the adults.</li>
+          <li>I understand that obscenities are strictly prohibited and that the referee shall instruct any spectator guilty of using obscenity to leave the venue.</li>
+          <li>I understand that ADF parents are responsible for the behavior of all of their team’s guests/spectators and that they shall act in accordance with the Code of Conduct.</li>
+          <li>I understand that a spectators are to take the side of the field opposite the teams; spectators will remain at least 3 feet behind the touchline; if, during the match, the spectators behavior is out of line then the referee will ask the coaches to speak to the spectators; if the behavior continues, it is within the discretion of the referee to ask the offending spectator(s) to leave the venue; and the referee shall abandon the match if the spectators become unruly and out of control.</li>
         </ul>
       </div>
     </div>

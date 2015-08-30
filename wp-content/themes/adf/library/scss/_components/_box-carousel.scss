@@ -90,6 +90,10 @@
   img {
     transform: translateY(-15px);
   }
+
+  @include breakpoint(large) {
+    height: 360px;
+  }
 }
 
 
@@ -223,6 +227,7 @@
     width: 70%;
   }
   @include breakpoint(small) {
-    width: 64%;
+    margin-top: 50px;
+    width: 100%;
   }
 }

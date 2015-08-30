@@ -15,7 +15,7 @@
       <div class="span6 span-m-8">
         <h1 class="pad-b text-white text-uppercase">Learn the Technique. <br>Learn the Art.</h1>
         <p class="text-highlight pad-b">We are Portland’s Premier Technical Soccer Training Development Program. Academia de Futeboltraining is designed for players 8-21 years of age, who are inspired to take their game to the next level.</p>
-        <a href="#" class="btn btn--primary">Learn More</a>
+        <a href="/about/" class="btn btn--primary">Learn More</a>
       </div>
     </div>
 
@@ -24,8 +24,8 @@
   <div class="callout-video-bg">
     <div class="overlay"></div>
     <video autoplay loop poster="<?php echo get_template_directory_uri(); ?>/library/img/headers/header.jpg">
-      <source src="<?php echo get_template_directory_uri(); ?>/library/video/header.mp4" type="video/mp4">
       <source src="<?php echo get_template_directory_uri(); ?>/library/video/header.webm" type="video/webm">
+      <source src="<?php echo get_template_directory_uri(); ?>/library/video/header2.mp4" type="video/mp4">
     </video>
   </div>
 </section>
@@ -157,7 +157,7 @@
     <div class="row pad-t" id="js--video-wrap">
       <?php while ($videoQuery->have_posts()) : $videoQuery->the_post(); ?>
       <div class="span4">
-        <a href="#" class="box-video video-wrap" data-id="<?php the_field('youtube_id'); ?>">
+        <a href="/videos/" class="box-video video-wrap" data-id="<?php the_field('youtube_id'); ?>">
           <span class="icon icon-arrow-right">
             <svg class="icon-svg">
               <use xlink:href="#icon-arrow-right" />
@@ -182,10 +182,7 @@
 
     <div class="row pad-b">
       <div class="span12">
-        <ul class="list-inline-middle list-inline-spacer-right">
-          <li><h3>Our Partners</h3></li>
-          <li><a href="/sponsors/" class="btn">Sponsorship Opportunities</a></li>
-        </ul>
+        <h3>Our Partners</h3>
       </div>
     </div>
 
@@ -252,7 +249,7 @@
         </span>
         <h4 class="pad-t--10 pad-b--10">Teams: Youth Academia</h4>
         <p>ADF currently has two Premier youth teams (U10 and U11 boys) who compete in Oregon's top leagues. ADF also participates in premier local, regional and national tournaments.</p>
-        <a href="#" class="btn">View Teams</a>
+        <a href="/teams/" class="btn">View Teams</a>
       </div>
       <div class="span4">
         <span class="icon icon-circle icon-soccer-ball">
@@ -262,7 +259,7 @@
         </span>
         <h4 class="pad-t--10 pad-b--10">Academia Training: The Training Academia</h4>
         <p>Premier technical soccer training development program for players 6 years and older who are inspired to take their game to the next level. We focus on building the individual player. Increase your technical abilities, passing, shooting, and dribbling so you are more confident and effective on the pitch.</p>
-        <a href="#" class="btn">Learn More</a>
+        <a href="/about/" class="btn">Learn More</a>
       </div>
       <div class="span4">
         <span class="icon icon-circle icon-map-marker">
@@ -272,7 +269,7 @@
         </span>
         <h4 class="pad-t--10 pad-b--10">Location</h4>
         <p>ADF training takes place at the following two locations: ADF’s own Futeboltraining Center and Mittleman Jewish Community Center’s Indoor Sportsplex. Games are played on grass at the beautiful PCC Sylvania Soccer Field.</p>
-        <a href="#" class="btn">Learn More</a>
+        <a href="/locations/" class="btn">Learn More</a>
       </div>
     </div>
 

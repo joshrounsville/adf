@@ -7,8 +7,8 @@ function tml_registration_errors( $errors ) {
   if ( empty( $_POST['last_name'] ) )
     $errors->add( 'empty_last_name', '<strong>ERROR</strong>: Please enter your last name.' );
 
-  if ( empty( $_POST['current_age'] ) )
-    $errors->add( 'empty_current_age', '<strong>ERROR</strong>: Please enter your current age.' );
+  if ( empty( $_POST['date_of_birth'] ) )
+    $errors->add( 'empty_date_of_birth', '<strong>ERROR</strong>: Please enter your date of birth.' );
 
   if ( empty( $_POST['phone_number'] ) )
     $errors->add( 'empty_phone_number', '<strong>ERROR</strong>: Please enter your phone number.' );
@@ -55,8 +55,11 @@ function tml_user_register( $user_id ) {
   if ( !empty( $_POST['last_name'] ) )
     update_user_meta( $user_id, 'last_name', $_POST['last_name'] );
 
-  if ( !empty( $_POST['current_age'] ) )
-    update_user_meta( $user_id, 'current_age', $_POST['current_age'] );
+  if ( !empty( $_POST['date_of_birth'] ) )
+    update_user_meta( $user_id, 'date_of_birth', $_POST['date_of_birth'] );
+
+  if ( !empty( $_POST['position'] ) )
+    update_user_meta( $user_id, 'position', $_POST['position'] );
 
   if ( !empty( $_POST['phone_number'] ) )
     update_user_meta( $user_id, 'phone_number', $_POST['phone_number'] );
@@ -96,13 +99,31 @@ add_action( 'user_register', 'tml_user_register' );
 
 function tml_user_update( $user_id ) {
   if ( current_user_can('edit_user', $user_id) )
+    update_user_meta( $user_id, 'favorite_player', $_POST['favorite_player'] );
+
+  if ( current_user_can('edit_user', $user_id) )
+    update_user_meta( $user_id, 'position', $_POST['position'] );
+
+  if ( current_user_can('edit_user', $user_id) )
+    update_user_meta( $user_id, 'place_of_birth', $_POST['place_of_birth'] );
+
+  if ( current_user_can('edit_user', $user_id) )
+    update_user_meta( $user_id, 'instagram_account', $_POST['instagram_account'] );
+
+  if ( current_user_can('edit_user', $user_id) )
+    update_user_meta( $user_id, 'facebook_account', $_POST['facebook_account'] );
+
+  if ( current_user_can('edit_user', $user_id) )
+    update_user_meta( $user_id, 'twitter_account', $_POST['twitter_account'] );
+
+  if ( current_user_can('edit_user', $user_id) )
     update_user_meta( $user_id, 'first_name', $_POST['first_name'] );
 
   if ( current_user_can('edit_user', $user_id) )
     update_user_meta( $user_id, 'last_name', $_POST['last_name'] );
 
   if ( current_user_can('edit_user', $user_id) )
-    update_user_meta( $user_id, 'current_age', $_POST['current_age'] );
+    update_user_meta( $user_id, 'date_of_birth', $_POST['date_of_birth'] );
 
   if ( current_user_can('edit_user', $user_id) )
     update_user_meta( $user_id, 'phone_number', $_POST['phone_number'] );
