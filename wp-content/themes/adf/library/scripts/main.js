@@ -57,7 +57,10 @@ $(function() {
 
 
 
-
+  //////// remove callout video on mobile
+  if ( $('.callout-video-bg').length && notDesktop ) {
+    $('.callout-video-bg video').remove();
+  }
 
 
 

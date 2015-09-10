@@ -4,7 +4,7 @@
 
 
 .callout {
-  background-image: url(../img/headers/header.jpg);
+  background-image: url(../img/headers/header-about.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -25,27 +25,6 @@
 
   .home & {
     padding: 230px 0 170px;
-  }
-  .page-template-page-about-php & {
-    background-image: url(../img/headers/header-about.jpg);
-  }
-  .page-template-page-about-contact-php & {
-    background-image: url(../img/headers/header-about.jpg);
-  }
-  .page-template-page-team-php & {
-    background-image: url(../img/headers/header-teams.jpg);
-  }
-  .page-template-page-academy-php & {
-    background-image: url(../img/headers/header-about.jpg);
-  }
-  .page-template-page-events-php & {
-    background-image: url(../img/headers/header-about.jpg);
-  }
-  .post-type-archive-video & {
-    background-image: url(../img/headers/header-about.jpg);
-  }
-  .page-template-page-programs & {
-    background-image: url(../img/headers/header-about.jpg);
   }
 
   @include breakpoint(large) {
@@ -77,6 +56,10 @@
   .container {
     z-index: 3;
   }
+
+  @include breakpoint(medium) {
+    background-image: url(../img/headers/header-about.jpg);
+  }
 }
 
 .callout-video-bg {
@@ -99,7 +82,7 @@
     background: rgba(34, 41, 41, 0.8);
     z-index: 2;
     backface-visibility: hidden;
-  transform: translateZ(0);
+    transform: translateZ(0);
   }
 
   video {
@@ -113,7 +96,11 @@
     min-height: 100%;
     z-index: 1;
     backface-visibility: hidden;
-  transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  @include breakpoint(medium) {
+    display: none;
   }
 }
 
