@@ -6,7 +6,7 @@
 .box-event {
   background: #fff;
   border: 3px solid #fff;
-  border-top: 4px solid $colorBlueLight;
+  border-top: 4px solid $colorYellow;
   border-radius: 4px;
   height: 230px;
   padding: 20px 17px;
@@ -15,7 +15,7 @@
   backface-visibility: hidden;
   &:hover,
   &:focus {
-    border-color: $colorBlueLight;
+    border-color: $colorYellow;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
     .icon-svg {
       transform: translateX(2px);
@@ -48,7 +48,7 @@
   span {
     width: 32px;
     height: 32px;
-    border: 2px solid $colorBlueLight;
+    border: 2px solid $colorYellow;
     border-radius: 100%;
     padding: 7px 0 0 1px;
     position: relative;

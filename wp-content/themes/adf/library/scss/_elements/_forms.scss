@@ -89,7 +89,7 @@ input::-moz-focus-inner {
 .form-wrap {
   .message {
     @include fontBold();
-    color: $colorBlue;
+    color: $colorYellow;
   }
 }
 
@@ -209,7 +209,7 @@ textarea,
   &:hover,
   &:focus {
     background: #fff;
-    border-color: $colorBlueLight;
+    border-color: $colorYellow;
   }
   &:disabled {
     &:hover,
@@ -231,9 +231,9 @@ textarea,
     &:checked {
       + label {
         &:before {
-          background-color: $colorBlueLight;
+          background-color: $colorYellow;
           background-image: url(../img/icons/checkmark.svg);
-          border-color: $colorBlueLight;
+          border-color: $colorYellow;
         }
       }
     }
@@ -291,7 +291,7 @@ textarea,
     color: $colorYellow;
   }
   &.strong {
-    color: $colorBlue;
+    color: $colorYellow;
   }
 }
 

@@ -174,10 +174,9 @@
 <?php endif; ?>
 <?php wp_reset_postdata(); ?>
 
-
 <?php $sponsorQuery = new WP_Query( array('posts_per_page' => '-1', 'post_type' => 'sponsor', 'orderby' => 'name') ); ?>
 <?php if ( $sponsorQuery->have_posts() ) : ?>
-<section class="bg-white border-top--gray pad-v--2x">
+<section class="bg-white border-top--styled pad-v--2x">
   <div class="container">
 
     <div class="row pad-b">
@@ -205,7 +204,7 @@
 <?php wp_reset_postdata(); ?>
 
 
-<section class="bg-black pad-v--2x">
+<section class="bg-gradient pad-v--2x">
   <div class="container">
 
     <div class="row">

@@ -76,13 +76,13 @@
 </section>
 
 
-<section class="pad-v--3x bg-red bg-red-img">
+<section class="pad-v--3x bg-gradient">
   <div class="container">
 
     <div class="row text-center">
       <div class="span12">
-        <h3 class="h2">How do we do it?</h3>
-        <p class="h3 text-white semi pad-t--20 pad-b-s--0">We develop players using our unique training curriculum that fosters creativity and individualism. We encourage consistent training – frequent touches and repetition are essential for player development.</p>
+        <h3 class="h2 text-white">How do we do it?</h3>
+        <p class="h3 semi text-white pad-t--20 pad-b-s--0">We develop players using our unique training curriculum that fosters creativity and individualism. We encourage consistent training – frequent touches and repetition are essential for player development.</p>
       </div>
     </div>
 
@@ -116,12 +116,12 @@
 </section>
 
 
-<section class="pad-v--3x bg-blue bg-blue-img">
+<section class="pad-v--3x bg-gradient">
   <div class="container">
 
     <div class="row text-center">
       <div class="span12">
-        <h3 class="h2">What value are we bringing?</h3>
+        <h3 class="h2 text-white">What value are we bringing?</h3>
         <p class="h3 text-white semi pad-t--20 pad-b-s--0"><span class="break">We provide players with exceptional training that is equivalent to what they would find in the</span> finest soccer academies in the world - players have the chance to realize their full potential.</p>
       </div>
     </div>

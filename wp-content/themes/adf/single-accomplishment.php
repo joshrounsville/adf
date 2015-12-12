@@ -28,9 +28,9 @@
         </div>
       </div>
       <div class="span4">
-        <div class="bg-white border-top--blue box-shadow pad-v pad-h--20 border-radius">
+        <div class="bg-white border-top--yellow box-shadow pad-v pad-h--20 border-radius">
           <h4 class="strong">Place</h4>
-          <p class="h2 pad-b--20 text-blue"><?php the_field('place_in_tournament'); ?></p>
+          <p class="h2 pad-b--20 text-yellow"><?php the_field('place_in_tournament'); ?></p>
           <h4 class="strong">When</h4>
           <p class="pad-b--0"><?php echo $tournamentDate->format('F j, Y'); ?></p>
         </div>

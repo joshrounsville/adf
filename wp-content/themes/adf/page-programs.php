@@ -33,7 +33,7 @@
 
     <div class="row pad-t--30 js--equal-height-parent">
       <div class="span6">
-        <div class="bg-white border-gray border-top--blue pad-v pad-h--20 border-radius js--equal-height">
+        <div class="bg-white border-gray border-top--yellow pad-v pad-h--20 border-radius js--equal-height">
           <h3 class="pad-b--20">
             <span class="icon icon-inline icon-circle icon-soccer-ball">
               <svg class="icon-svg">
@@ -47,7 +47,7 @@
         </div>
       </div>
       <div class="span6">
-         <div class="bg-white border-gray border-top--blue pad-v pad-h--20 border-radius js--equal-height">
+         <div class="bg-white border-gray border-top--yellow pad-v pad-h--20 border-radius js--equal-height">
           <h3 class="pad-b--20">
             <span class="icon icon-inline icon-circle icon-trophy">
               <svg class="icon-svg">
@@ -64,7 +64,7 @@
 
     <div class="row pad-t--30">
       <div class="span6">
-        <div class="bg-white border-gray border-top--blue pad-v pad-h--20 border-radius">
+        <div class="bg-white border-gray border-top--yellow pad-v pad-h--20 border-radius">
           <h3 class="pad-b--20">
             <span class="icon icon-inline icon-circle icon-soccer-pitch">
               <svg class="icon-svg">
@@ -78,7 +78,7 @@
         </div>
       </div>
       <div class="span6">
-        <div class="bg-white border-gray border-top--blue pad-v pad-h--20 border-radius">
+        <div class="bg-white border-gray border-top--yellow pad-v pad-h--20 border-radius">
           <h3 class="pad-b--20">
             <span class="icon icon-inline icon-circle icon-soccer-pitch">
               <svg class="icon-svg">
@@ -108,14 +108,14 @@
 
     <div class="row pad-t--30 js--equal-height-parent">
       <div class="span6">
-        <div class="bg-white border-top--blue pad-v pad-h--20 border-radius js--equal-height">
+        <div class="bg-white border-top--yellow pad-v pad-h--20 border-radius js--equal-height">
           <h3 class="pad-b--10">Agency representation</h3>
           <p>ADF is dedicated to helping players achieve their goals. Whether a player has their sights set on a college scholarship or professional playing career, ADF provides the support and guidance they need.</p>
           <p>In order to assist aspiring professionals, ADF has a partnership with Marcar Sports, a professional agency established in 1997 by Mauro Azevedo in Rio De Janeiro, Brazil. Marcar Sports represents players as they navigate the complex world of professional soccer. Players represented by Marcar Sports have signed with numerous international clubs including a recent signing with French top division club AS Monaco.</p>
         </div>
       </div>
       <div class="span6">
-         <div class="bg-white border-top--blue pad-v pad-h--20 border-radius js--equal-height">
+         <div class="bg-white border-top--yellow pad-v pad-h--20 border-radius js--equal-height">
           <h3 class="pad-b--10">Scouting</h3>
           <p>ADF understands that being identified by college and professional coaches and scouts is critical for players to achieve their goals. Far too often players travel to far away camps and tournaments "hoping" to be seen by the “right” coach or scout only to return disappointed. ADF works with players to help them develop their portfolio which includes a playing resume (CV) and video footage.</p>
           <p>Players consult with established coaches and agents to position themselves for success. Frequently ADF determines that a player should improve their resume by adding some international training and playing experience. ADF has the relationships to make this happen. ADF also sends scouts to observe its own academy players in action to provide them with feedback and guidance.</p>
@@ -125,13 +125,13 @@
 
     <div class="row pad-t--30 js--equal-height-parent">
       <div class="span6">
-        <div class="bg-white border-top--blue pad-v pad-h--20 border-radius js--equal-height">
+        <div class="bg-white border-top--yellow pad-v pad-h--20 border-radius js--equal-height">
           <h3 class="pad-b--20">Community</h3>
           <p>ADF is committed to supporting and giving back to the communities in which it operates. Throughout the year ADF provides camps for underrepresented youth and lends support to organizations and events that make our world a better place to live.</p>
         </div>
       </div>
       <div class="span6">
-        <div class="bg-white border-top--blue pad-v pad-h--20 border-radius js--equal-height">
+        <div class="bg-white border-top--yellow pad-v pad-h--20 border-radius js--equal-height">
           <h3 class="pad-b--20">Barefoot Tournament</h3>
           <p>This annual event is a celebration of the beautiful game and local community. Participants play soccer the way it’s played in many parts of the world; barefoot. In addition to playing soccer, players, parents and fans can enjoy a carnival, live music and tasty food. All proceeds from the event benefit Grassroots Soccer.</p>
           <p><a href="http://www.grassrootsoccer.org/" target="_blank">Grassroots Soccer</a> is a non-profit organization that uses the power of soccer to educate, inspire and mobilize communities to stop the spread of HIV. Over 630,000 adolescents and teens have graduated from its programs in 16 African countries.</p>
@@ -154,13 +154,13 @@
 
     <div class="row pad-t--30 js--equal-height-parent">
       <div class="span6">
-        <div class="bg-white border-gray border-top--blue pad-v pad-h--20 border-radius js--equal-height">
+        <div class="bg-white border-gray border-top--yellow pad-v pad-h--20 border-radius js--equal-height">
           <h3 class="pad-b--10">Brazil Exchange</h3>
           <p>ADF has established relationships with several top soccer organizations in Brazil. Every year ADF arranges for players to travel to Brazil to train and compete. Players can go individually or travel as part of an ADF led group. While in Brazil players learn from top club coaches, train and compete with outstanding youth players and explore the vibrant culture that makes Brazil so special.</p>
         </div>
       </div>
       <div class="span6">
-        <div class="bg-white border-gray border-top--blue pad-v pad-h--20 border-radius js--equal-height">
+        <div class="bg-white border-gray border-top--yellow pad-v pad-h--20 border-radius js--equal-height">
           <h3 class="pad-b--10">Europe Exchange</h3>
           <p>ADF is in the process of establishing a relationship with a top European club. This relationship will give ADF players the opportunity to train alongside top European players and learn from accomplished international coaches. Stay tuned for more information on this exciting development!</p>
         </div>

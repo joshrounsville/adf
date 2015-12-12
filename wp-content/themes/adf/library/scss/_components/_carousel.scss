@@ -151,7 +151,7 @@
   border-top: 5px solid #fff;
   border-right: 5px solid #fff;
   border-bottom: 5px solid #fff;
-  border-left: 5px solid $colorBlueLight;
+  border-left: 5px solid $colorYellow;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -239,15 +239,15 @@
 
 .btn--slider-filter {
   &.active {
-    border-color: $colorBlueLight;
-    background: $colorBlueLight;
-    color: $colorBlueDark;
+    border-color: #000;
+    background: #000;
+    color: $colorYellow;
     &:hover,
     &:active,
     &:focus {
-      border-color: $colorBlueLight;
-      background: $colorBlueLight;
-      color: $colorBlueDark;
+      border-color: $colorYellow;
+      background: $colorYellow;
+      color: #000;
     }
   }
 }
@@ -275,7 +275,7 @@
   .icon {
     width: 32px;
     height: 32px;
-    border: 2px solid $colorBlueLight;
+    border: 2px solid $colorYellow;
     border-radius: 100%;
     padding: 7px 0 0 1px;
     position: relative;
@@ -321,7 +321,7 @@
   .icon {
     width: 32px;
     height: 32px;
-    border: 2px solid $colorBlueLight;
+    border: 2px solid $colorYellow;
     border-radius: 100%;
     position: relative;
     bottom: -11px;

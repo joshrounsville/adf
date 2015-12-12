@@ -65,7 +65,7 @@ $(function() {
 
 
   //////// setup instagram feed
-  var instagramTemplate = '<div class="span3"><a href="{{link}}" target=_"blank" class="box-instagram"><div class="img-wrap"><img src="{{image}}" alt="Academia de Futebol Training"></div><div class="bottom"><h5>{{model.create_time_ago}}</h5><span class="view-item"><span class="icon icon-instagram icon-instagram-large"><svg class="icon-svg"><use xlink:href="#icon-instagram" /></svg></span></span></div><div class="instagram-overview"><h4>{{caption}}</h4></div></a></div>';
+  var instagramTemplate = '<div class="span3"><a href="{{link}}" target=_"blank" class="box-instagram"><div class="img-wrap"><img src="{{image}}" alt="Academia de Futebol Training"></div><div class="bottom"><h5>{{model.create_time_ago}}</h5><span class="icon icon-instagram icon-instagram-large"><svg class="icon-svg"><use xlink:href="#icon-instagram" /></svg></span></div><div class="instagram-overview"><h4>{{caption}}</h4></div></a></div>';
 
   var feed = new Instafeed({
     get: 'user',

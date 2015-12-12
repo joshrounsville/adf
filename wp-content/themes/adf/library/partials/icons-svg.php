@@ -27,11 +27,11 @@
   </symbol>
 
   <symbol id="icon-globe" viewBox="-289 379 36 36">
-    <circle fill="none" stroke="#85E1E5" stroke-width="2" cx="-271" cy="397" r="17"></circle>
-    <path fill="#85E1E5" stroke="#85E1E5" stroke-linejoin="round" d="M-275,394.1h1.6 l0.9-1.2l1.3-0.2l1.2,1.2l1.8,0.2l0.4,0.9l1.4,2.9c0,0,1.3-0.5,2-0.7c0.1,0,0.3-0.1,0.3-0.1l-2-1.4l3.6,1l1.5,3.3l1.3-0.7l-0.7-1.4 l1.1-0.7l1.5,2.3h1.5l0.9-4.3l-1.8-6.7l-4.7-2.4l-5.2,1.4l-2.3-0.7l-3.5,2.4l1.1,0.7l0.4,0.8l-2.7,1.2L-275,394.1z"/>
-    <path fill="#85E1E5" stroke="#85E1E5" stroke-linejoin="round" d="M-274.6,400.3l-1.3-1.3 l-0.1-1.5l1.8-2.4l2.5-0.1l3.3,1l0.9,2.2l1.1,1.1l1-0.3l-0.6,1.5l-1.3,1l0.2,1.8l-0.9,0.9l-0.2,1.1l-1,1.2l-1.4,0.1l-1-3l0.4-1 l-0.8-1.4v-1L-274.6,400.3z"/>
-    <path fill="#85E1E5" stroke="#85E1E5" stroke-linejoin="round" d="M-281,384.1l0.6,3.1 l1.1,1.6l1.4,0.1l0.3-1.7l2-1.8l-1.7-3.7L-281,384.1z"/>
-    <path fill="#85E1E5" stroke="#85E1E5" stroke-linejoin="round" d="M-287,400.3l2.4-0.3 l2.6,0.9c0,0,0.9,1.3,1.3,1.3c0.4,0,2,1,2,1l-0.6,0.9l-0.3,1.2l-1.3,0.8l-0.4,1.2l-2,0.8L-287,400.3z"/>
+    <circle fill="none" stroke="#ffcd26" stroke-width="2" cx="-271" cy="397" r="17"></circle>
+    <path fill="#ffcd26" stroke="#ffcd26" stroke-linejoin="round" d="M-275,394.1h1.6 l0.9-1.2l1.3-0.2l1.2,1.2l1.8,0.2l0.4,0.9l1.4,2.9c0,0,1.3-0.5,2-0.7c0.1,0,0.3-0.1,0.3-0.1l-2-1.4l3.6,1l1.5,3.3l1.3-0.7l-0.7-1.4 l1.1-0.7l1.5,2.3h1.5l0.9-4.3l-1.8-6.7l-4.7-2.4l-5.2,1.4l-2.3-0.7l-3.5,2.4l1.1,0.7l0.4,0.8l-2.7,1.2L-275,394.1z"/>
+    <path fill="#ffcd26" stroke="#ffcd26" stroke-linejoin="round" d="M-274.6,400.3l-1.3-1.3 l-0.1-1.5l1.8-2.4l2.5-0.1l3.3,1l0.9,2.2l1.1,1.1l1-0.3l-0.6,1.5l-1.3,1l0.2,1.8l-0.9,0.9l-0.2,1.1l-1,1.2l-1.4,0.1l-1-3l0.4-1 l-0.8-1.4v-1L-274.6,400.3z"/>
+    <path fill="#ffcd26" stroke="#ffcd26" stroke-linejoin="round" d="M-281,384.1l0.6,3.1 l1.1,1.6l1.4,0.1l0.3-1.7l2-1.8l-1.7-3.7L-281,384.1z"/>
+    <path fill="#ffcd26" stroke="#ffcd26" stroke-linejoin="round" d="M-287,400.3l2.4-0.3 l2.6,0.9c0,0,0.9,1.3,1.3,1.3c0.4,0,2,1,2,1l-0.6,0.9l-0.3,1.2l-1.3,0.8l-0.4,1.2l-2,0.8L-287,400.3z"/>
   </symbol>
 
   <symbol id="icon-grid" viewBox="0 0 16 16">
@@ -51,50 +51,50 @@
   </symbol>
 
   <symbol id="icon-map-marker" viewBox="-295 380 20.6 32.6">
-    <path fill="#85E1E5" d="M-284.7,412.6c0,0-10.3-16.2-10.3-22
+    <path fill="#ffcd26" d="M-284.7,412.6c0,0-10.3-16.2-10.3-22
     c0-5.8,4.6-10.6,10.3-10.6c5.7,0,10.3,4.7,10.3,10.6C-274.4,396.4-284.7,412.6-284.7,412.6L-284.7,412.6z M-284.7,383.5
     c-3.8,0-6.9,3.2-6.9,7c0,3.9,3.1,7,6.9,7c3.8,0,6.9-3.2,6.9-7C-277.9,386.7-280.9,383.5-284.7,383.5L-284.7,383.5z"/>
   </symbol>
 
   <symbol id="icon-pennant" viewBox="-283.6 377.2 42.2 36.3">
-    <path fill="none" stroke="#85E1E5" stroke-width="3" stroke-linecap="round" d="M-284.1,412 l7.7-31.8"/>
-    <path fill="#85E1E5" stroke="#85E1E5" stroke-width="3" stroke-linejoin="round" d="M-244.9,394.9l-31.4-16.2l-4.6,21L-244.9,394.9z"/>
+    <path fill="none" stroke="#ffcd26" stroke-width="3" stroke-linecap="round" d="M-284.1,412 l7.7-31.8"/>
+    <path fill="#ffcd26" stroke="#ffcd26" stroke-width="3" stroke-linejoin="round" d="M-244.9,394.9l-31.4-16.2l-4.6,21L-244.9,394.9z"/>
     <circle fill="#FFFFFF" cx="-270" cy="391" r="4"></circle>
   </symbol>
 
   <symbol id="icon-soccer-ball" viewBox="-288 378 38 38">
-    <path fill="#FFFFFF" stroke="#85E1E5" stroke-width="2" d="M-268,415c9.9,0,18-8.1,18-18 s-8.1-18-18-18s-18,8.1-18,18S-277.9,415-268,415z"/>
-    <path fill="none" stroke="#85E1E5" stroke-linecap="square" d="M-271.4,401.6l-4.4,5.9" />
-    <path fill="none" stroke="#85E1E5" stroke-linecap="square" d="M-264.7,401.7l4.5,6" />
-    <path fill="none" stroke="#85E1E5" stroke-linecap="square" d="M-262.6,395.3l6.2-1.1" />
-    <path fill="none" stroke="#85E1E5" stroke-linecap="square" d="M-273.5,395.3l-5.8-1.1" />
-    <path fill="none" stroke="#85E1E5" stroke-linecap="square" d="M-268,391.5v-8.1"/>
-    <path fill="#85E1E5" d="M-283.4,388.3c0,0-0.8,2-2.6,4.3s0.5,6.5,0.5,6.5l1.7,0.6 l4.3-5.6L-283.4,388.3z"/>
-    <polygon fill="#85E1E5" points="-268,391 -262.3,395.1 -264.5,401.9 -271.5,401.9 -273.7,395.1"></polygon>
-    <polygon fill="#85E1E5" points="-252.9,388.3 -250.9,392.6 -250.5,398.8 -252.5,399.7 -256.8,394.2"></polygon>
-    <polygon fill="#85E1E5" points="-268,384.9 -273.7,380.7 -268,379.4 -262.3,380.7"></polygon>
-    <polygon fill="#85E1E5" points="-275.5,407.3 -273.9,413.6 -278.9,410.6 -282.5,406.8"></polygon>
-    <polygon fill="#85E1E5" points="-260.5,407.3 -262.2,414.1 -258.1,411.3 -253.5,406.8"></polygon>
+    <path fill="#FFFFFF" stroke="#ffcd26" stroke-width="2" d="M-268,415c9.9,0,18-8.1,18-18 s-8.1-18-18-18s-18,8.1-18,18S-277.9,415-268,415z"/>
+    <path fill="none" stroke="#ffcd26" stroke-linecap="square" d="M-271.4,401.6l-4.4,5.9" />
+    <path fill="none" stroke="#ffcd26" stroke-linecap="square" d="M-264.7,401.7l4.5,6" />
+    <path fill="none" stroke="#ffcd26" stroke-linecap="square" d="M-262.6,395.3l6.2-1.1" />
+    <path fill="none" stroke="#ffcd26" stroke-linecap="square" d="M-273.5,395.3l-5.8-1.1" />
+    <path fill="none" stroke="#ffcd26" stroke-linecap="square" d="M-268,391.5v-8.1"/>
+    <path fill="#ffcd26" d="M-283.4,388.3c0,0-0.8,2-2.6,4.3s0.5,6.5,0.5,6.5l1.7,0.6 l4.3-5.6L-283.4,388.3z"/>
+    <polygon fill="#ffcd26" points="-268,391 -262.3,395.1 -264.5,401.9 -271.5,401.9 -273.7,395.1"></polygon>
+    <polygon fill="#ffcd26" points="-252.9,388.3 -250.9,392.6 -250.5,398.8 -252.5,399.7 -256.8,394.2"></polygon>
+    <polygon fill="#ffcd26" points="-268,384.9 -273.7,380.7 -268,379.4 -262.3,380.7"></polygon>
+    <polygon fill="#ffcd26" points="-275.5,407.3 -273.9,413.6 -278.9,410.6 -282.5,406.8"></polygon>
+    <polygon fill="#ffcd26" points="-260.5,407.3 -262.2,414.1 -258.1,411.3 -253.5,406.8"></polygon>
   </symbol>
 
   <symbol id="icon-soccer-pitch" viewBox="-288 376 34 40">
-    <circle fill="#FFFFFF" stroke="#85E1E5" stroke-width="2" cx="-272" cy="396" r="5"></circle>
-    <rect x="-288" y="377" fill="none" stroke="#85E1E5" stroke-width="2" stroke-linejoin="round" width="32" height="38"></rect>
-    <path fill="none" stroke="#85E1E5" stroke-width="2" stroke-linecap="square" d="M-287.5,396h31"/>
-    <rect x="-282" y="408" fill="none" stroke="#85E1E5" stroke-width="2" stroke-linejoin="round" width="20" height="7"></rect>
-    <rect x="-282" y="377" fill="none" stroke="#85E1E5" stroke-width="2" stroke-linejoin="round" width="20" height="7"></rect>
-    <rect x="-277" y="377" fill="none" stroke="#85E1E5" stroke-width="2" stroke-linejoin="round" width="10" height="3"></rect>
+    <circle fill="#FFFFFF" stroke="#ffcd26" stroke-width="2" cx="-272" cy="396" r="5"></circle>
+    <rect x="-288" y="377" fill="none" stroke="#ffcd26" stroke-width="2" stroke-linejoin="round" width="32" height="38"></rect>
+    <path fill="none" stroke="#ffcd26" stroke-width="2" stroke-linecap="square" d="M-287.5,396h31"/>
+    <rect x="-282" y="408" fill="none" stroke="#ffcd26" stroke-width="2" stroke-linejoin="round" width="20" height="7"></rect>
+    <rect x="-282" y="377" fill="none" stroke="#ffcd26" stroke-width="2" stroke-linejoin="round" width="20" height="7"></rect>
+    <rect x="-277" y="377" fill="none" stroke="#ffcd26" stroke-width="2" stroke-linejoin="round" width="10" height="3"></rect>
   </symbol>
 
   <symbol id="icon-trophy" viewBox="-290 379 34 35">
-    <path fill="#85E1E5" d="M-273,403c6.1,0,11-4.9,11-11s-4.9-11-11-11s-11,4.9-11,11 S-279.1,403-273,403z"/>
-    <path fill="none" stroke="#85E1E5" stroke-width="2" d="M-257,389c0,3.3-2.7,6-6,6 s-6-2.7-6-6c0-1.2,0.4-2.4,1-3.3V382h11V389z"/>
-    <path fill="none" stroke="#85E1E5" stroke-width="2" d="M-289,389c0,3.3,2.7,6,6,6 s6-2.7,6-6c0-1.2-0.4-2.4-1-3.3V382h-11V389z"/>
-    <rect x="-284" y="379" fill="#85E1E5" width="22" height="13"></rect>
+    <path fill="#ffcd26" d="M-273,403c6.1,0,11-4.9,11-11s-4.9-11-11-11s-11,4.9-11,11 S-279.1,403-273,403z"/>
+    <path fill="none" stroke="#ffcd26" stroke-width="2" d="M-257,389c0,3.3-2.7,6-6,6 s-6-2.7-6-6c0-1.2,0.4-2.4,1-3.3V382h11V389z"/>
+    <path fill="none" stroke="#ffcd26" stroke-width="2" d="M-289,389c0,3.3,2.7,6,6,6 s6-2.7,6-6c0-1.2-0.4-2.4-1-3.3V382h-11V389z"/>
+    <rect x="-284" y="379" fill="#ffcd26" width="22" height="13"></rect>
     <circle fill="none" stroke="#FFFFFF" stroke-width="2" cx="-273" cy="390" r="4"></circle>
-    <rect x="-281" y="411" fill="#85E1E5" width="16" height="3"></rect>
-    <rect x="-277" y="408" fill="#85E1E5" width="8" height="3"></rect>
-    <rect x="-275" y="402" fill="#85E1E5" width="4" height="7"></rect>
+    <rect x="-281" y="411" fill="#ffcd26" width="16" height="3"></rect>
+    <rect x="-277" y="408" fill="#ffcd26" width="8" height="3"></rect>
+    <rect x="-275" y="402" fill="#ffcd26" width="4" height="7"></rect>
   </symbol>
 
   <symbol id="icon-twitter" viewBox="-296.1 389.2 18.4 14.9">

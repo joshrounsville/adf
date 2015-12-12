@@ -66,16 +66,13 @@
     width: 78%;
     @include ellipsis();
   }
-  .view-item {
-    bottom: 6px;
-    width: 34px;
+  .icon-instagram {
+    right: 6px;
+    bottom: 15px;
     backface-visibility: hidden;
-    span {
-      bottom: 0;
-      margin: 0;
-    }
+    position: absolute;
     .icon-svg {
-      fill: $colorBlueLight;
+      fill: #9a9a9a;
       width: 100%;
     }
   }

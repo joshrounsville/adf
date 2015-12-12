@@ -10,7 +10,7 @@
   text-decoration: none;
   outline: 0;
   background: $colorBtn;
-  color: $colorBlueDark;
+  color: #000;
   border: 2px solid $colorBtn;
   font-size: 14px;
   border-radius: 3px;
@@ -20,9 +20,9 @@
   font-style: normal;
   &:hover,
   &:focus {
-    background: $colorBlue;
-    border-color: $colorBlue;
-    color: #fff;
+    background: #000;
+    border-color: #000;
+    color: $colorYellow;
   }
 
   &.btn--primary {
@@ -34,6 +34,17 @@
     text-transform: uppercase;
   }
 
+  &.btn--black {
+    background: #000;
+    border-color: #000;
+    color: $colorYellow;
+    &:hover,
+    &:focus {
+      background: $colorYellow;
+      border-color: $colorYellow;
+      color: #000;
+    }
+  }
   &.btn--yellow {
     background: $colorYellowLight;
     border-color: $colorYellowLight;
@@ -55,8 +66,9 @@
     color: #fff;
     &:hover,
     &:focus {
-      background: $colorBlue;
-      border-color: $colorBlue;
+      background: $colorYellow;
+      border-color: $colorYellow;
+      color: #000;
     }
   }
   &.btn--outline-gray {
@@ -76,14 +88,14 @@
 
   &.btn--filter {
     &.active {
-      border-color: $colorBlueLight;
-      background: $colorBlueLight;
-      color: $colorBlueDark;
+      border-color: #000;
+      background: #000;
+      color: $colorYellow;
       &:hover,
       &:focus {
-        border-color: $colorBlueLight;
-        background: $colorBlueLight;
-        color: $colorBlueDark;
+        border-color: $colorYellow;
+        background: $colorYellow;
+        color: #000;
       }
     }
   }
@@ -95,7 +107,7 @@
       display: block;
       width: 12px;
       height: 12px;
-      border: 2px solid $colorBlueLight;
+      border: 2px solid $colorYellow;
       border-right: 2px solid #fff;
       border-bottom: 2px solid #fff;
       border-radius: 100%;

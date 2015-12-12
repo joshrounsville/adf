@@ -140,14 +140,14 @@
                 <a href="<?php echo get_page_link(81); ?>" class="btn btn--secondary btn--outline-white">Your Profile</a>
               </li>
               <li>
-                <a href="<?php echo wp_logout_url(); ?>" class="btn btn--secondary">Log Out</a>
+                <a href="<?php echo wp_logout_url(); ?>" class="btn btn--secondary btn--black">Log Out</a>
               </li>
               <?php else : ?>
               <li>
                 <a href="<?php echo get_page_link(78); ?>" class="btn btn--secondary btn--outline-white">Register</a>
               </li>
               <li>
-                <a href="<?php echo get_page_link(76); ?>" class="btn btn--secondary">Sign In</a>
+                <a href="<?php echo get_page_link(76); ?>" class="btn btn--secondary btn--black">Sign In</a>
               </li>
               <?php endif; ?>
             </ul>

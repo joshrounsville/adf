@@ -21,15 +21,17 @@ $margin: 50px;
 
 $colorGray: #8C9393 !default;
 $colorGrayDark: #666C6C !default;
-$colorGrayXDark: #222A2A !default;
+$colorGrayXDark: #262626 !default;
 $colorGrayLight: #DDE0E0 !default;
 $colorGrayXLight: #F5F6F6 !default;
 
-$colorRed: #C95050 !default;
-$colorRedLight: #FF6969 !default;
-$colorRedDark: #833434 !default;
+//$colorRed: #C95050 !default;
+$colorRed: #9e211c !default;
+$colorRedLight: #ff0002 !default;
+$colorRedDark: #9b1d18 !default;
 
-$colorYellow: #D2BE14 !default;
+//$colorYellow: #D2BE14 !default;
+$colorYellow: #ffcd26 !default;
 $colorYellowLight: #FFE500 !default;
 $colorYellowDark: #6C620C !default;
 
@@ -37,11 +39,11 @@ $colorBlue: #63AEB1 !default;
 $colorBlueLight: #85E1E5 !default;
 $colorBlueDark: #325A5B !default;
 
-$colorText: $colorGrayDark !default;
-$colorBtn: $colorBlueLight !default;
+$colorText: $colorGrayDark;
+$colorBtn: $colorYellow;
 
-$colorLink: $colorBlue !default;
-$colorLinkHover: $colorBlueDark !default;
+$colorLink: $colorYellow;
+$colorLinkHover: $colorGrayXDark;
 
 
 /*==========  FONTS  ==========*/

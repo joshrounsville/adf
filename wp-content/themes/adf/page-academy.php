@@ -46,7 +46,7 @@
 
     <div class="row">
       <div class="span6">
-        <div class="bg-white border-top--blue pad-v pad-h--20 border-radius">
+        <div class="bg-white border-top--yellow pad-v pad-h--20 border-radius">
           <h5 class="text-gray strong">U8 - U23</h5>
           <h3 class="pad-b--10">Join our Cadete, Juvenile or Juniors Program!</h3>
           <p class="pad-b--20">Our youth Academy teams begin to compete at the age of 7. Players start at the Cadete level and then progress through Juvenile category, Juniors category and eventually play on the Men’s team.</p>
@@ -54,7 +54,7 @@
         </div>
       </div>
       <div class="span6">
-         <div class="bg-white border-top--blue pad-v pad-h--20 border-radius">
+         <div class="bg-white border-top--yellow pad-v pad-h--20 border-radius">
           <h5 class="text-gray strong">Goalkeepers U11 - U23</h5>
           <h3 class="pad-b--10">Train with the area's best keepers!</h3>
           <p class="pad-b--20">The Academy's keepers all  train with the region's finest goal keeper coach, Sorin Popovici. Sorin is a former first division professional goalkeeper from Europe</p>

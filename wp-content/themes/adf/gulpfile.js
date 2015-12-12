@@ -6,7 +6,7 @@
  * Define paths
  * ==================================== */
 var source = 'library';
-var build = 'build';
+
 
 
 /* ====================================
@@ -25,7 +25,7 @@ var plumberConfig = {errorHandler: $.notify.onError("Error: <%= error.message %>
 gulp.task('styles', function () {
   return gulp.src(source + '/scss/**/components.scss')
     .pipe($.plumber(plumberConfig))
-    .pipe($.rubySass())
+    .pipe($.sass())
     .pipe($.autoprefixer((["last 2  version", "> 1%", "ie 8", "ie 7"], { cascade: true })))
     .pipe($.minifyCss())
     .pipe($.rename({
@@ -40,7 +40,7 @@ gulp.task('styles', function () {
  * Scripts
  * ==================================== */
  gulp.task('jshint', function() {
-  return gulp.src(source + '/scripts/main.js')
+  return gulp.src(source + '/js/scripts.js')
     .pipe($.plumber(plumberConfig))
     .pipe($.jshint())
     .pipe($.jshint.reporter('default'));
@@ -98,7 +98,7 @@ gulp.task('default', function(){
 gulp.task('watch', function() {
   gulp.watch(source + '/scss/**/*.scss', ['styles']);
 
-  gulp.watch([source + '/scripts/**/*.js', '!' + source + '/scripts/scripts.min.js'], ['jshint', 'scripts']);
+  gulp.watch([source + '/scripts/**/*.js', ! + source + '/scripts/scripts.min.js'], ['jshint', 'scripts']);
 
   gulp.watch(source + '/img/**/*', ['images']);
 });

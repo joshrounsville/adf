@@ -42,12 +42,12 @@
 </section>
 
 
-<section class="pad-v--2x bg-red">
+<section class="pad-v--2x bg-gradient">
   <div class="container">
 
     <div class="row text-center">
       <div class="span8 offset2">
-        <p class="h3 text-red-dark semi pad-b--0">Joaquim and his staff not only train players to improve technically, they also coach, mentor and guide players to help them realize their goals.</p>
+        <p class="h3 text-white semi pad-b--0">Joaquim and his staff not only train players to improve technically, they also coach, mentor and guide players to help them realize their goals.</p>
       </div>
     </div>
 

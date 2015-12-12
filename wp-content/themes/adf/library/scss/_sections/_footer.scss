@@ -7,13 +7,25 @@ footer {
   padding: $padding 0;
   background: $colorGrayXDark;
   font-size: $fontSmall;
-  border-top: 5px solid $colorBlueLight;
+
+  position: relative;
   @include fontRegular();
+
+  &:before {
+    content: "";
+    display: block;
+    height: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(#9f221d, #550d0d);
+  }
   a {
     color: $colorGray;
     &:hover,
     &:focus {
-      color: $colorBlue;
+      color: $colorYellow;
     }
   }
   h5 {
@@ -21,7 +33,7 @@ footer {
       color: #fff;
       &:hover,
       &:focus {
-        color: $colorBlue;
+        color: $colorYellow;
       }
     }
   }

@@ -78,7 +78,7 @@
     }
     .icon-svg {
       backface-visibility: hidden;
-      fill: $colorBlueLight;
+      fill: $colorYellow;
       width: 100%;
     }
   }
@@ -127,7 +127,7 @@
     padding: 0 0 5px;
   }
   h6 {
-    color: $colorBlueLight;
+    color: $colorYellow;
     transform: translateY(10px);
     transition: transform 0.13s 0.05s ease-in-out;
   }

@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="span4">
-        <div class="bg-white border-top--blue box-shadow pad-v pad-h--20 border-radius">
+        <div class="bg-white border-top--yellow box-shadow pad-v pad-h--20 border-radius">
           <h4 class="strong">Where?</h4>
           <ul class="pad-b--20">
             <li><?php the_field('event_street_address'); ?></li>
