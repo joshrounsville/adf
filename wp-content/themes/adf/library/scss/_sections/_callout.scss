@@ -4,13 +4,13 @@
 
 
 .callout {
-  background-image: url(../img/headers/header-about.jpg);
+  background-image: url(../img/headers/header-kick.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   color: #fff;
   padding: 200px 0 90px;
-  margin-top: -135px;
+  margin-top: -145px;
   position: relative;
   animation: fadeIn 0.4s 0.35s both;
   h1 {
@@ -34,7 +34,7 @@
     }
   }
   @include breakpoint(medium) {
-    margin-top: -95px;
+    margin-top: -105px;
     padding: 115px 0 30px;
     transition: opacity 0.13s ease-in-out;
     animation: none;
@@ -58,7 +58,7 @@
   }
 
   @include breakpoint(medium) {
-    background-image: url(../img/headers/header-about.jpg);
+    background-image: url(../img/headers/header-kick.jpg);
   }
 }
 

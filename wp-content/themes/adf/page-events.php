@@ -52,6 +52,7 @@
         'paged' => $paged
       );
     ?>
+    <?php $eventQuery = new WP_Query( $args ); ?>
 
     <?php if ( $eventQuery->found_posts == 0 ) : ?>
       <div class="row pad-t--2x">
@@ -64,13 +65,13 @@
     <?php $post_count = 1; if ( $eventQuery->have_posts() ) : while ($eventQuery->have_posts()) : $eventQuery->the_post(); ?>
 
       <?php if ($post_count % 4 == 1): ?>
+
       <div class="row pad-t">
       <?php endif; ?>
 
         <div class="span3">
           <a href="<?php the_permalink(); ?>" class="box-event box-event--border">
-            <?php $eventDate = DateTime::createFromFormat('Ymd', get_field('event_date')); ?>
-            <time datetime="<?php echo $eventDate->format('Y-m-d'); ?>"><?php echo $eventDate->format('F j, Y'); ?></time>
+            <time datetime="<?php echo date('Y-m-d', strtotime(get_field('event_date'))); ?>"><?php echo date('F j, Y', strtotime(get_field('event_date'))); ?></time>
             <h3><?php the_title(); ?></h3>
             <span class="view-item">
               View Event

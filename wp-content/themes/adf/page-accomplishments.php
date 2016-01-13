@@ -53,8 +53,7 @@
 
         <div class="span3">
           <a href="<?php the_permalink(); ?>" class="box-event box-event--border">
-            <?php $tournamentDate = DateTime::createFromFormat('Ymd', get_field('tournament_date')); ?>
-            <time datetime="<?php echo $tournamentDate->format('Y-m-d'); ?>"><?php echo $tournamentDate->format('F j, Y'); ?></time>
+            <time datetime="<?php echo date('Y-m-d', strtotime(get_field('tournament_date'))); ?>"><?php echo date('F j, Y', strtotime(get_field('tournament_date'))); ?></time>
             <h3><?php the_title(); ?></h3>
             <span class="view-item">
               View Accomplishment

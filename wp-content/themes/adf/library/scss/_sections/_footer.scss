@@ -7,20 +7,9 @@ footer {
   padding: $padding 0;
   background: $colorGrayXDark;
   font-size: $fontSmall;
-
   position: relative;
   @include fontRegular();
-
-  &:before {
-    content: "";
-    display: block;
-    height: 5px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    background: linear-gradient(#9f221d, #550d0d);
-  }
+  border-top: 5px solid #9d1f1b;
   a {
     color: $colorGray;
     &:hover,

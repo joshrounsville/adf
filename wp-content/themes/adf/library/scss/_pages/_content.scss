@@ -33,6 +33,12 @@
   }
   ol {
     list-style: decimal;
+    counter-reset: none;
+    li {
+      &:before {
+        display: none;
+      }
+    }
   }
   li {
     padding: 0 0 4px;

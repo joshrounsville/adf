@@ -32,12 +32,13 @@
     <div class="row">
       <div class="span6">
         <h2 class="pad-b--20">Staff Contact</h2>
+        <?php if ( have_rows('contact') ) : ?>
         <ul class="list-staff-contact mar-b--20">
-          <li><strong>Joaquim Capuia</strong>, President <a href="mailto:<?php echo antispambot('team@futeboltraining.com'); ?>" target="_blank">Contact</a></li>
-          <li><strong>JB Cunha</strong>, Coach <a href="mailto:<?php echo antispambot('team@futeboltraining.com'); ?>" target="_blank">Contact</a></li>
-          <li><strong>Chris Thurley</strong>, Coach <a href="mailto:<?php echo antispambot('team@futeboltraining.com'); ?>" target="_blank">Contact</a></li>
-          <li><strong>Wandi Ali</strong>, Coach <a href="mailto:<?php echo antispambot('team@futeboltraining.com'); ?>" target="_blank">Contact</a></li>
+          <?php while ( have_rows('contact') ) : the_row(); ?>
+          <li><strong><?php the_sub_field('name'); ?></strong>, <?php the_sub_field('title'); ?> <a href="mailto:<?php the_sub_field('email_address'); ?>" target="_blank">Contact</a></li>
+          <?php endwhile; ?>
         </ul>
+        <?php endif; ?>
       </div>
       <div class="span6">
         <h2 class="pad-b--20">General Inquiries</h2>

@@ -23,7 +23,7 @@
 
   <div class="callout-video-bg">
     <div class="overlay"></div>
-    <video autoplay loop poster="<?php echo get_template_directory_uri(); ?>/library/img/headers/header.jpg">
+    <video autoplay loop>
       <source src="<?php echo get_template_directory_uri(); ?>/library/video/header.webm" type="video/webm">
       <source src="<?php echo get_template_directory_uri(); ?>/library/video/header2.mp4" type="video/mp4">
     </video>
@@ -42,7 +42,7 @@
 
     <div class="row pad-t">
       <div class="span3 span-m-6 pad-b-m--20">
-        <span class="icon icon-circle icon-soccer-ball">
+        <span class="icon icon-soccer-ball">
           <svg class="icon-svg">
             <use xlink:href="#icon-soccer-ball" />
           </svg>
@@ -51,7 +51,7 @@
         <p>Players that are selected, join the Academia team, which participates in two of the highest leagues in Oregon: Oregon Premier League and Oregon Youth Soccer Association.</p>
       </div>
       <div class="span3 span-m-6 pad-b-m--20">
-        <span class="icon icon-circle icon-soccer-pitch">
+        <span class="icon icon-soccer-pitch">
           <svg class="icon-svg">
             <use xlink:href="#icon-soccer-pitch" />
           </svg>
@@ -60,7 +60,7 @@
         <p>The Training Academia is open to all players 6 years and older. The Academia’s curriculum is designed to focus on developing the individual player's technical abilities and touch. It is also designed to develop confidence on the ball by teaching players how to maneuver in and around tight spaces under pressure.</p>
       </div>
       <div class="span3 span-m-6">
-        <span class="icon icon-circle icon-globe">
+        <span class="icon icon-globe">
           <svg class="icon-svg">
             <use xlink:href="#icon-globe" />
           </svg>
@@ -69,9 +69,9 @@
         <p>Players have the opportunity to travel to Brazil and train with professional club teams such as Fluminense. Training with these teams exposes players to a faster paced game which accelerates their development. While in Brazil, players gain valuable life experiences on and off the pitch.</p>
       </div>
       <div class="span3 span-m-6">
-        <span class="icon icon-circle icon-trophy">
+        <span class="icon icon-medal">
           <svg class="icon-svg">
-            <use xlink:href="#icon-trophy" />
+            <use xlink:href="#icon-medal" />
           </svg>
         </span>
         <h4 class="pad-t--10 pad-b--10">First Team</h4>
@@ -118,8 +118,7 @@
       <?php while ($eventQuery->have_posts()) : $eventQuery->the_post(); ?>
       <div class="span3">
         <a href="<?php the_permalink(); ?>" class="box-event">
-          <?php $eventDate = DateTime::createFromFormat('Ymd', get_field('event_date')); ?>
-          <time datetime="<?php echo $eventDate->format('Y-m-d'); ?>"><?php echo $eventDate->format('F j, Y'); ?></time>
+          <time datetime="<?php echo date('Y-m-d', strtotime(get_field('event_date'))); ?>"><?php echo date('F j, Y', strtotime(get_field('event_date'))); ?></time>
           <h3><?php the_title(); ?></h3>
           <span class="view-item">
             View Event
@@ -241,29 +240,29 @@
 
     <div class="row">
       <div class="span4">
-        <span class="icon icon-circle icon-pennant">
+        <span class="icon icon-shield">
           <svg class="icon-svg">
-            <use xlink:href="#icon-pennant" />
+            <use xlink:href="#icon-shield" />
           </svg>
         </span>
         <h4 class="pad-t--10 pad-b--10">Teams: Youth Academia</h4>
         <p>ADF currently has two Premier youth teams (U10 and U11 boys) who compete in Oregon's top leagues. ADF also participates in premier local, regional and national tournaments.</p>
-        <a href="/teams/" class="btn">View Teams</a>
+        <a href="/teams/adf-04s/" class="btn">View Teams</a>
       </div>
       <div class="span4">
-        <span class="icon icon-circle icon-soccer-ball">
+        <span class="icon icon-soccer-ball">
           <svg class="icon-svg">
             <use xlink:href="#icon-soccer-ball" />
           </svg>
         </span>
         <h4 class="pad-t--10 pad-b--10">Academia Training: The Training Academia</h4>
         <p>Premier technical soccer training development program for players 6 years and older who are inspired to take their game to the next level. We focus on building the individual player. Increase your technical abilities, passing, shooting, and dribbling so you are more confident and effective on the pitch.</p>
-        <a href="/about/" class="btn">Learn More</a>
+        <a href="http://www.futeboltraining.com/" target="_blank" class="btn">Learn More</a>
       </div>
       <div class="span4">
-        <span class="icon icon-circle icon-map-marker">
+        <span class="icon icon-marker">
           <svg class="icon-svg">
-            <use xlink:href="#icon-map-marker" />
+            <use xlink:href="#icon-marker" />
           </svg>
         </span>
         <h4 class="pad-t--10 pad-b--10">Location</h4>

@@ -35,7 +35,7 @@
       <div class="span6">
         <div class="bg-white border-gray border-top--yellow pad-v pad-h--20 border-radius js--equal-height">
           <h3 class="pad-b--20">
-            <span class="icon icon-inline icon-circle icon-soccer-ball">
+            <span class="icon icon-inline icon-soccer-ball">
               <svg class="icon-svg">
                 <use xlink:href="#icon-soccer-ball" />
               </svg>
@@ -49,9 +49,9 @@
       <div class="span6">
          <div class="bg-white border-gray border-top--yellow pad-v pad-h--20 border-radius js--equal-height">
           <h3 class="pad-b--20">
-            <span class="icon icon-inline icon-circle icon-trophy">
+            <span class="icon icon-inline icon-medal">
               <svg class="icon-svg">
-                <use xlink:href="#icon-trophy" />
+                <use xlink:href="#icon-medal" />
               </svg>
             </span>
             Tournaments
@@ -66,7 +66,7 @@
       <div class="span6">
         <div class="bg-white border-gray border-top--yellow pad-v pad-h--20 border-radius">
           <h3 class="pad-b--20">
-            <span class="icon icon-inline icon-circle icon-soccer-pitch">
+            <span class="icon icon-inline icon-soccer-pitch">
               <svg class="icon-svg">
                 <use xlink:href="#icon-soccer-pitch" />
               </svg>
@@ -80,7 +80,7 @@
       <div class="span6">
         <div class="bg-white border-gray border-top--yellow pad-v pad-h--20 border-radius">
           <h3 class="pad-b--20">
-            <span class="icon icon-inline icon-circle icon-soccer-pitch">
+            <span class="icon icon-inline icon-soccer-pitch">
               <svg class="icon-svg">
                 <use xlink:href="#icon-soccer-pitch" />
               </svg>

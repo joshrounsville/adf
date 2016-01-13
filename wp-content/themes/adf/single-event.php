@@ -6,7 +6,7 @@
 
     <div class="row">
       <div class="span12">
-        <a href="/events/" class="icon-circle-wrap">
+        <a href="/upcoming-events/" class="icon-circle-wrap">
           <span class="icon icon-grid">
             <svg class="icon-svg">
               <use xlink:href="#icon-grid" />
@@ -20,8 +20,7 @@
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <div class="row pad-t">
       <div class="span8">
-        <?php $eventDate = DateTime::createFromFormat('Ymd', get_field('event_date')); ?>
-        <time datetime="<?php echo $eventDate->format('Y-m-d'); ?>"><?php echo $eventDate->format('F j, Y'); ?></time>
+        <time datetime="<?php echo date('Y-m-d', strtotime(get_field('event_date'))); ?>"><?php echo date('F j, Y', strtotime(get_field('event_date'))); ?></time>
         <h2><?php the_title(); ?></h2>
         <div class="post-wrap pad-t">
           <?php the_content(); ?>
@@ -35,7 +34,7 @@
             <li><?php the_field('event_city_state_zip'); ?></li>
           </ul>
           <h4 class="strong">When?</h4>
-          <p class="pad-b--0"><?php echo $eventDate->format('F j, Y'); ?></p>
+          <p class="pad-b--0"><?php echo date('F j, Y', strtotime(get_field('event_date'))); ?></p>
         </div>
       </div>
     </div>
@@ -44,6 +43,31 @@
   </div>
 </section>
 
+
+<?php
+  $today = date('Ymd');
+  global $post;
+  $postId = $post->ID;
+
+  $args = array(
+    'meta_key' => 'event_date',
+    'orderby' => 'meta_value_num',
+    'order' => 'ASC',
+    'post_type' => 'event',
+    'posts_per_page' => 4,
+    'post__not_in' => array($postId),
+    'meta_query' => array(
+      array(
+        'key' => 'event_date',
+        'value'   => $today,
+        'compare' => '>='
+      )
+    )
+  );
+?>
+<?php $eventQuery = new WP_Query( $args ); ?>
+
+<?php if ( $eventQuery->have_posts() ) : ?>
 
 <section class="bg-gray pad-v">
   <div class="container">
@@ -54,37 +78,12 @@
       </div>
     </div>
 
-    <?php
-      $today = date('Ymd');
-      global $post;
-      $postId = $post->ID;
-
-      $args = array(
-        'meta_key' => 'event_date',
-        'orderby' => 'meta_value_num',
-        'order' => 'ASC',
-        'post_type' => 'event',
-        'posts_per_page' => 4,
-        'post__not_in' => array($postId),
-        'meta_query' => array(
-          array(
-            'key' => 'event_date',
-            'value'   => $today,
-            'compare' => '>='
-          )
-        )
-      );
-    ?>
-    <?php $eventQuery = new WP_Query( $args ); ?>
-
-    <?php if ( $eventQuery->have_posts() ) : ?>
-      <div class="row">
+    <div class="row">
 
       <?php while ($eventQuery->have_posts()) : $eventQuery->the_post(); ?>
         <div class="span3">
           <a href="<?php the_permalink(); ?>" class="box-event">
-            <?php $eventDate = DateTime::createFromFormat('Ymd', get_field('event_date')); ?>
-            <time datetime="<?php echo $eventDate->format('Y-m-d'); ?>"><?php echo $eventDate->format('F j, Y'); ?></time>
+            <time datetime="<?php echo date('Y-m-d', strtotime(get_field('event_date'))); ?>"><?php echo date('F j, Y', strtotime(get_field('event_date'))); ?></time>
             <h3><?php the_title(); ?></h3>
             <span class="view-item">
               View Event
@@ -98,13 +97,13 @@
         </div>
       <?php endwhile; ?>
 
-      </div>
-    <?php endif; ?>
-
-    <?php wp_reset_postdata(); ?>
+    </div>
 
   </div>
 </section>
+
+<?php endif; ?>
+<?php wp_reset_postdata(); ?>
 
 
 <?php get_footer(); ?>

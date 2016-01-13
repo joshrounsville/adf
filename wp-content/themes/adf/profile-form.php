@@ -95,23 +95,52 @@
       $show_password_fields = apply_filters( 'show_password_fields', true, $profileuser );
       if ( $show_password_fields ) :
     ?>
-    <div class="form-row password-row">
-      <div class="form-item form-left">
-        <label for="pass1<?php $template->the_instance(); ?>">New Password</label>
-        <input type="password" name="pass1" id="pass1<?php $template->the_instance(); ?>" size="16" value="" autocomplete="off">
-        <small>If you would like to change the password type a new one. Otherwise leave this blank.</small>
-      </div>
-      <div class="form-item form-right">
-        <label for="pass2<?php $template->the_instance(); ?>">Re-Type New Password</label>
-        <input type="password" name="pass2" id="pass2<?php $template->the_instance(); ?>" size="16" value="" autocomplete="off">
-        <small>Type your new password again.</small>
-      </div>
-    </div>
     <div class="form-row">
-      <p class="pass-strength" id="pass-strength-result"><?php _e( 'Strength indicator', 'theme-my-login' ); ?></p>
-      <p class="description indicator-hint"><?php _e( 'Hint: The password should be at least seven characters long. To make it stronger, use upper and lower case letters, numbers and symbols like ! " ? $ % ^ &amp; ).' ); ?></p>
-    </div>
+      <div class="form-item form-full-width">
 
+        <table class="tml-form-table">
+          <tr id="password" class="user-pass1-wrap">
+            <td>
+              <label for="pass1<?php $template->the_instance(); ?>"><?php _e( 'New Password', 'theme-my-login' ); ?></label>
+              <input class="hidden" value=" " />
+              <button type="button" class="btn button button-secondary wp-generate-pw hide-if-no-js"><?php _e( 'Generate Password', 'theme-my-login' ); ?></button>
+              <div class="wp-pwd hide-if-js">
+                <span class="password-input-wrapper">
+                  <input type="password" name="pass1<?php $template->the_instance(); ?>" id="pass1<?php $template->the_instance(); ?>" class="regular-text" value="" autocomplete="off" data-pw="<?php echo esc_attr( wp_generate_password( 24 ) ); ?>" aria-describedby="pass-strength-result" />
+                </span>
+                <div style="display:none" id="pass-strength-result" class="pad-t--20 pad-b--20 h3" aria-live="polite"></div>
+                  <button type="button" class="btn button button-secondary wp-hide-pw hide-if-no-js" data-toggle="0" aria-label="<?php esc_attr_e( 'Hide password', 'theme-my-login' ); ?>">
+                    <span class="dashicons dashicons-hidden"></span>
+                    <span class="text"><?php _e( 'Hide', 'theme-my-login' ); ?></span>
+                  </button>
+                  <button type="button" class="btn btn-black button button-secondary wp-cancel-pw hide-if-no-js" data-toggle="0" aria-label="<?php esc_attr_e( 'Cancel password change', 'theme-my-login' ); ?>">
+                    <span class="text"><?php _e( 'Cancel', 'theme-my-login' ); ?></span>
+                  </button>
+              </div>
+            </td>
+          </tr>
+          <tr class="user-pass2-wrap hide-if-js">
+            <th scope="row">
+              <label for="pass2<?php $template->the_instance(); ?>"><?php _e( 'Repeat New Password', 'theme-my-login' ); ?></label>
+            </th>
+            <td>
+              <input name="pass2<?php $template->the_instance(); ?>" type="password" id="pass2<?php $template->the_instance(); ?>" class="regular-text" value="" autocomplete="off" />
+              <p class="description"><?php _e( 'Type your new password again.', 'theme-my-login' ); ?></p>
+            </td>
+          </tr>
+          <tr class="pw-weak hide">
+            <th><?php _e( 'Confirm Password', 'theme-my-login' ); ?></th>
+            <td>
+              <label>
+                <input type="checkbox" name="pw_weak" class="pw-checkbox" />
+                <?php _e( 'Confirm use of weak password', 'theme-my-login' ); ?>
+              </label>
+            </td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
     <?php endif; ?>
 
     <h3 class="pad-v">Player Info</h3>
@@ -129,12 +158,12 @@
 
     <div class="form-row">
       <div class="form-item form-left">
-        <label for="date_of_birth<?php $template->the_instance(); ?>">Date of Birth (10/15/1995)</label>
-        <input type="text" name="date_of_birth" id="date_of_birth<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->date_of_birth ); ?>" required>
+        <label for="nickname<?php $template->the_instance(); ?>">Nickname</label>
+        <input type="text" name="nickname" id="nickname<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->nickname ); ?>" required>
       </div>
       <div class="form-item form-right">
-        <label for="current_club<?php $template->the_instance(); ?>">Current Club</label>
-        <input type="text" name="current_club" id="current_club<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->current_club ); ?>" required>
+        <label for="date_of_birth<?php $template->the_instance(); ?>">Date of Birth (10/15/1995)</label>
+        <input type="text" name="date_of_birth" id="date_of_birth<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->date_of_birth ); ?>" required>
       </div>
     </div>
 
@@ -146,6 +175,13 @@
       <div class="form-item form-right">
         <label for="phone_number<?php $template->the_instance(); ?>">Phone Number</label>
         <input type="tel" name="phone_number" id="phone_number<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->phone_number ); ?>" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-item form-left">
+        <label for="current_club<?php $template->the_instance(); ?>">Current Club</label>
+        <input type="text" name="current_club" id="current_club<?php $template->the_instance(); ?>" value="<?php echo esc_attr( $profileuser->current_club ); ?>" required>
       </div>
     </div>
 

@@ -5,7 +5,7 @@
           <div class="span12">
 
             <a href="/" class="logo logo-footer">
-              <img src="<?php echo get_template_directory_uri(); ?>/library/img/logos/academia-de-futeboltraining.png" alt="Academia de futeboltraining" width="60" height="60">
+              <img src="<?php echo get_template_directory_uri(); ?>/library/img/logos/adf.svg" alt="Academia de futeboltraining" width="70" height="70">
             </a>
 
             <nav class="nav-footer">
@@ -27,7 +27,7 @@
               <ul>
                 <li><h5><a href="/about/contact/">Contact</a></h5></li>
                 <li><a href="/about/contact/">USA</a></li>
-                <li><a href="mailto:exchange@futeboltraining.com" target="_blank">International</a></li>
+                <li><a href="mailto:joaquim@futeboltraining.com" target="_blank">International</a></li>
               </ul>
             </nav>
 

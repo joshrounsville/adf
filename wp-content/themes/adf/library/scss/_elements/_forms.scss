@@ -328,6 +328,30 @@ textarea,
 
 
 
+.password-input-wrapper {
+  width: 100%;
+
+  input[name='pass1-text'] {
+    display: none;
+  }
+  input[name='pass1'] {
+    display: block;
+  }
+
+  &.show-password {
+    input[name='pass1-text'] {
+      display: block;
+    }
+    input[name='pass1'] {
+      display: none;
+    }
+  }
+}
+
+.tml-form-table {
+  width: 100%;
+}
+
 
 
 

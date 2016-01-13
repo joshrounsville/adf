@@ -44,7 +44,7 @@
       <div class="row">
         <div class="span12">
           <a href="/" class="logo logo-mobile">
-            <img src="<?php echo get_template_directory_uri(); ?>/library/img/logos/academia-de-futeboltraining.png" alt="Academia de futeboltraining" width="60" height="60">
+            <img src="<?php echo get_template_directory_uri(); ?>/library/img/logos/adf.svg" alt="Academia de futeboltraining" width="70" height="70">
           </a>
           <a href="#" class="nav-show nav-trigger">
             <span></span>
@@ -91,7 +91,7 @@
         <div class="span8 span-m-12">
 
           <a href="/" class="logo logo-main">
-            <img src="<?php echo get_template_directory_uri(); ?>/library/img/logos/academia-de-futeboltraining.png" alt="Academia de futeboltraining" width="60" height="60">
+            <img src="<?php echo get_template_directory_uri(); ?>/library/img/logos/adf.svg" alt="Academia de futeboltraining" width="70" height="70">
           </a>
 
           <nav class="nav-main">

@@ -10,7 +10,7 @@
   text-decoration: none;
   outline: 0;
   background: $colorBtn;
-  color: #000;
+  color: #231f20;
   border: 2px solid $colorBtn;
   font-size: 14px;
   border-radius: 3px;
@@ -20,8 +20,8 @@
   font-style: normal;
   &:hover,
   &:focus {
-    background: #000;
-    border-color: #000;
+    background: #231f20;
+    border-color: #231f20;
     color: $colorYellow;
   }
 
@@ -35,14 +35,14 @@
   }
 
   &.btn--black {
-    background: #000;
-    border-color: #000;
+    background: #231f20;
+    border-color: #231f20;
     color: $colorYellow;
     &:hover,
     &:focus {
       background: $colorYellow;
       border-color: $colorYellow;
-      color: #000;
+      color: #231f20;
     }
   }
   &.btn--yellow {
@@ -68,7 +68,7 @@
     &:focus {
       background: $colorYellow;
       border-color: $colorYellow;
-      color: #000;
+      color: #231f20;
     }
   }
   &.btn--outline-gray {
@@ -88,14 +88,14 @@
 
   &.btn--filter {
     &.active {
-      border-color: #000;
-      background: #000;
+      border-color: #231f20;
+      background: #231f20;
       color: $colorYellow;
       &:hover,
       &:focus {
         border-color: $colorYellow;
         background: $colorYellow;
-        color: #000;
+        color: #231f20;
       }
     }
   }

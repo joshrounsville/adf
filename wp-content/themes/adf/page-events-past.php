@@ -78,8 +78,7 @@
 
         <div class="span3">
           <a href="<?php the_permalink(); ?>" class="box-event box-event--border">
-            <?php $eventDate = DateTime::createFromFormat('Ymd', get_field('event_date')); ?>
-            <time datetime="<?php echo $eventDate->format('Y-m-d'); ?>"><?php echo $eventDate->format('F j, Y'); ?></time>
+            <time datetime="<?php echo date('Y-m-d', strtotime(get_field('event_date'))); ?>"><?php echo date('F j, Y', strtotime(get_field('event_date'))); ?></time>
             <h3><?php the_title(); ?></h3>
             <span class="view-item">
               View Event
