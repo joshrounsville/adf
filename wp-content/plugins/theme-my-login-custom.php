@@ -13,9 +13,6 @@ function tml_registration_errors( $errors ) {
   if ( empty( $_POST['phone_number'] ) )
     $errors->add( 'empty_phone_number', '<strong>ERROR</strong>: Please enter your phone number.' );
 
-  if ( empty( $_POST['current_club'] ) )
-    $errors->add( 'empty_current_club', '<strong>ERROR</strong>: Please enter your current club.' );
-
   if ( empty( $_POST['goals_short_term'] ) )
     $errors->add( 'empty_goals_short_term', '<strong>ERROR</strong>: Please enter your short term soccer goals.' );
 
